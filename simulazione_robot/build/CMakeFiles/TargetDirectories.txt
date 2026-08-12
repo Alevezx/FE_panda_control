@@ -1,0 +1,3 @@
+/home/alessandro/Desktop/tesi/codici_cpp/simulazione_robot/build/CMakeFiles/simulazione_robot_tau.dir
+/home/alessandro/Desktop/tesi/codici_cpp/simulazione_robot/build/CMakeFiles/edit_cache.dir
+/home/alessandro/Desktop/tesi/codici_cpp/simulazione_robot/build/CMakeFiles/rebuild_cache.dir

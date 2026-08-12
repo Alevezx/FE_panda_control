@@ -1,0 +1,36 @@
+<skeleton>
+	<keypoint time='0.0'>
+		<point id='0'>nan nan nan</point>
+		<point id='1'>nan nan nan</point>
+		<point id='2'>nan nan nan</point>
+		<point id='3'>nan nan nan</point>
+		<point id='4'>nan nan nan</point>
+		<point id='5'>nan nan nan</point>
+		<point id='6'>nan nan nan</point>
+		<point id='7'>nan nan nan</point>
+		<point id='8'>nan nan nan</point>
+		<point id='9'>1 0.5 0.5</point>
+		<point id='10'>1 0.5 0.3</point>
+		<point id='11'>nan nan nan</point>
+		<point id='12'>nan nan nan</point>
+		<point id='13'>nan nan nan</point>
+		<point id='14'>nan nan nan</point>
+	</keypoint>
+	<keypoint time='6.0'>
+		<point id='0'>nan nan nan</point>
+		<point id='1'>nan nan nan</point>
+		<point id='2'>nan nan nan</point>
+		<point id='3'>nan nan nan</point>
+		<point id='4'>nan nan nan</point>
+		<point id='5'>nan nan nan</point>
+		<point id='6'>nan nan nan</point>
+		<point id='7'>nan nan nan</point>
+		<point id='8'>nan nan nan</point>
+		<point id='9'>2 0.5 0.5</point>
+		<point id='10'>2 0.5 0.3</point>
+		<point id='11'>nan nan nan</point>
+		<point id='12'>nan nan nan</point>
+		<point id='13'>nan nan nan</point>
+		<point id='14'>nan nan nan</point>
+	</keypoint>
+</skeleton>

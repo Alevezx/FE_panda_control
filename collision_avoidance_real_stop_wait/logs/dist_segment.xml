@@ -1,0 +1,713 @@
+<distance>
+	<keypoint time='0.0328266'>
+		<stop_duration>0.302405</stop_duration>
+		<min_distance>0.879476</min_distance>	</keypoint>
+	<keypoint time='0.0750987'>
+		<stop_duration>0.294543</stop_duration>
+		<min_distance>0.8805</min_distance>	</keypoint>
+	<keypoint time='0.118706'>
+		<stop_duration>0.307898</stop_duration>
+		<min_distance>0.882076</min_distance>	</keypoint>
+	<keypoint time='0.163063'>
+		<stop_duration>0.318404</stop_duration>
+		<min_distance>0.884373</min_distance>	</keypoint>
+	<keypoint time='0.209058'>
+		<stop_duration>0.327139</stop_duration>
+		<min_distance>0.887319</min_distance>	</keypoint>
+	<keypoint time='0.254911'>
+		<stop_duration>0.334451</stop_duration>
+		<min_distance>0.891025</min_distance>	</keypoint>
+	<keypoint time='0.301034'>
+		<stop_duration>0.339792</stop_duration>
+		<min_distance>0.895255</min_distance>	</keypoint>
+	<keypoint time='0.347507'>
+		<stop_duration>0.343214</stop_duration>
+		<min_distance>0.899853</min_distance>	</keypoint>
+	<keypoint time='0.395105'>
+		<stop_duration>0.345189</stop_duration>
+		<min_distance>0.904641</min_distance>	</keypoint>
+	<keypoint time='0.44241'>
+		<stop_duration>0.34495</stop_duration>
+		<min_distance>0.909636</min_distance>	</keypoint>
+	<keypoint time='0.489742'>
+		<stop_duration>0.342695</stop_duration>
+		<min_distance>0.914335</min_distance>	</keypoint>
+	<keypoint time='0.53569'>
+		<stop_duration>0.337819</stop_duration>
+		<min_distance>0.918764</min_distance>	</keypoint>
+	<keypoint time='0.581194'>
+		<stop_duration>0.332381</stop_duration>
+		<min_distance>0.922533</min_distance>	</keypoint>
+	<keypoint time='0.626301'>
+		<stop_duration>0.324956</stop_duration>
+		<min_distance>0.925685</min_distance>	</keypoint>
+	<keypoint time='0.671382'>
+		<stop_duration>0.31569</stop_duration>
+		<min_distance>0.928263</min_distance>	</keypoint>
+	<keypoint time='0.714394'>
+		<stop_duration>0.303506</stop_duration>
+		<min_distance>0.930253</min_distance>	</keypoint>
+	<keypoint time='0.756627'>
+		<stop_duration>0.286545</stop_duration>
+		<min_distance>0.931623</min_distance>	</keypoint>
+	<keypoint time='0.796401'>
+		<stop_duration>0.264172</stop_duration>
+		<min_distance>0.932513</min_distance>	</keypoint>
+	<keypoint time='0.835331'>
+		<stop_duration>0.25274</stop_duration>
+		<min_distance>0.932966</min_distance>	</keypoint>
+	<keypoint time='0.873991'>
+		<stop_duration>0.250953</stop_duration>
+		<min_distance>0.933158</min_distance>	</keypoint>
+	<keypoint time='0.912799'>
+		<stop_duration>0.250316</stop_duration>
+		<min_distance>0.933195</min_distance>	</keypoint>
+	<keypoint time='0.951852'>
+		<stop_duration>0.251806</stop_duration>
+		<min_distance>0.933196</min_distance>	</keypoint>
+	<keypoint time='0.994267'>
+		<stop_duration>0.256905</stop_duration>
+		<min_distance>0.93321</min_distance>	</keypoint>
+	<keypoint time='1.03532'>
+		<stop_duration>0.278276</stop_duration>
+		<min_distance>0.933262</min_distance>	</keypoint>
+	<keypoint time='1.07737'>
+		<stop_duration>0.290989</stop_duration>
+		<min_distance>0.933367</min_distance>	</keypoint>
+	<keypoint time='1.12127'>
+		<stop_duration>0.305349</stop_duration>
+		<min_distance>0.933546</min_distance>	</keypoint>
+	<keypoint time='1.16569'>
+		<stop_duration>0.318088</stop_duration>
+		<min_distance>0.933827</min_distance>	</keypoint>
+	<keypoint time='1.21087'>
+		<stop_duration>0.327852</stop_duration>
+		<min_distance>0.934231</min_distance>	</keypoint>
+	<keypoint time='1.25735'>
+		<stop_duration>0.335191</stop_duration>
+		<min_distance>0.934772</min_distance>	</keypoint>
+	<keypoint time='1.30362'>
+		<stop_duration>0.340751</stop_duration>
+		<min_distance>0.935486</min_distance>	</keypoint>
+	<keypoint time='1.34987'>
+		<stop_duration>0.344404</stop_duration>
+		<min_distance>0.936402</min_distance>	</keypoint>
+	<keypoint time='1.3967'>
+		<stop_duration>0.346584</stop_duration>
+		<min_distance>0.937491</min_distance>	</keypoint>
+	<keypoint time='1.44373'>
+		<stop_duration>0.346861</stop_duration>
+		<min_distance>0.938794</min_distance>	</keypoint>
+	<keypoint time='1.49063'>
+		<stop_duration>0.345367</stop_duration>
+		<min_distance>0.940263</min_distance>	</keypoint>
+	<keypoint time='1.53738'>
+		<stop_duration>0.342094</stop_duration>
+		<min_distance>0.941844</min_distance>	</keypoint>
+	<keypoint time='1.58343'>
+		<stop_duration>0.33702</stop_duration>
+		<min_distance>0.943429</min_distance>	</keypoint>
+	<keypoint time='1.62937'>
+		<stop_duration>0.333357</stop_duration>
+		<min_distance>0.944963</min_distance>	</keypoint>
+	<keypoint time='1.67577'>
+		<stop_duration>0.322485</stop_duration>
+		<min_distance>0.946357</min_distance>	</keypoint>
+	<keypoint time='1.72017'>
+		<stop_duration>0.310512</stop_duration>
+		<min_distance>0.947553</min_distance>	</keypoint>
+	<keypoint time='1.76249'>
+		<stop_duration>0.292331</stop_duration>
+		<min_distance>0.948411</min_distance>	</keypoint>
+	<keypoint time='1.80353'>
+		<stop_duration>0.271921</stop_duration>
+		<min_distance>0.948986</min_distance>	</keypoint>
+	<keypoint time='1.84245'>
+		<stop_duration>0.255669</stop_duration>
+		<min_distance>0.949303</min_distance>	</keypoint>
+	<keypoint time='1.88179'>
+		<stop_duration>0.250612</stop_duration>
+		<min_distance>0.949436</min_distance>	</keypoint>
+	<keypoint time='1.92058'>
+		<stop_duration>0.250484</stop_duration>
+		<min_distance>0.949464</min_distance>	</keypoint>
+	<keypoint time='1.96045'>
+		<stop_duration>0.25008</stop_duration>
+		<min_distance>0.949464</min_distance>	</keypoint>
+	<keypoint time='1.99915'>
+		<stop_duration>0.25079</stop_duration>
+		<min_distance>0.949448</min_distance>	</keypoint>
+	<keypoint time='2.03832'>
+		<stop_duration>0.252988</stop_duration>
+		<min_distance>0.949369</min_distance>	</keypoint>
+	<keypoint time='2.07731'>
+		<stop_duration>0.255783</stop_duration>
+		<min_distance>0.94918</min_distance>	</keypoint>
+	<keypoint time='2.11663'>
+		<stop_duration>0.259079</stop_duration>
+		<min_distance>0.948835</min_distance>	</keypoint>
+	<keypoint time='2.15566'>
+		<stop_duration>0.263218</stop_duration>
+		<min_distance>0.948278</min_distance>	</keypoint>
+	<keypoint time='2.19564'>
+		<stop_duration>0.267277</stop_duration>
+		<min_distance>0.947496</min_distance>	</keypoint>
+	<keypoint time='2.23627'>
+		<stop_duration>0.271588</stop_duration>
+		<min_distance>0.946411</min_distance>	</keypoint>
+	<keypoint time='2.27719'>
+		<stop_duration>0.275932</stop_duration>
+		<min_distance>0.945001</min_distance>	</keypoint>
+	<keypoint time='2.31938'>
+		<stop_duration>0.280362</stop_duration>
+		<min_distance>0.943178</min_distance>	</keypoint>
+	<keypoint time='2.36054'>
+		<stop_duration>0.2848</stop_duration>
+		<min_distance>0.940872</min_distance>	</keypoint>
+	<keypoint time='2.40239'>
+		<stop_duration>0.289064</stop_duration>
+		<min_distance>0.93808</min_distance>	</keypoint>
+	<keypoint time='2.4444'>
+		<stop_duration>0.293177</stop_duration>
+		<min_distance>0.934755</min_distance>	</keypoint>
+	<keypoint time='2.48739'>
+		<stop_duration>0.296995</stop_duration>
+		<min_distance>0.930952</min_distance>	</keypoint>
+	<keypoint time='2.5304'>
+		<stop_duration>0.300814</stop_duration>
+		<min_distance>0.926323</min_distance>	</keypoint>
+	<keypoint time='2.57413'>
+		<stop_duration>0.304487</stop_duration>
+		<min_distance>0.920855</min_distance>	</keypoint>
+	<keypoint time='2.61845'>
+		<stop_duration>0.307847</stop_duration>
+		<min_distance>0.91474</min_distance>	</keypoint>
+	<keypoint time='2.66331'>
+		<stop_duration>0.31107</stop_duration>
+		<min_distance>0.90764</min_distance>	</keypoint>
+	<keypoint time='2.7078'>
+		<stop_duration>0.31413</stop_duration>
+		<min_distance>0.899437</min_distance>	</keypoint>
+	<keypoint time='2.75219'>
+		<stop_duration>0.316966</stop_duration>
+		<min_distance>0.890223</min_distance>	</keypoint>
+	<keypoint time='2.79706'>
+		<stop_duration>0.319526</stop_duration>
+		<min_distance>0.88018</min_distance>	</keypoint>
+	<keypoint time='2.84252'>
+		<stop_duration>0.321945</stop_duration>
+		<min_distance>0.868803</min_distance>	</keypoint>
+	<keypoint time='2.8875'>
+		<stop_duration>0.32419</stop_duration>
+		<min_distance>0.855981</min_distance>	</keypoint>
+	<keypoint time='2.93434'>
+		<stop_duration>0.326185</stop_duration>
+		<min_distance>0.842586</min_distance>	</keypoint>
+	<keypoint time='2.98205'>
+		<stop_duration>0.340079</stop_duration>
+		<min_distance>0.828296</min_distance>	</keypoint>
+	<keypoint time='3.02046'>
+		<stop_duration>0.240793</stop_duration>
+		<min_distance>0.811662</min_distance>	</keypoint>
+	<keypoint time='3.06359'>
+		<stop_duration>0.302022</stop_duration>
+		<min_distance>0.799174</min_distance>	</keypoint>
+	<keypoint time='3.1045'>
+		<stop_duration>0.267824</stop_duration>
+		<min_distance>0.790294</min_distance>	</keypoint>
+	<keypoint time='3.14542'>
+		<stop_duration>0.278872</stop_duration>
+		<min_distance>0.789526</min_distance>	</keypoint>
+	<keypoint time='3.18955'>
+		<stop_duration>0.30522</stop_duration>
+		<min_distance>0.794437</min_distance>	</keypoint>
+	<keypoint time='3.23237'>
+		<stop_duration>0.299173</stop_duration>
+		<min_distance>0.802964</min_distance>	</keypoint>
+	<keypoint time='3.27354'>
+		<stop_duration>0.271039</stop_duration>
+		<min_distance>0.810042</min_distance>	</keypoint>
+	<keypoint time='3.3125'>
+		<stop_duration>0.254625</stop_duration>
+		<min_distance>0.813873</min_distance>	</keypoint>
+	<keypoint time='3.35184'>
+		<stop_duration>0.25104</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.39079'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.42914'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.46743'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.50564'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.54357'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.58261'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.62164'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.66026'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.69934'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.7379'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.77609'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.81544'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.85417'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.89275'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.93151'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='3.96965'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.00787'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.04646'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.08507'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.12364'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.16273'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.2015'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.24012'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.2786'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.31769'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.35612'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.39482'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.43383'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.47177'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.51032'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.54919'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.58736'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.6256'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.66498'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.70381'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.74226'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.7815'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.82019'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.85858'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.89775'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>0.814569</min_distance>	</keypoint>
+	<keypoint time='4.93653'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>10.3367</min_distance>	</keypoint>
+	<keypoint time='4.97485'>
+		<stop_duration>0.251015</stop_duration>
+		<min_distance>10.3367</min_distance>	</keypoint>
+	<keypoint time='5.0138'>
+		<stop_duration>0.250206</stop_duration>
+		<min_distance>10.3367</min_distance>	</keypoint>
+	<keypoint time='5.0527'>
+		<stop_duration>0.250865</stop_duration>
+		<min_distance>10.3367</min_distance>	</keypoint>
+	<keypoint time='5.09118'>
+		<stop_duration>0.253004</stop_duration>
+		<min_distance>10.3366</min_distance>	</keypoint>
+	<keypoint time='5.13083'>
+		<stop_duration>0.255177</stop_duration>
+		<min_distance>10.3365</min_distance>	</keypoint>
+	<keypoint time='5.17051'>
+		<stop_duration>0.257929</stop_duration>
+		<min_distance>10.3362</min_distance>	</keypoint>
+	<keypoint time='5.2104'>
+		<stop_duration>0.261298</stop_duration>
+		<min_distance>10.3358</min_distance>	</keypoint>
+	<keypoint time='5.25043'>
+		<stop_duration>0.264666</stop_duration>
+		<min_distance>10.3352</min_distance>	</keypoint>
+	<keypoint time='5.29071'>
+		<stop_duration>0.268189</stop_duration>
+		<min_distance>10.3344</min_distance>	</keypoint>
+	<keypoint time='5.33138'>
+		<stop_duration>0.271775</stop_duration>
+		<min_distance>10.3334</min_distance>	</keypoint>
+	<keypoint time='5.37249'>
+		<stop_duration>0.275362</stop_duration>
+		<min_distance>10.3322</min_distance>	</keypoint>
+	<keypoint time='5.41337'>
+		<stop_duration>0.279098</stop_duration>
+		<min_distance>10.3307</min_distance>	</keypoint>
+	<keypoint time='5.45538'>
+		<stop_duration>0.282627</stop_duration>
+		<min_distance>10.329</min_distance>	</keypoint>
+	<keypoint time='5.49766'>
+		<stop_duration>0.286146</stop_duration>
+		<min_distance>10.3269</min_distance>	</keypoint>
+	<keypoint time='5.53943'>
+		<stop_duration>0.289504</stop_duration>
+		<min_distance>10.3247</min_distance>	</keypoint>
+	<keypoint time='5.58217'>
+		<stop_duration>0.292729</stop_duration>
+		<min_distance>10.3221</min_distance>	</keypoint>
+	<keypoint time='5.62541'>
+		<stop_duration>0.295794</stop_duration>
+		<min_distance>10.3194</min_distance>	</keypoint>
+	<keypoint time='5.67'>
+		<stop_duration>0.298765</stop_duration>
+		<min_distance>10.3164</min_distance>	</keypoint>
+	<keypoint time='5.71388'>
+		<stop_duration>0.301689</stop_duration>
+		<min_distance>10.313</min_distance>	</keypoint>
+	<keypoint time='5.75733'>
+		<stop_duration>0.304352</stop_duration>
+		<min_distance>10.3094</min_distance>	</keypoint>
+	<keypoint time='5.80157'>
+		<stop_duration>0.306837</stop_duration>
+		<min_distance>10.3058</min_distance>	</keypoint>
+	<keypoint time='5.84538'>
+		<stop_duration>0.309133</stop_duration>
+		<min_distance>10.302</min_distance>	</keypoint>
+	<keypoint time='5.8897'>
+		<stop_duration>0.311229</stop_duration>
+		<min_distance>10.2982</min_distance>	</keypoint>
+	<keypoint time='5.93423'>
+		<stop_duration>0.313183</stop_duration>
+		<min_distance>10.2943</min_distance>	</keypoint>
+	<keypoint time='5.97872'>
+		<stop_duration>0.314974</stop_duration>
+		<min_distance>10.2904</min_distance>	</keypoint>
+	<keypoint time='6.01722'>
+		<stop_duration>0.228714</stop_duration>
+		<min_distance>10.2865</min_distance>	</keypoint>
+	<keypoint time='6.0626'>
+		<stop_duration>0.323897</stop_duration>
+		<min_distance>10.2833</min_distance>	</keypoint>
+	<keypoint time='6.10837'>
+		<stop_duration>0.320209</stop_duration>
+		<min_distance>10.2796</min_distance>	</keypoint>
+	<keypoint time='6.15427'>
+		<stop_duration>0.320731</stop_duration>
+		<min_distance>10.2761</min_distance>	</keypoint>
+	<keypoint time='6.1994'>
+		<stop_duration>0.321739</stop_duration>
+		<min_distance>10.2727</min_distance>	</keypoint>
+	<keypoint time='6.24446'>
+		<stop_duration>0.322616</stop_duration>
+		<min_distance>10.2697</min_distance>	</keypoint>
+	<keypoint time='6.2899'>
+		<stop_duration>0.323327</stop_duration>
+		<min_distance>10.267</min_distance>	</keypoint>
+	<keypoint time='6.33521'>
+		<stop_duration>0.323874</stop_duration>
+		<min_distance>10.2647</min_distance>	</keypoint>
+	<keypoint time='6.38027'>
+		<stop_duration>0.324289</stop_duration>
+		<min_distance>10.2627</min_distance>	</keypoint>
+	<keypoint time='6.42566'>
+		<stop_duration>0.324535</stop_duration>
+		<min_distance>10.2612</min_distance>	</keypoint>
+	<keypoint time='6.47136'>
+		<stop_duration>0.32464</stop_duration>
+		<min_distance>10.26</min_distance>	</keypoint>
+	<keypoint time='6.51649'>
+		<stop_duration>0.324573</stop_duration>
+		<min_distance>10.2593</min_distance>	</keypoint>
+	<keypoint time='6.56117'>
+		<stop_duration>0.324355</stop_duration>
+		<min_distance>10.259</min_distance>	</keypoint>
+	<keypoint time='6.60639'>
+		<stop_duration>0.323983</stop_duration>
+		<min_distance>10.2591</min_distance>	</keypoint>
+	<keypoint time='6.65121'>
+		<stop_duration>0.323446</stop_duration>
+		<min_distance>10.2596</min_distance>	</keypoint>
+	<keypoint time='6.69595'>
+		<stop_duration>0.322785</stop_duration>
+		<min_distance>10.2605</min_distance>	</keypoint>
+	<keypoint time='6.74117'>
+		<stop_duration>0.321956</stop_duration>
+		<min_distance>10.2618</min_distance>	</keypoint>
+	<keypoint time='6.7865'>
+		<stop_duration>0.320964</stop_duration>
+		<min_distance>10.2635</min_distance>	</keypoint>
+	<keypoint time='6.83076'>
+		<stop_duration>0.319797</stop_duration>
+		<min_distance>10.2655</min_distance>	</keypoint>
+	<keypoint time='6.87547'>
+		<stop_duration>0.318515</stop_duration>
+		<min_distance>10.2677</min_distance>	</keypoint>
+	<keypoint time='6.92057'>
+		<stop_duration>0.317046</stop_duration>
+		<min_distance>10.2702</min_distance>	</keypoint>
+	<keypoint time='6.96473'>
+		<stop_duration>0.315408</stop_duration>
+		<min_distance>10.2729</min_distance>	</keypoint>
+	<keypoint time='7.0091'>
+		<stop_duration>0.31363</stop_duration>
+		<min_distance>10.2756</min_distance>	</keypoint>
+	<keypoint time='7.05316'>
+		<stop_duration>0.311671</stop_duration>
+		<min_distance>10.2785</min_distance>	</keypoint>
+	<keypoint time='7.09664'>
+		<stop_duration>0.309482</stop_duration>
+		<min_distance>10.2815</min_distance>	</keypoint>
+	<keypoint time='7.1406'>
+		<stop_duration>0.306855</stop_duration>
+		<min_distance>10.2845</min_distance>	</keypoint>
+	<keypoint time='7.1838'>
+		<stop_duration>0.304513</stop_duration>
+		<min_distance>10.2874</min_distance>	</keypoint>
+	<keypoint time='7.2274'>
+		<stop_duration>0.301362</stop_duration>
+		<min_distance>10.2903</min_distance>	</keypoint>
+	<keypoint time='7.27072'>
+		<stop_duration>0.299475</stop_duration>
+		<min_distance>10.2931</min_distance>	</keypoint>
+	<keypoint time='7.31346'>
+		<stop_duration>0.296695</stop_duration>
+		<min_distance>10.2958</min_distance>	</keypoint>
+	<keypoint time='7.35614'>
+		<stop_duration>0.293653</stop_duration>
+		<min_distance>10.2983</min_distance>	</keypoint>
+	<keypoint time='7.39836'>
+		<stop_duration>0.290499</stop_duration>
+		<min_distance>10.3006</min_distance>	</keypoint>
+	<keypoint time='7.44018'>
+		<stop_duration>0.287142</stop_duration>
+		<min_distance>10.3027</min_distance>	</keypoint>
+	<keypoint time='7.48166'>
+		<stop_duration>0.283782</stop_duration>
+		<min_distance>10.3046</min_distance>	</keypoint>
+	<keypoint time='7.52321'>
+		<stop_duration>0.280261</stop_duration>
+		<min_distance>10.3063</min_distance>	</keypoint>
+	<keypoint time='7.56435'>
+		<stop_duration>0.276378</stop_duration>
+		<min_distance>10.3078</min_distance>	</keypoint>
+	<keypoint time='7.60492'>
+		<stop_duration>0.272772</stop_duration>
+		<min_distance>10.3091</min_distance>	</keypoint>
+	<keypoint time='7.64516'>
+		<stop_duration>0.269209</stop_duration>
+		<min_distance>10.3102</min_distance>	</keypoint>
+	<keypoint time='7.68572'>
+		<stop_duration>0.265774</stop_duration>
+		<min_distance>10.311</min_distance>	</keypoint>
+	<keypoint time='7.7257'>
+		<stop_duration>0.262384</stop_duration>
+		<min_distance>10.3117</min_distance>	</keypoint>
+	<keypoint time='7.76578'>
+		<stop_duration>0.258454</stop_duration>
+		<min_distance>10.3123</min_distance>	</keypoint>
+	<keypoint time='7.80545'>
+		<stop_duration>0.255894</stop_duration>
+		<min_distance>10.3127</min_distance>	</keypoint>
+	<keypoint time='7.84415'>
+		<stop_duration>0.252968</stop_duration>
+		<min_distance>10.3129</min_distance>	</keypoint>
+	<keypoint time='7.88289'>
+		<stop_duration>0.2505</stop_duration>
+		<min_distance>10.3131</min_distance>	</keypoint>
+	<keypoint time='7.92156'>
+		<stop_duration>0.249993</stop_duration>
+		<min_distance>10.3131</min_distance>	</keypoint>
+	<keypoint time='7.9612'>
+		<stop_duration>0.250121</stop_duration>
+		<min_distance>10.3132</min_distance>	</keypoint>
+	<keypoint time='8.00067'>
+		<stop_duration>0.25002</stop_duration>
+		<min_distance>10.3132</min_distance>	</keypoint>
+	<keypoint time='8.03933'>
+		<stop_duration>0.254187</stop_duration>
+		<min_distance>10.3132</min_distance>	</keypoint>
+	<keypoint time='8.07885'>
+		<stop_duration>0.261633</stop_duration>
+		<min_distance>10.313</min_distance>	</keypoint>
+	<keypoint time='8.12047'>
+		<stop_duration>0.283451</stop_duration>
+		<min_distance>10.3127</min_distance>	</keypoint>
+	<keypoint time='8.16307'>
+		<stop_duration>0.296413</stop_duration>
+		<min_distance>10.312</min_distance>	</keypoint>
+	<keypoint time='8.2069'>
+		<stop_duration>0.309989</stop_duration>
+		<min_distance>10.3111</min_distance>	</keypoint>
+	<keypoint time='8.25181'>
+		<stop_duration>0.320354</stop_duration>
+		<min_distance>10.3098</min_distance>	</keypoint>
+	<keypoint time='8.29722'>
+		<stop_duration>0.328944</stop_duration>
+		<min_distance>10.3083</min_distance>	</keypoint>
+	<keypoint time='8.34385'>
+		<stop_duration>0.335442</stop_duration>
+		<min_distance>10.3067</min_distance>	</keypoint>
+	<keypoint time='8.39012'>
+		<stop_duration>0.340229</stop_duration>
+		<min_distance>10.3052</min_distance>	</keypoint>
+	<keypoint time='8.43656'>
+		<stop_duration>0.34302</stop_duration>
+		<min_distance>10.3041</min_distance>	</keypoint>
+	<keypoint time='8.48291'>
+		<stop_duration>0.344539</stop_duration>
+		<min_distance>10.3034</min_distance>	</keypoint>
+	<keypoint time='8.52936'>
+		<stop_duration>0.344172</stop_duration>
+		<min_distance>10.3033</min_distance>	</keypoint>
+	<keypoint time='8.57612'>
+		<stop_duration>0.342023</stop_duration>
+		<min_distance>10.3038</min_distance>	</keypoint>
+	<keypoint time='8.62213'>
+		<stop_duration>0.338191</stop_duration>
+		<min_distance>10.3047</min_distance>	</keypoint>
+	<keypoint time='8.6677'>
+		<stop_duration>0.332579</stop_duration>
+		<min_distance>10.3059</min_distance>	</keypoint>
+	<keypoint time='8.71227'>
+		<stop_duration>0.318757</stop_duration>
+		<min_distance>10.3073</min_distance>	</keypoint>
+	<keypoint time='8.75685'>
+		<stop_duration>0.314766</stop_duration>
+		<min_distance>10.3087</min_distance>	</keypoint>
+	<keypoint time='8.79989'>
+		<stop_duration>0.303273</stop_duration>
+		<min_distance>10.3099</min_distance>	</keypoint>
+	<keypoint time='8.8417'>
+		<stop_duration>0.286954</stop_duration>
+		<min_distance>10.3109</min_distance>	</keypoint>
+	<keypoint time='8.88219'>
+		<stop_duration>0.264416</stop_duration>
+		<min_distance>10.3115</min_distance>	</keypoint>
+	<keypoint time='8.92124'>
+		<stop_duration>0.252031</stop_duration>
+		<min_distance>10.3118</min_distance>	</keypoint>
+	<keypoint time='8.95984'>
+		<stop_duration>0.251058</stop_duration>
+		<min_distance>10.312</min_distance>	</keypoint>
+	<keypoint time='8.99854'>
+		<stop_duration>0.250308</stop_duration>
+		<min_distance>10.312</min_distance>	</keypoint>
+	<keypoint time='9.03761'>
+		<stop_duration>0.25209</stop_duration>
+		<min_distance>10.312</min_distance>	</keypoint>
+	<keypoint time='9.0765'>
+		<stop_duration>0.257148</stop_duration>
+		<min_distance>10.3119</min_distance>	</keypoint>
+	<keypoint time='9.11722'>
+		<stop_duration>0.275487</stop_duration>
+		<min_distance>10.3117</min_distance>	</keypoint>
+	<keypoint time='9.15892'>
+		<stop_duration>0.287683</stop_duration>
+		<min_distance>10.3112</min_distance>	</keypoint>
+	<keypoint time='9.20232'>
+		<stop_duration>0.301546</stop_duration>
+		<min_distance>10.3104</min_distance>	</keypoint>
+	<keypoint time='9.24635'>
+		<stop_duration>0.314341</stop_duration>
+		<min_distance>10.3093</min_distance>	</keypoint>
+	<keypoint time='9.29143'>
+		<stop_duration>0.323939</stop_duration>
+		<min_distance>10.3079</min_distance>	</keypoint>
+	<keypoint time='9.33732'>
+		<stop_duration>0.331481</stop_duration>
+		<min_distance>10.3064</min_distance>	</keypoint>
+	<keypoint time='9.3829'>
+		<stop_duration>0.337166</stop_duration>
+		<min_distance>10.305</min_distance>	</keypoint>
+	<keypoint time='9.4297'>
+		<stop_duration>0.340867</stop_duration>
+		<min_distance>10.3038</min_distance>	</keypoint>
+	<keypoint time='9.47636'>
+		<stop_duration>0.343337</stop_duration>
+		<min_distance>10.303</min_distance>	</keypoint>
+	<keypoint time='9.52362'>
+		<stop_duration>0.343755</stop_duration>
+		<min_distance>10.3027</min_distance>	</keypoint>
+	<keypoint time='9.57003'>
+		<stop_duration>0.342362</stop_duration>
+		<min_distance>10.303</min_distance>	</keypoint>
+	<keypoint time='9.616'>
+		<stop_duration>0.339241</stop_duration>
+		<min_distance>10.3038</min_distance>	</keypoint>
+	<keypoint time='9.66185'>
+		<stop_duration>0.334361</stop_duration>
+		<min_distance>10.305</min_distance>	</keypoint>
+	<keypoint time='9.70739'>
+		<stop_duration>0.327576</stop_duration>
+		<min_distance>10.3065</min_distance>	</keypoint>
+	<keypoint time='9.75304'>
+		<stop_duration>0.319276</stop_duration>
+		<min_distance>10.308</min_distance>	</keypoint>
+	<keypoint time='9.79652'>
+		<stop_duration>0.30838</stop_duration>
+		<min_distance>10.3095</min_distance>	</keypoint>
+	<keypoint time='9.8388'>
+		<stop_duration>0.292289</stop_duration>
+		<min_distance>10.3106</min_distance>	</keypoint>
+	<keypoint time='9.87987'>
+		<stop_duration>0.277469</stop_duration>
+		<min_distance>10.3114</min_distance>	</keypoint>
+	<keypoint time='9.91927'>
+		<stop_duration>0.253444</stop_duration>
+		<min_distance>10.3119</min_distance>	</keypoint>
+	<keypoint time='9.95761'>
+		<stop_duration>0.250529</stop_duration>
+		<min_distance>10.3121</min_distance>	</keypoint>
+	<keypoint time='9.99676'>
+		<stop_duration>0.250653</stop_duration>
+		<min_distance>10.3122</min_distance>	</keypoint>
+</distance>

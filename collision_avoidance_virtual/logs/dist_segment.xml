@@ -1,0 +1,2022 @@
+<distance>
+	<keypoint time='0.0320621'>
+		<stop_duration>0.271957</stop_duration>
+		<point id='0'>0.629468 -0.291243 0.289408</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.075628'>
+		<stop_duration>0.264508</stop_duration>
+		<point id='0'>0.629149 -0.291392 0.289618</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.119857'>
+		<stop_duration>0.270868</stop_duration>
+		<point id='0'>0.628572 -0.291661 0.289996</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.164935'>
+		<stop_duration>0.278237</stop_duration>
+		<point id='0'>0.627714 -0.292056 0.290554</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.21234'>
+		<stop_duration>0.284663</stop_duration>
+		<point id='0'>0.626532 -0.292592 0.291316</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.259456'>
+		<stop_duration>0.289978</stop_duration>
+		<point id='0'>0.624971 -0.293287 0.29231</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.307202'>
+		<stop_duration>0.294083</stop_duration>
+		<point id='0'>0.623103 -0.294098 0.29348</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.353182'>
+		<stop_duration>0.296696</stop_duration>
+		<point id='0'>0.62092 -0.295018 0.294822</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.397405'>
+		<stop_duration>0.299483</stop_duration>
+		<point id='0'>0.618631 -0.295952 0.296199</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.451473'>
+		<stop_duration>0.301483</stop_duration>
+		<point id='0'>0.616321 -0.296863 0.297558</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.498371'>
+		<stop_duration>0.300566</stop_duration>
+		<point id='0'>0.613427 -0.29796 0.299219</point>
+		<point id='1'>1 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='0.545337'>
+		<stop_duration>0.299263</stop_duration>
+		<point id='0'>0.610895 -0.29888 0.300634</point>
+		<point id='1'>1 0.5 0.300634</point>
+	</keypoint>
+	<keypoint time='0.594049'>
+		<stop_duration>0.296907</stop_duration>
+		<point id='0'>0.608459 -0.299732 0.301961</point>
+		<point id='1'>1 0.5 0.301961</point>
+	</keypoint>
+	<keypoint time='0.640548'>
+		<stop_duration>0.293278</stop_duration>
+		<point id='0'>0.606145 -0.300512 0.303191</point>
+		<point id='1'>1 0.5 0.303191</point>
+	</keypoint>
+	<keypoint time='0.688201'>
+		<stop_duration>0.288731</stop_duration>
+		<point id='0'>0.604125 -0.301168 0.304241</point>
+		<point id='1'>1 0.5 0.304241</point>
+	</keypoint>
+	<keypoint time='0.738876'>
+		<stop_duration>0.28309</stop_duration>
+		<point id='0'>0.602364 -0.301723 0.305138</point>
+		<point id='1'>1 0.5 0.305138</point>
+	</keypoint>
+	<keypoint time='0.783852'>
+		<stop_duration>0.276341</stop_duration>
+		<point id='0'>0.600898 -0.302173 0.305873</point>
+		<point id='1'>1 0.5 0.305873</point>
+	</keypoint>
+	<keypoint time='0.827608'>
+		<stop_duration>0.26928</stop_duration>
+		<point id='0'>0.599945 -0.302459 0.306344</point>
+		<point id='1'>1 0.5 0.306344</point>
+	</keypoint>
+	<keypoint time='0.871802'>
+		<stop_duration>0.260489</stop_duration>
+		<point id='0'>0.599289 -0.302654 0.306665</point>
+		<point id='1'>1 0.5 0.306665</point>
+	</keypoint>
+	<keypoint time='0.915757'>
+		<stop_duration>0.25144</stop_duration>
+		<point id='0'>0.598903 -0.302767 0.306853</point>
+		<point id='1'>1 0.5 0.306853</point>
+	</keypoint>
+	<keypoint time='0.958397'>
+		<stop_duration>0.250154</stop_duration>
+		<point id='0'>0.598731 -0.302818 0.306937</point>
+		<point id='1'>1 0.5 0.306937</point>
+	</keypoint>
+	<keypoint time='1.00053'>
+		<stop_duration>0.250073</stop_duration>
+		<point id='0'>0.598694 -0.302828 0.306954</point>
+		<point id='1'>1 0.5 0.306954</point>
+	</keypoint>
+	<keypoint time='1.04246'>
+		<stop_duration>0.253244</stop_duration>
+		<point id='0'>0.598701 -0.302837 0.306989</point>
+		<point id='1'>1 0.5 0.306989</point>
+	</keypoint>
+	<keypoint time='1.08663'>
+		<stop_duration>0.261716</stop_duration>
+		<point id='0'>0.598817 -0.302982 0.307583</point>
+		<point id='1'>1 0.5 0.307583</point>
+	</keypoint>
+	<keypoint time='1.13154'>
+		<stop_duration>0.295269</stop_duration>
+		<point id='0'>0.599233 -0.303502 0.309729</point>
+		<point id='1'>1 0.5 0.309729</point>
+	</keypoint>
+	<keypoint time='1.17714'>
+		<stop_duration>0.309764</stop_duration>
+		<point id='0'>0.600039 -0.30451 0.313995</point>
+		<point id='1'>1 0.5 0.313995</point>
+	</keypoint>
+	<keypoint time='1.22402'>
+		<stop_duration>0.326538</stop_duration>
+		<point id='0'>0.60135 -0.306151 0.321256</point>
+		<point id='1'>1 0.5 0.321256</point>
+	</keypoint>
+	<keypoint time='1.27527'>
+		<stop_duration>0.34177</stop_duration>
+		<point id='0'>0.603137 -0.308392 0.331922</point>
+		<point id='1'>1 0.5 0.331922</point>
+	</keypoint>
+	<keypoint time='1.32352'>
+		<stop_duration>0.353415</stop_duration>
+		<point id='0'>0.605439 -0.311284 0.347363</point>
+		<point id='1'>1 0.5 0.347363</point>
+	</keypoint>
+	<keypoint time='1.37501'>
+		<stop_duration>0.361363</stop_duration>
+		<point id='0'>0.607703 -0.314124 0.365274</point>
+		<point id='1'>1 0.5 0.365274</point>
+	</keypoint>
+	<keypoint time='1.42906'>
+		<stop_duration>0.368164</stop_duration>
+		<point id='0'>0.609934 -0.316904 0.387602</point>
+		<point id='1'>1 0.5 0.387602</point>
+	</keypoint>
+	<keypoint time='1.48151'>
+		<stop_duration>0.372494</stop_duration>
+		<point id='0'>0.611741 -0.319096 0.41365</point>
+		<point id='1'>1 0.5 0.41365</point>
+	</keypoint>
+	<keypoint time='1.53314'>
+		<stop_duration>0.374554</stop_duration>
+		<point id='0'>0.612759 -0.320199 0.441537</point>
+		<point id='1'>1 0.5 0.441537</point>
+	</keypoint>
+	<keypoint time='1.58738'>
+		<stop_duration>0.37388</stop_duration>
+		<point id='0'>0.612862 -0.320033 0.468946</point>
+		<point id='1'>1 0.5 0.468946</point>
+	</keypoint>
+	<keypoint time='1.64164'>
+		<stop_duration>0.370557</stop_duration>
+		<point id='0'>0.612065 -0.318572 0.496972</point>
+		<point id='1'>1 0.5 0.496972</point>
+	</keypoint>
+	<keypoint time='1.69324'>
+		<stop_duration>0.364865</stop_duration>
+		<point id='0'>0.610455 -0.315935 0.523796</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.74119'>
+		<stop_duration>0.357205</stop_duration>
+		<point id='0'>0.608452 -0.312745 0.546435</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.79144'>
+		<stop_duration>0.341668</stop_duration>
+		<point id='0'>0.606402 -0.309512 0.564701</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.84246'>
+		<stop_duration>0.335932</stop_duration>
+		<point id='0'>0.604345 -0.30628 0.580272</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.8913'>
+		<stop_duration>0.318728</stop_duration>
+		<point id='0'>0.602565 -0.303487 0.592256</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.93833'>
+		<stop_duration>0.299733</stop_duration>
+		<point id='0'>0.601332 -0.301552 0.599944</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='1.98285'>
+		<stop_duration>0.257908</stop_duration>
+		<point id='0'>0.600577 -0.300368 0.60444</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.02597'>
+		<stop_duration>0.250526</stop_duration>
+		<point id='0'>0.600231 -0.299825 0.606454</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.06839'>
+		<stop_duration>0.251137</stop_duration>
+		<point id='0'>0.60014 -0.299682 0.60698</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.11145'>
+		<stop_duration>0.250199</stop_duration>
+		<point id='0'>0.600136 -0.299677 0.607</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.15529'>
+		<stop_duration>0.251867</stop_duration>
+		<point id='0'>0.600129 -0.299643 0.607043</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.19908'>
+		<stop_duration>0.25851</stop_duration>
+		<point id='0'>0.60009 -0.299471 0.60726</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.2487'>
+		<stop_duration>0.265471</stop_duration>
+		<point id='0'>0.599996 -0.299057 0.607782</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.29404'>
+		<stop_duration>0.274651</stop_duration>
+		<point id='0'>0.5998 -0.298189 0.608871</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.33948'>
+		<stop_duration>0.283773</stop_duration>
+		<point id='0'>0.599515 -0.296926 0.610445</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.38571'>
+		<stop_duration>0.292802</stop_duration>
+		<point id='0'>0.599109 -0.29513 0.61266</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.4316'>
+		<stop_duration>0.301819</stop_duration>
+		<point id='0'>0.598551 -0.292659 0.615663</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.4781'>
+		<stop_duration>0.309458</stop_duration>
+		<point id='0'>0.597833 -0.289476 0.61946</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.52481'>
+		<stop_duration>0.317004</stop_duration>
+		<point id='0'>0.596916 -0.285409 0.624197</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.57214'>
+		<stop_duration>0.323777</stop_duration>
+		<point id='0'>0.595829 -0.280574 0.629666</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.62052'>
+		<stop_duration>0.330416</stop_duration>
+		<point id='0'>0.594474 -0.274537 0.636259</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.66958'>
+		<stop_duration>0.33655</stop_duration>
+		<point id='0'>0.592888 -0.267435 0.643697</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.71893'>
+		<stop_duration>0.342371</stop_duration>
+		<point id='0'>0.591018 -0.25901 0.652097</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.76776'>
+		<stop_duration>0.34779</stop_duration>
+		<point id='0'>0.588892 -0.249348 0.6612</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.81844'>
+		<stop_duration>0.352762</stop_duration>
+		<point id='0'>0.586564 -0.238652 0.670659</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.87003'>
+		<stop_duration>0.357831</stop_duration>
+		<point id='0'>0.583816 -0.225845 0.681188</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.92331'>
+		<stop_duration>0.362601</stop_duration>
+		<point id='0'>0.580808 -0.211568 0.691975</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='2.97606'>
+		<stop_duration>0.366453</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.02872'>
+		<stop_duration>0.366303</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.08374'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.13791'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.19131'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.24226'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.29318'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.34741'>
+		<stop_duration>0.366298</stop_duration>
+		<point id='0'>0.578048 -0.198203 0.701228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.39289'>
+		<stop_duration>0.253148</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.43872'>
+		<stop_duration>0.250413</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.48326'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.52691'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.57123'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.61259'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.66155'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.70481'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.74687'>
+		<stop_duration>0.250408</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.78769'>
+		<stop_duration>0.250004</stop_duration>
+		<point id='0'>0.578047 -0.198201 0.70123</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.83398'>
+		<stop_duration>0.251078</stop_duration>
+		<point id='0'>0.578044 -0.198183 0.701242</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.87853'>
+		<stop_duration>0.253266</stop_duration>
+		<point id='0'>0.578014 -0.198038 0.701338</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.92261'>
+		<stop_duration>0.261711</stop_duration>
+		<point id='0'>0.577938 -0.197665 0.701585</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='3.96753'>
+		<stop_duration>0.268166</stop_duration>
+		<point id='0'>0.577794 -0.196961 0.702048</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.01469'>
+		<stop_duration>0.276138</stop_duration>
+		<point id='0'>0.577559 -0.195807 0.702805</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.06042'>
+		<stop_duration>0.283904</stop_duration>
+		<point id='0'>0.577199 -0.194035 0.703955</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.10605'>
+		<stop_duration>0.292321</stop_duration>
+		<point id='0'>0.576731 -0.19173 0.705432</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.14967'>
+		<stop_duration>0.299492</stop_duration>
+		<point id='0'>0.576116 -0.188679 0.707353</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.19729'>
+		<stop_duration>0.305956</stop_duration>
+		<point id='0'>0.57539 -0.185064 0.70958</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.24778'>
+		<stop_duration>0.312566</stop_duration>
+		<point id='0'>0.574453 -0.180365 0.712395</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.29602'>
+		<stop_duration>0.318574</stop_duration>
+		<point id='0'>0.573374 -0.174907 0.715556</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.34329'>
+		<stop_duration>0.32441</stop_duration>
+		<point id='0'>0.57207 -0.168238 0.719262</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.392'>
+		<stop_duration>0.329625</stop_duration>
+		<point id='0'>0.570621 -0.160739 0.723228</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.43934'>
+		<stop_duration>0.334615</stop_duration>
+		<point id='0'>0.568965 -0.152046 0.727567</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.48967'>
+		<stop_duration>0.339214</stop_duration>
+		<point id='0'>0.567141 -0.142305 0.732109</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.53966'>
+		<stop_duration>0.343658</stop_duration>
+		<point id='0'>0.565067 -0.131008 0.736965</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.59091'>
+		<stop_duration>0.346901</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.64228'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.69098'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.7432'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.79438'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.84664'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.89661'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.94656'>
+		<stop_duration>0.346893</stop_duration>
+		<point id='0'>0.563274 -0.121042 0.740892</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='4.9899'>
+		<stop_duration>0.25233</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.03281'>
+		<stop_duration>0.250392</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.07498'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.11759'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.17603'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.21762'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.26069'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.30556'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.34772'>
+		<stop_duration>0.250388</stop_duration>
+		<point id='0'>0.563273 -0.12104 0.740893</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.39015'>
+		<stop_duration>0.250317</stop_duration>
+		<point id='0'>0.563273 -0.121038 0.740894</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.43358'>
+		<stop_duration>0.251578</stop_duration>
+		<point id='0'>0.563264 -0.120988 0.740913</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.47419'>
+		<stop_duration>0.256823</stop_duration>
+		<point id='0'>0.563228 -0.120783 0.74099</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.51682'>
+		<stop_duration>0.261618</stop_duration>
+		<point id='0'>0.563154 -0.12037 0.741146</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.56111'>
+		<stop_duration>0.267537</stop_duration>
+		<point id='0'>0.563021 -0.119623 0.741425</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.60448'>
+		<stop_duration>0.274537</stop_duration>
+		<point id='0'>0.562813 -0.118451 0.74186</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.65307'>
+		<stop_duration>0.280874</stop_duration>
+		<point id='0'>0.562529 -0.116846 0.742449</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.70201'>
+		<stop_duration>0.289062</stop_duration>
+		<point id='0'>0.562113 -0.114485 0.743299</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.74726'>
+		<stop_duration>0.295942</stop_duration>
+		<point id='0'>0.561552 -0.111284 0.744424</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.79675'>
+		<stop_duration>0.30197</stop_duration>
+		<point id='0'>0.56092 -0.107657 0.745659</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.84637'>
+		<stop_duration>0.308359</stop_duration>
+		<point id='0'>0.560093 -0.102865 0.747226</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.89493'>
+		<stop_duration>0.314317</stop_duration>
+		<point id='0'>0.559099 -0.0970472 0.749032</point>
+		<point id='1'>1 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.94164'>
+		<stop_duration>0.319567</stop_duration>
+		<point id='0'>0.558008 -0.0905767 0.750918</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='5.98989'>
+		<stop_duration>0.324257</stop_duration>
+		<point id='0'>0.556841 -0.0835571 0.75282</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.03781'>
+		<stop_duration>0.3288</stop_duration>
+		<point id='0'>0.555495 -0.0753304 0.754858</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.08842'>
+		<stop_duration>0.332946</stop_duration>
+		<point id='0'>0.554029 -0.0662086 0.756883</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.13891'>
+		<stop_duration>0.336922</stop_duration>
+		<point id='0'>0.552383 -0.0557427 0.758905</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.18925'>
+		<stop_duration>0.340581</stop_duration>
+		<point id='0'>0.550595 -0.0440959 0.760782</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.23945'>
+		<stop_duration>0.34376</stop_duration>
+		<point id='0'>0.548797 -0.0320681 0.762312</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.28973'>
+		<stop_duration>0.346687</stop_duration>
+		<point id='0'>0.546892 -0.0189592 0.763512</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.34079'>
+		<stop_duration>0.349215</stop_duration>
+		<point id='0'>0.544981 -0.00539265 0.764244</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.3901'>
+		<stop_duration>0.351881</stop_duration>
+		<point id='0'>0.542956 0.00945751 0.764454</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.44309'>
+		<stop_duration>0.353963</stop_duration>
+		<point id='0'>0.541006 0.024264 0.76405</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.49563'>
+		<stop_duration>0.355707</stop_duration>
+		<point id='0'>0.53894 0.0405455 0.762895</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.5501'>
+		<stop_duration>0.357089</stop_duration>
+		<point id='0'>0.536904 0.0572289 0.760934</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.60019'>
+		<stop_duration>0.35807</stop_duration>
+		<point id='0'>0.534997 0.0734851 0.758257</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.65055'>
+		<stop_duration>0.358704</stop_duration>
+		<point id='0'>0.533146 0.0898655 0.75478</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.70169'>
+		<stop_duration>0.358987</stop_duration>
+		<point id='0'>0.531364 0.106246 0.750504</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.75301'>
+		<stop_duration>0.358918</stop_duration>
+		<point id='0'>0.529657 0.122503 0.745445</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.80689'>
+		<stop_duration>0.358598</stop_duration>
+		<point id='0'>0.527997 0.138853 0.73951</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.85962'>
+		<stop_duration>0.357781</stop_duration>
+		<point id='0'>0.526359 0.155482 0.732567</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.91137'>
+		<stop_duration>0.35658</stop_duration>
+		<point id='0'>0.524815 0.171576 0.724933</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='6.97063'>
+		<stop_duration>0.355075</stop_duration>
+		<point id='0'>0.523418 0.186415 0.717054</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.01963'>
+		<stop_duration>0.352968</stop_duration>
+		<point id='0'>0.521917 0.202567 0.707505</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.07073'>
+		<stop_duration>0.350866</stop_duration>
+		<point id='0'>0.520763 0.215033 0.699398</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.12134'>
+		<stop_duration>0.348404</stop_duration>
+		<point id='0'>0.519626 0.227275 0.690769</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.17264'>
+		<stop_duration>0.34556</stop_duration>
+		<point id='0'>0.518534 0.238916 0.681909</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.2241'>
+		<stop_duration>0.342423</stop_duration>
+		<point id='0'>0.517529 0.249442 0.67331</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.27502'>
+		<stop_duration>0.338845</stop_duration>
+		<point id='0'>0.516567 0.259284 0.66473</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.32614'>
+		<stop_duration>0.334798</stop_duration>
+		<point id='0'>0.515688 0.268028 0.656638</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.37888'>
+		<stop_duration>0.328263</stop_duration>
+		<point id='0'>0.514856 0.276052 0.648798</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.4277'>
+		<stop_duration>0.324922</stop_duration>
+		<point id='0'>0.514153 0.282618 0.642069</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.47666'>
+		<stop_duration>0.321465</stop_duration>
+		<point id='0'>0.513481 0.288695 0.635573</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.52406'>
+		<stop_duration>0.316322</stop_duration>
+		<point id='0'>0.512876 0.293996 0.629686</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.57053'>
+		<stop_duration>0.310798</stop_duration>
+		<point id='0'>0.512362 0.298369 0.624665</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.6119'>
+		<stop_duration>0.310798</stop_duration>
+		<point id='0'>0.510406 0.313855 0.605588</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.65998'>
+		<stop_duration>0.267177</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.70295'>
+		<stop_duration>0.256564</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.74667'>
+		<stop_duration>0.255648</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.78976'>
+		<stop_duration>0.255608</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.83219'>
+		<stop_duration>0.255607</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.87588'>
+		<stop_duration>0.255607</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.91836'>
+		<stop_duration>0.255607</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='7.96162'>
+		<stop_duration>0.255607</stop_duration>
+		<point id='0'>0.510413 0.313887 0.605509</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.00238'>
+		<stop_duration>0.252778</stop_duration>
+		<point id='0'>0.510415 0.313894 0.605494</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.04599'>
+		<stop_duration>0.26221</stop_duration>
+		<point id='0'>0.510455 0.31407 0.605064</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.09221'>
+		<stop_duration>0.300216</stop_duration>
+		<point id='0'>0.510617 0.314771 0.60334</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.14109'>
+		<stop_duration>0.317039</stop_duration>
+		<point id='0'>0.510982 0.316329 0.599413</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.18957'>
+		<stop_duration>0.338236</stop_duration>
+		<point id='0'>0.511618 0.318976 0.592411</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.24098'>
+		<stop_duration>0.356634</stop_duration>
+		<point id='0'>0.512543 0.322671 0.581827</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.29421'>
+		<stop_duration>0.376268</stop_duration>
+		<point id='0'>0.513765 0.327269 0.566938</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.34804'>
+		<stop_duration>0.394631</stop_duration>
+		<point id='0'>0.515189 0.332197 0.547807</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.40592'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.516704 0.336859 0.524128</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='8.46172'>
+		<stop_duration>0.399747</stop_duration>
+		<point id='0'>0.518092 0.34042 0.496298</point>
+		<point id='1'>2 0.5 0.496298</point>
+	</keypoint>
+	<keypoint time='8.51512'>
+		<stop_duration>0.399676</stop_duration>
+		<point id='0'>0.519041 0.342049 0.466971</point>
+		<point id='1'>2 0.5 0.466971</point>
+	</keypoint>
+	<keypoint time='8.56835'>
+		<stop_duration>0.399778</stop_duration>
+		<point id='0'>0.519394 0.341617 0.438169</point>
+		<point id='1'>2 0.5 0.438169</point>
+	</keypoint>
+	<keypoint time='8.62357'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.519115 0.339313 0.410085</point>
+		<point id='1'>2 0.5 0.410085</point>
+	</keypoint>
+	<keypoint time='8.68294'>
+		<stop_duration>0.388637</stop_duration>
+		<point id='0'>0.51819 0.335348 0.382963</point>
+		<point id='1'>2 0.5 0.382963</point>
+	</keypoint>
+	<keypoint time='8.73136'>
+		<stop_duration>0.363443</stop_duration>
+		<point id='0'>0.516812 0.330556 0.359554</point>
+		<point id='1'>2 0.5 0.359554</point>
+	</keypoint>
+	<keypoint time='8.78166'>
+		<stop_duration>0.356708</stop_duration>
+		<point id='0'>0.515406 0.326177 0.342193</point>
+		<point id='1'>2 0.5 0.342193</point>
+	</keypoint>
+	<keypoint time='8.83345'>
+		<stop_duration>0.343098</stop_duration>
+		<point id='0'>0.513966 0.321992 0.327752</point>
+		<point id='1'>2 0.5 0.327752</point>
+	</keypoint>
+	<keypoint time='8.88575'>
+		<stop_duration>0.32128</stop_duration>
+		<point id='0'>0.512702 0.318495 0.316833</point>
+		<point id='1'>2 0.5 0.316833</point>
+	</keypoint>
+	<keypoint time='8.92872'>
+		<stop_duration>0.262144</stop_duration>
+		<point id='0'>0.511836 0.316174 0.310038</point>
+		<point id='1'>2 0.5 0.310038</point>
+	</keypoint>
+	<keypoint time='8.97161'>
+		<stop_duration>0.250176</stop_duration>
+		<point id='0'>0.51142 0.31508 0.306946</point>
+		<point id='1'>2 0.5 0.306946</point>
+	</keypoint>
+	<keypoint time='9.01567'>
+		<stop_duration>0.251884</stop_duration>
+		<point id='0'>0.511242 0.314614 0.305649</point>
+		<point id='1'>2 0.5 0.305649</point>
+	</keypoint>
+	<keypoint time='9.0606'>
+		<stop_duration>0.250395</stop_duration>
+		<point id='0'>0.51121 0.31453 0.305415</point>
+		<point id='1'>2 0.5 0.305415</point>
+	</keypoint>
+	<keypoint time='9.10338'>
+		<stop_duration>0.254994</stop_duration>
+		<point id='0'>0.511227 0.314565 0.305516</point>
+		<point id='1'>2 0.5 0.305516</point>
+	</keypoint>
+	<keypoint time='9.14636'>
+		<stop_duration>0.264338</stop_duration>
+		<point id='0'>0.511388 0.314889 0.306448</point>
+		<point id='1'>2 0.5 0.306448</point>
+	</keypoint>
+	<keypoint time='9.19425'>
+		<stop_duration>0.308763</stop_duration>
+		<point id='0'>0.511824 0.315773 0.309011</point>
+		<point id='1'>2 0.5 0.309011</point>
+	</keypoint>
+	<keypoint time='9.24322'>
+		<stop_duration>0.321691</stop_duration>
+		<point id='0'>0.512706 0.317582 0.314401</point>
+		<point id='1'>2 0.5 0.314401</point>
+	</keypoint>
+	<keypoint time='9.29401'>
+		<stop_duration>0.342775</stop_duration>
+		<point id='0'>0.514082 0.32047 0.323425</point>
+		<point id='1'>2 0.5 0.323425</point>
+	</keypoint>
+	<keypoint time='9.34994'>
+		<stop_duration>0.356627</stop_duration>
+		<point id='0'>0.51586 0.324338 0.336487</point>
+		<point id='1'>2 0.5 0.336487</point>
+	</keypoint>
+	<keypoint time='9.40213'>
+		<stop_duration>0.369918</stop_duration>
+		<point id='0'>0.518016 0.329295 0.355426</point>
+		<point id='1'>2 0.5 0.355426</point>
+	</keypoint>
+	<keypoint time='9.4577'>
+		<stop_duration>0.380357</stop_duration>
+		<point id='0'>0.519926 0.334044 0.377203</point>
+		<point id='1'>2 0.5 0.377203</point>
+	</keypoint>
+	<keypoint time='9.51216'>
+		<stop_duration>0.390133</stop_duration>
+		<point id='0'>0.521506 0.33845 0.403704</point>
+		<point id='1'>2 0.5 0.403704</point>
+	</keypoint>
+	<keypoint time='9.56535'>
+		<stop_duration>0.393273</stop_duration>
+		<point id='0'>0.522375 0.341427 0.431435</point>
+		<point id='1'>2 0.5 0.431435</point>
+	</keypoint>
+	<keypoint time='9.61895'>
+		<stop_duration>0.394148</stop_duration>
+		<point id='0'>0.522523 0.342706 0.460141</point>
+		<point id='1'>2 0.5 0.460141</point>
+	</keypoint>
+	<keypoint time='9.67126'>
+		<stop_duration>0.387977</stop_duration>
+		<point id='0'>0.522003 0.342102 0.488525</point>
+		<point id='1'>2 0.5 0.488525</point>
+	</keypoint>
+	<keypoint time='9.72707'>
+		<stop_duration>0.380799</stop_duration>
+		<point id='0'>0.520998 0.339801 0.514824</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='9.78176'>
+		<stop_duration>0.371021</stop_duration>
+		<point id='0'>0.519622 0.335944 0.539948</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='9.83491'>
+		<stop_duration>0.352849</stop_duration>
+		<point id='0'>0.518197 0.331397 0.560925</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='9.88519'>
+		<stop_duration>0.346678</stop_duration>
+		<point id='0'>0.516919 0.326911 0.577434</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='9.93319'>
+		<stop_duration>0.333485</stop_duration>
+		<point id='0'>0.515939 0.323225 0.589112</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='9.98284'>
+		<stop_duration>0.312501</stop_duration>
+		<point id='0'>0.515267 0.320573 0.59675</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.0265'>
+		<stop_duration>0.260018</stop_duration>
+		<point id='0'>0.514818 0.318743 0.601715</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.0706'>
+		<stop_duration>0.254204</stop_duration>
+		<point id='0'>0.514627 0.317954 0.603788</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.1124'>
+		<stop_duration>0.252009</stop_duration>
+		<point id='0'>0.514563 0.317687 0.604481</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.1586'>
+		<stop_duration>0.250027</stop_duration>
+		<point id='0'>0.51456 0.317671 0.604521</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.202'>
+		<stop_duration>0.25153</stop_duration>
+		<point id='0'>0.514562 0.317648 0.604552</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.2444'>
+		<stop_duration>0.257017</stop_duration>
+		<point id='0'>0.514577 0.31751 0.604737</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.2881'>
+		<stop_duration>0.264343</stop_duration>
+		<point id='0'>0.514614 0.317181 0.605175</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.3355'>
+		<stop_duration>0.272315</stop_duration>
+		<point id='0'>0.514684 0.316545 0.606021</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.3802'>
+		<stop_duration>0.282489</stop_duration>
+		<point id='0'>0.514808 0.315408 0.60752</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.4268'>
+		<stop_duration>0.290786</stop_duration>
+		<point id='0'>0.514972 0.313894 0.609496</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.4725'>
+		<stop_duration>0.300747</stop_duration>
+		<point id='0'>0.51521 0.311683 0.612339</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.5185'>
+		<stop_duration>0.308201</stop_duration>
+		<point id='0'>0.515501 0.308935 0.615802</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.5659'>
+		<stop_duration>0.315742</stop_duration>
+		<point id='0'>0.51587 0.30541 0.620138</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.6135'>
+		<stop_duration>0.323005</stop_duration>
+		<point id='0'>0.516336 0.300879 0.625541</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.6628'>
+		<stop_duration>0.329543</stop_duration>
+		<point id='0'>0.516876 0.295547 0.631667</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.712'>
+		<stop_duration>0.335928</stop_duration>
+		<point id='0'>0.517533 0.28895 0.638918</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.7609'>
+		<stop_duration>0.341783</stop_duration>
+		<point id='0'>0.518291 0.28124 0.646961</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.8081'>
+		<stop_duration>0.347213</stop_duration>
+		<point id='0'>0.519157 0.272355 0.655695</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.8611'>
+		<stop_duration>0.351904</stop_duration>
+		<point id='0'>0.520073 0.262939 0.664372</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.913'>
+		<stop_duration>0.357122</stop_duration>
+		<point id='0'>0.521281 0.250595 0.674915</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='10.9664'>
+		<stop_duration>0.361675</stop_duration>
+		<point id='0'>0.522602 0.2373 0.685299</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.0171'>
+		<stop_duration>0.366267</stop_duration>
+		<point id='0'>0.524169 0.221936 0.696154</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.0691'>
+		<stop_duration>0.370156</stop_duration>
+		<point id='0'>0.525843 0.206097 0.706162</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.1183'>
+		<stop_duration>0.374031</stop_duration>
+		<point id='0'>0.527824 0.188187 0.716149</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.1682'>
+		<stop_duration>0.377351</stop_duration>
+		<point id='0'>0.529924 0.170141 0.724887</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.219'>
+		<stop_duration>0.380929</stop_duration>
+		<point id='0'>0.532333 0.150565 0.732963</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.2728'>
+		<stop_duration>0.383846</stop_duration>
+		<point id='0'>0.534966 0.130411 0.73984</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.3259'>
+		<stop_duration>0.386601</stop_duration>
+		<point id='0'>0.538151 0.107553 0.745968</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.3806'>
+		<stop_duration>0.388643</stop_duration>
+		<point id='0'>0.541602 0.0843869 0.750441</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.4349'>
+		<stop_duration>0.390008</stop_duration>
+		<point id='0'>0.545536 0.0597095 0.753346</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.4874'>
+		<stop_duration>0.390482</stop_duration>
+		<point id='0'>0.549797 0.034717 0.754374</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.5402'>
+		<stop_duration>0.390052</stop_duration>
+		<point id='0'>0.554166 0.0106638 0.75356</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.5922'>
+		<stop_duration>0.388783</stop_duration>
+		<point id='0'>0.55876 -0.0131819 0.751</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.6448'>
+		<stop_duration>0.386806</stop_duration>
+		<point id='0'>0.563524 -0.0365838 0.746765</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.6982'>
+		<stop_duration>0.384269</stop_duration>
+		<point id='0'>0.568395 -0.0593213 0.740971</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.7563'>
+		<stop_duration>0.381246</stop_duration>
+		<point id='0'>0.573406 -0.0816312 0.733616</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.8077'>
+		<stop_duration>0.377624</stop_duration>
+		<point id='0'>0.578779 -0.104506 0.724271</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.8586'>
+		<stop_duration>0.374061</stop_duration>
+		<point id='0'>0.583449 -0.123626 0.714977</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.9125'>
+		<stop_duration>0.37039</stop_duration>
+		<point id='0'>0.587865 -0.14114 0.705202</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='11.9631'>
+		<stop_duration>0.366301</stop_duration>
+		<point id='0'>0.592337 -0.158383 0.694318</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.0125'>
+		<stop_duration>0.362162</stop_duration>
+		<point id='0'>0.596284 -0.173241 0.683863</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.0632'>
+		<stop_duration>0.357838</stop_duration>
+		<point id='0'>0.599875 -0.186499 0.673632</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.1141'>
+		<stop_duration>0.353064</stop_duration>
+		<point id='0'>0.60331 -0.198982 0.663163</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.163'>
+		<stop_duration>0.347905</stop_duration>
+		<point id='0'>0.60635 -0.209888 0.653304</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.2122'>
+		<stop_duration>0.341404</stop_duration>
+		<point id='0'>0.609008 -0.219334 0.64419</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.2607'>
+		<stop_duration>0.334082</stop_duration>
+		<point id='0'>0.611305 -0.227442 0.635913</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.3084'>
+		<stop_duration>0.330628</stop_duration>
+		<point id='0'>0.61335 -0.234623 0.628209</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.3579'>
+		<stop_duration>0.32467</stop_duration>
+		<point id='0'>0.615029 -0.2405 0.62163</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.4048'>
+		<stop_duration>0.317578</stop_duration>
+		<point id='0'>0.616508 -0.245669 0.61563</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.4542'>
+		<stop_duration>0.310025</stop_duration>
+		<point id='0'>0.617674 -0.249741 0.610755</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.5018'>
+		<stop_duration>0.301624</stop_duration>
+		<point id='0'>0.618653 -0.253159 0.606559</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.5491'>
+		<stop_duration>0.292415</stop_duration>
+		<point id='0'>0.619394 -0.255745 0.603319</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.5976'>
+		<stop_duration>0.282784</stop_duration>
+		<point id='0'>0.619933 -0.257625 0.600928</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.6424'>
+		<stop_duration>0.270037</stop_duration>
+		<point id='0'>0.620317 -0.258967 0.599201</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.6866'>
+		<stop_duration>0.261786</stop_duration>
+		<point id='0'>0.620543 -0.259756 0.598179</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.73'>
+		<stop_duration>0.251517</stop_duration>
+		<point id='0'>0.620676 -0.260219 0.597576</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.7726'>
+		<stop_duration>0.250162</stop_duration>
+		<point id='0'>0.620733 -0.260419 0.597315</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.8157'>
+		<stop_duration>0.250248</stop_duration>
+		<point id='0'>0.620748 -0.260473 0.597246</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.8589'>
+		<stop_duration>0.252568</stop_duration>
+		<point id='0'>0.620751 -0.260478 0.597229</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.9025'>
+		<stop_duration>0.262806</stop_duration>
+		<point id='0'>0.620835 -0.260603 0.596754</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.948'>
+		<stop_duration>0.295069</stop_duration>
+		<point id='0'>0.621158 -0.261083 0.59491</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='12.9937'>
+		<stop_duration>0.31058</stop_duration>
+		<point id='0'>0.621848 -0.262112 0.590885</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.0499'>
+		<stop_duration>0.327527</stop_duration>
+		<point id='0'>0.622975 -0.263804 0.584011</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.1'>
+		<stop_duration>0.344379</stop_duration>
+		<point id='0'>0.624854 -0.266659 0.571573</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.1517'>
+		<stop_duration>0.353769</stop_duration>
+		<point id='0'>0.626829 -0.269728 0.556731</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.2051'>
+		<stop_duration>0.362817</stop_duration>
+		<point id='0'>0.628951 -0.273149 0.537612</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.2731'>
+		<stop_duration>0.369815</stop_duration>
+		<point id='0'>0.630908 -0.276532 0.51427</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='13.326'>
+		<stop_duration>0.37452</stop_duration>
+		<point id='0'>0.632405 -0.279612 0.484437</point>
+		<point id='1'>2 0.5 0.484437</point>
+	</keypoint>
+	<keypoint time='13.3769'>
+		<stop_duration>0.375972</stop_duration>
+		<point id='0'>0.632795 -0.28123 0.457173</point>
+		<point id='1'>2 0.5 0.457173</point>
+	</keypoint>
+	<keypoint time='13.4295'>
+		<stop_duration>0.374457</stop_duration>
+		<point id='0'>0.632274 -0.281717 0.430699</point>
+		<point id='1'>2 0.5 0.430699</point>
+	</keypoint>
+	<keypoint time='13.4839'>
+		<stop_duration>0.370052</stop_duration>
+		<point id='0'>0.630793 -0.281102 0.403333</point>
+		<point id='1'>2 0.5 0.403333</point>
+	</keypoint>
+	<keypoint time='13.5383'>
+		<stop_duration>0.363259</stop_duration>
+		<point id='0'>0.628537 -0.279504 0.377906</point>
+		<point id='1'>2 0.5 0.377906</point>
+	</keypoint>
+	<keypoint time='13.5901'>
+		<stop_duration>0.350758</stop_duration>
+		<point id='0'>0.625755 -0.277205 0.354984</point>
+		<point id='1'>2 0.5 0.354984</point>
+	</keypoint>
+	<keypoint time='13.6435'>
+		<stop_duration>0.343883</stop_duration>
+		<point id='0'>0.623041 -0.274804 0.336889</point>
+		<point id='1'>2 0.5 0.336889</point>
+	</keypoint>
+	<keypoint time='13.6925'>
+		<stop_duration>0.330747</stop_duration>
+		<point id='0'>0.620466 -0.272446 0.32207</point>
+		<point id='1'>2 0.5 0.32207</point>
+	</keypoint>
+	<keypoint time='13.7396'>
+		<stop_duration>0.310792</stop_duration>
+		<point id='0'>0.618568 -0.270673 0.312187</point>
+		<point id='1'>2 0.5 0.312187</point>
+	</keypoint>
+	<keypoint time='13.7839'>
+		<stop_duration>0.269528</stop_duration>
+		<point id='0'>0.617317 -0.269492 0.306063</point>
+		<point id='1'>2 0.5 0.306063</point>
+	</keypoint>
+	<keypoint time='13.8271'>
+		<stop_duration>0.254369</stop_duration>
+		<point id='0'>0.616594 -0.268806 0.302645</point>
+		<point id='1'>2 0.5 0.302645</point>
+	</keypoint>
+	<keypoint time='13.8703'>
+		<stop_duration>0.251578</stop_duration>
+		<point id='0'>0.616292 -0.268519 0.301242</point>
+		<point id='1'>2 0.5 0.301242</point>
+	</keypoint>
+	<keypoint time='13.9169'>
+		<stop_duration>0.250771</stop_duration>
+		<point id='0'>0.616229 -0.268459 0.300951</point>
+		<point id='1'>2 0.5 0.300951</point>
+	</keypoint>
+	<keypoint time='13.9665'>
+		<stop_duration>0.254636</stop_duration>
+		<point id='0'>0.616245 -0.268477 0.301032</point>
+		<point id='1'>2 0.5 0.301032</point>
+	</keypoint>
+	<keypoint time='14.0083'>
+		<stop_duration>0.265216</stop_duration>
+		<point id='0'>0.616459 -0.268724 0.302129</point>
+		<point id='1'>2 0.5 0.302129</point>
+	</keypoint>
+	<keypoint time='14.0584'>
+		<stop_duration>0.301012</stop_duration>
+		<point id='0'>0.616962 -0.269305 0.304741</point>
+		<point id='1'>2 0.5 0.304741</point>
+	</keypoint>
+	<keypoint time='14.1115'>
+		<stop_duration>0.315832</stop_duration>
+		<point id='0'>0.618042 -0.270553 0.310536</point>
+		<point id='1'>2 0.5 0.310536</point>
+	</keypoint>
+	<keypoint time='14.1648'>
+		<stop_duration>0.335505</stop_duration>
+		<point id='0'>0.619819 -0.272614 0.320721</point>
+		<point id='1'>2 0.5 0.320721</point>
+	</keypoint>
+	<keypoint time='14.2173'>
+		<stop_duration>0.348902</stop_duration>
+		<point id='0'>0.622038 -0.2752 0.334876</point>
+		<point id='1'>2 0.5 0.334876</point>
+	</keypoint>
+	<keypoint time='14.2718'>
+		<stop_duration>0.358816</stop_duration>
+		<point id='0'>0.624477 -0.278056 0.353068</point>
+		<point id='1'>2 0.5 0.353068</point>
+	</keypoint>
+	<keypoint time='14.3241'>
+		<stop_duration>0.367238</stop_duration>
+		<point id='0'>0.626897 -0.280901 0.375852</point>
+		<point id='1'>2 0.5 0.375852</point>
+	</keypoint>
+	<keypoint time='14.3751'>
+		<stop_duration>0.372604</stop_duration>
+		<point id='0'>0.628763 -0.283091 0.400731</point>
+		<point id='1'>2 0.5 0.400731</point>
+	</keypoint>
+	<keypoint time='14.4262'>
+		<stop_duration>0.375336</stop_duration>
+		<point id='0'>0.629868 -0.284357 0.426489</point>
+		<point id='1'>2 0.5 0.426489</point>
+	</keypoint>
+	<keypoint time='14.4798'>
+		<stop_duration>0.375611</stop_duration>
+		<point id='0'>0.630146 -0.284591 0.453714</point>
+		<point id='1'>2 0.5 0.453714</point>
+	</keypoint>
+	<keypoint time='14.5318'>
+		<stop_duration>0.372722</stop_duration>
+		<point id='0'>0.629488 -0.283627 0.481906</point>
+		<point id='1'>2 0.5 0.481906</point>
+	</keypoint>
+	<keypoint time='14.5829'>
+		<stop_duration>0.367392</stop_duration>
+		<point id='0'>0.628015 -0.281603 0.50823</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.6363'>
+		<stop_duration>0.360208</stop_duration>
+		<point id='0'>0.626042 -0.278916 0.531312</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.6867'>
+		<stop_duration>0.347216</stop_duration>
+		<point id='0'>0.623642 -0.275647 0.552696</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.7361'>
+		<stop_duration>0.33972</stop_duration>
+		<point id='0'>0.621403 -0.272586 0.569252</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.7962'>
+		<stop_duration>0.32677</stop_duration>
+		<point id='0'>0.619475 -0.269942 0.58184</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.8431'>
+		<stop_duration>0.30439</stop_duration>
+		<point id='0'>0.617721 -0.267528 0.592311</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.8862'>
+		<stop_duration>0.258742</stop_duration>
+		<point id='0'>0.616874 -0.266361 0.597089</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.9292'>
+		<stop_duration>0.254322</stop_duration>
+		<point id='0'>0.616482 -0.265819 0.599253</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='14.9727'>
+		<stop_duration>0.252013</stop_duration>
+		<point id='0'>0.616353 -0.265641 0.599954</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.0158'>
+		<stop_duration>0.25006</stop_duration>
+		<point id='0'>0.616344 -0.265629 0.600002</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.0594'>
+		<stop_duration>0.251966</stop_duration>
+		<point id='0'>0.616332 -0.265611 0.600047</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.1005'>
+		<stop_duration>0.255156</stop_duration>
+		<point id='0'>0.616262 -0.265509 0.600302</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.1444'>
+		<stop_duration>0.2661</stop_duration>
+		<point id='0'>0.616099 -0.26527 0.600898</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.1891'>
+		<stop_duration>0.274467</stop_duration>
+		<point id='0'>0.615773 -0.264793 0.602082</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.2365'>
+		<stop_duration>0.284432</stop_duration>
+		<point id='0'>0.615236 -0.264 0.604024</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.2828'>
+		<stop_duration>0.294823</stop_duration>
+		<point id='0'>0.614388 -0.262735 0.60707</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.3304'>
+		<stop_duration>0.305454</stop_duration>
+		<point id='0'>0.613274 -0.26105 0.611028</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.3797'>
+		<stop_duration>0.314404</stop_duration>
+		<point id='0'>0.61179 -0.258765 0.616222</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.4281'>
+		<stop_duration>0.323612</stop_duration>
+		<point id='0'>0.609835 -0.255681 0.622946</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.4778'>
+		<stop_duration>0.332172</stop_duration>
+		<point id='0'>0.607493 -0.25188 0.630821</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.5266'>
+		<stop_duration>0.340845</stop_duration>
+		<point id='0'>0.604638 -0.247085 0.640176</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.5784'>
+		<stop_duration>0.349598</stop_duration>
+		<point id='0'>0.601302 -0.241258 0.650786</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.6311'>
+		<stop_duration>0.359361</stop_duration>
+		<point id='0'>0.597303 -0.233948 0.663083</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.685'>
+		<stop_duration>0.370467</stop_duration>
+		<point id='0'>0.592683 -0.225049 0.676752</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.7372'>
+		<stop_duration>0.384204</stop_duration>
+		<point id='0'>0.587327 -0.214095 0.691936</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.7956'>
+		<stop_duration>0.3953</stop_duration>
+		<point id='0'>0.581822 -0.20208 0.706845</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.8512'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.575172 -0.186457 0.723961</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.9048'>
+		<stop_duration>0.399774</stop_duration>
+		<point id='0'>0.568423 -0.169213 0.74037</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='15.9588'>
+		<stop_duration>0.399485</stop_duration>
+		<point id='0'>0.56174 -0.150557 0.755665</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.0143'>
+		<stop_duration>0.399124</stop_duration>
+		<point id='0'>0.555009 -0.12988 0.770078</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.0701'>
+		<stop_duration>0.399356</stop_duration>
+		<point id='0'>0.548122 -0.106314 0.783704</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.1248'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.54165 -0.0813062 0.795311</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.1804'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.535625 -0.0546373 0.804808</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.2466'>
+		<stop_duration>0.398716</stop_duration>
+		<point id='0'>0.530102 -0.0260256 0.811997</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.3011'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.524607 0.00888406 0.816877</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.3579'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.520944 0.0387336 0.81783</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.4132'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.518103 0.0699214 0.815732</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.4689'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.516315 0.0996588 0.81078</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.5235'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.515422 0.129274 0.802903</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.5792'>
+		<stop_duration>0.39913</stop_duration>
+		<point id='0'>0.515392 0.157241 0.792625</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.6353'>
+		<stop_duration>0.399363</stop_duration>
+		<point id='0'>0.516128 0.184311 0.779846</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.6938'>
+		<stop_duration>0.399594</stop_duration>
+		<point id='0'>0.517512 0.209631 0.76512</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.7495'>
+		<stop_duration>0.399593</stop_duration>
+		<point id='0'>0.519485 0.233836 0.748221</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.8148'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.52175 0.254983 0.730872</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.869'>
+		<stop_duration>0.4</stop_duration>
+		<point id='0'>0.524671 0.276992 0.709813</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.9228'>
+		<stop_duration>0.386906</stop_duration>
+		<point id='0'>0.527142 0.292781 0.692472</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='16.9745'>
+		<stop_duration>0.376218</stop_duration>
+		<point id='0'>0.529624 0.306853 0.675139</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.0274'>
+		<stop_duration>0.366615</stop_duration>
+		<point id='0'>0.531851 0.318311 0.659481</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.0763'>
+		<stop_duration>0.357125</stop_duration>
+		<point id='0'>0.533961 0.328335 0.644439</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.1279'>
+		<stop_duration>0.34842</stop_duration>
+		<point id='0'>0.535757 0.336324 0.631401</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.1785'>
+		<stop_duration>0.338514</stop_duration>
+		<point id='0'>0.537417 0.343321 0.619087</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.228'>
+		<stop_duration>0.327041</stop_duration>
+		<point id='0'>0.538822 0.348975 0.608436</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.2756'>
+		<stop_duration>0.322023</stop_duration>
+		<point id='0'>0.539984 0.353483 0.599433</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.3225'>
+		<stop_duration>0.313763</stop_duration>
+		<point id='0'>0.540923 0.357019 0.592015</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.3698'>
+		<stop_duration>0.304728</stop_duration>
+		<point id='0'>0.541661 0.359736 0.586078</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.418'>
+		<stop_duration>0.294978</stop_duration>
+		<point id='0'>0.542224 0.361771 0.581488</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.4663'>
+		<stop_duration>0.283773</stop_duration>
+		<point id='0'>0.542669 0.363358 0.577817</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.5138'>
+		<stop_duration>0.27053</stop_duration>
+		<point id='0'>0.542967 0.36441 0.575338</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.5563'>
+		<stop_duration>0.256568</stop_duration>
+		<point id='0'>0.543148 0.365044 0.573823</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.6025'>
+		<stop_duration>0.25004</stop_duration>
+		<point id='0'>0.543237 0.365357 0.573072</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.6479'>
+		<stop_duration>0.250416</stop_duration>
+		<point id='0'>0.543276 0.365494 0.572741</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.6995'>
+		<stop_duration>0.250135</stop_duration>
+		<point id='0'>0.543283 0.365518 0.572684</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.7451'>
+		<stop_duration>0.256715</stop_duration>
+		<point id='0'>0.543312 0.365558 0.572518</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.7912'>
+		<stop_duration>0.282437</stop_duration>
+		<point id='0'>0.543532 0.365867 0.571238</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.839'>
+		<stop_duration>0.304427</stop_duration>
+		<point id='0'>0.544097 0.366659 0.5679</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.8867'>
+		<stop_duration>0.32131</stop_duration>
+		<point id='0'>0.545115 0.368083 0.561683</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.9393'>
+		<stop_duration>0.336603</stop_duration>
+		<point id='0'>0.546578 0.370123 0.552231</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='17.9882'>
+		<stop_duration>0.347838</stop_duration>
+		<point id='0'>0.548629 0.372964 0.537723</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='18.0398'>
+		<stop_duration>0.35576</stop_duration>
+		<point id='0'>0.550774 0.375901 0.520398</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='18.0936'>
+		<stop_duration>0.361912</stop_duration>
+		<point id='0'>0.552984 0.378867 0.498889</point>
+		<point id='1'>2 0.5 0.498889</point>
+	</keypoint>
+	<keypoint time='18.145'>
+		<stop_duration>0.365973</stop_duration>
+		<point id='0'>0.554959 0.38141 0.473464</point>
+		<point id='1'>2 0.5 0.473464</point>
+	</keypoint>
+	<keypoint time='18.1964'>
+		<stop_duration>0.36812</stop_duration>
+		<point id='0'>0.556289 0.382954 0.447054</point>
+		<point id='1'>2 0.5 0.447054</point>
+	</keypoint>
+	<keypoint time='18.2542'>
+		<stop_duration>0.368483</stop_duration>
+		<point id='0'>0.556892 0.383377 0.419711</point>
+		<point id='1'>2 0.5 0.419711</point>
+	</keypoint>
+	<keypoint time='18.3062'>
+		<stop_duration>0.36667</stop_duration>
+		<point id='0'>0.55663 0.382426 0.389179</point>
+		<point id='1'>2 0.5 0.389179</point>
+	</keypoint>
+	<keypoint time='18.3613'>
+		<stop_duration>0.363048</stop_duration>
+		<point id='0'>0.555627 0.380437 0.363412</point>
+		<point id='1'>2 0.5 0.363412</point>
+	</keypoint>
+	<keypoint time='18.4117'>
+		<stop_duration>0.356501</stop_duration>
+		<point id='0'>0.553925 0.377403 0.338098</point>
+		<point id='1'>2 0.5 0.338098</point>
+	</keypoint>
+	<keypoint time='18.4646'>
+		<stop_duration>0.349627</stop_duration>
+		<point id='0'>0.552086 0.374269 0.31833</point>
+		<point id='1'>2 0.5 0.31833</point>
+	</keypoint>
+	<keypoint time='18.5163'>
+		<stop_duration>0.339797</stop_duration>
+		<point id='0'>0.550146 0.371043 0.301427</point>
+		<point id='1'>2 0.5 0.301427</point>
+	</keypoint>
+	<keypoint time='18.5647'>
+		<stop_duration>0.325695</stop_duration>
+		<point id='0'>0.54847 0.368298 0.288812</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.6133'>
+		<stop_duration>0.304947</stop_duration>
+		<point id='0'>0.547259 0.366333 0.280521</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.6606'>
+		<stop_duration>0.276165</stop_duration>
+		<point id='0'>0.546465 0.365053 0.275393</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.7032'>
+		<stop_duration>0.250854</stop_duration>
+		<point id='0'>0.546068 0.364413 0.272903</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.746'>
+		<stop_duration>0.252143</stop_duration>
+		<point id='0'>0.545961 0.364242 0.272242</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.7888'>
+		<stop_duration>0.2511</stop_duration>
+		<point id='0'>0.545953 0.36423 0.272197</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.8326'>
+		<stop_duration>0.258348</stop_duration>
+		<point id='0'>0.546014 0.364313 0.272518</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.8804'>
+		<stop_duration>0.28524</stop_duration>
+		<point id='0'>0.546298 0.364699 0.274028</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.9268'>
+		<stop_duration>0.303456</stop_duration>
+		<point id='0'>0.54699 0.365639 0.277778</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='18.9775'>
+		<stop_duration>0.320467</stop_duration>
+		<point id='0'>0.548149 0.367212 0.284319</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='19.0389'>
+		<stop_duration>0.337511</stop_duration>
+		<point id='0'>0.549882 0.369553 0.294783</point>
+		<point id='1'>2 0.5 0.3</point>
+	</keypoint>
+	<keypoint time='19.0961'>
+		<stop_duration>0.350714</stop_duration>
+		<point id='0'>0.552481 0.373036 0.312479</point>
+		<point id='1'>2 0.5 0.312479</point>
+	</keypoint>
+	<keypoint time='19.1462'>
+		<stop_duration>0.358579</stop_duration>
+		<point id='0'>0.555061 0.376443 0.333639</point>
+		<point id='1'>2 0.5 0.333639</point>
+	</keypoint>
+	<keypoint time='19.1969'>
+		<stop_duration>0.363495</stop_duration>
+		<point id='0'>0.557161 0.37915 0.355712</point>
+		<point id='1'>2 0.5 0.355712</point>
+	</keypoint>
+	<keypoint time='19.2489'>
+		<stop_duration>0.366418</stop_duration>
+		<point id='0'>0.558807 0.381178 0.380223</point>
+		<point id='1'>2 0.5 0.380223</point>
+	</keypoint>
+	<keypoint time='19.3003'>
+		<stop_duration>0.367925</stop_duration>
+		<point id='0'>0.559799 0.38225 0.406903</point>
+		<point id='1'>2 0.5 0.406903</point>
+	</keypoint>
+	<keypoint time='19.3543'>
+		<stop_duration>0.367289</stop_duration>
+		<point id='0'>0.559957 0.382138 0.434801</point>
+		<point id='1'>2 0.5 0.434801</point>
+	</keypoint>
+	<keypoint time='19.4078'>
+		<stop_duration>0.364632</stop_duration>
+		<point id='0'>0.559242 0.380822 0.462223</point>
+		<point id='1'>2 0.5 0.462223</point>
+	</keypoint>
+	<keypoint time='19.4591'>
+		<stop_duration>0.359829</stop_duration>
+		<point id='0'>0.55774 0.378446 0.488547</point>
+		<point id='1'>2 0.5 0.488547</point>
+	</keypoint>
+	<keypoint time='19.5095'>
+		<stop_duration>0.352865</stop_duration>
+		<point id='0'>0.555795 0.375522 0.511259</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.5603'>
+		<stop_duration>0.343093</stop_duration>
+		<point id='0'>0.553732 0.372505 0.52996</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.6093'>
+		<stop_duration>0.332804</stop_duration>
+		<point id='0'>0.551656 0.369523 0.54577</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.6575'>
+		<stop_duration>0.315487</stop_duration>
+		<point id='0'>0.550003 0.367176 0.556939</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.7041'>
+		<stop_duration>0.296413</stop_duration>
+		<point id='0'>0.548775 0.365446 0.564617</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.7478'>
+		<stop_duration>0.271058</stop_duration>
+		<point id='0'>0.548031 0.364403 0.569056</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.791'>
+		<stop_duration>0.250942</stop_duration>
+		<point id='0'>0.547702 0.363943 0.570968</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+	<keypoint time='19.8341'>
+		<stop_duration>0.250991</stop_duration>
+		<point id='0'>0.547617 0.363824 0.571462</point>
+		<point id='1'>2 0.5 0.5</point>
+	</keypoint>
+</distance>
