@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Panda — Franka Emika DAE Viewer</title>
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.185.1/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.185.1/examples/jsm/"
+  }
+}
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div style="display:flex; height:100%">
+  <div id="plot" style="width:70%; height:100%">
+    <div id="loading"><div class="spin"></div><div class="txt" id="loadingTxt">Loading Franka mesh library…</div></div>
+
+    <div id="hud">
+      <div class="tag"></div>
+      <div class="title" style="display:flex">
+        <img src="img/logo_unibz.svg" width="100px">
+        <h1>SSM with skeleton tracking application</h1>
+      </div>
+    </div>
+    <p id="rula_score"></p>
+  </div>
+
+  <div style="width:30%; height:100%">
+    <div>
+      <img id="image1" src="" style="max-width:100%;">
+    </div>
+    <div>
+      <img id="image2" src="" style="max-width:100%;">
+    </div>
+    <div>
+      <img id="image3" src="" style="max-width:100%;">
+    </div>
+    <div>
+      <img id="image4" src="" style="max-width:100%;">
+    </div>
+  </div>
+</div>
+
+
+<script type="module" src="js/scene.js"></script>
+<script type="module" src="js/robot.js"></script>
+<script type="module" src="js/camera.js"></script>
+<script type="module" src="js/capsules.js"></script>
+</body>
+</html>
