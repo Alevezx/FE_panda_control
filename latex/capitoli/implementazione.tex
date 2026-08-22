@@ -1,0 +1,113 @@
+
+\section{Braccio robotico}
+Il manipolatore utilizzato in questa attività di tesi è il \textit{Franka Emika Panda} mostrato in Figura~\ref{fig:robot_reale}, un robot collaborativo a $7$ gradi di libertà costruito appositamente per l'interazione sicura con l'operatore umano.
+
+\begin{figure} [htbp]
+    \centering
+    \includegraphics[width=0.4\linewidth]{figure_tesi/robot_reale.png}
+    \caption{Robot collaborativo \textit{Franka Emika Panda}}
+    \label{fig:robot_reale}
+\end{figure}
+
+Il robot ha una lunghezza massima di $850\text{ mm}$ e un carico utile \textit{payload} nominale di $3 \text{ kg}$. La struttura a $7$ gradi di libertà introduce una ridondanza cinematica che consente di evitare singolarità e ostacoli nello spazio di lavoro, mantenendo inalterata la posa dell'end-effector.
+
+Alcune applicazioni comuni includono assemblaggio di precisione, operazioni di \textit{pick-and-place} e ispezione di qualità. L'elemento distintivo del Franka Emika Panda è l'integrazione di sensori di coppia ai giunti (\textit{joint torque sensors}) su ciascuno dei $7$ assi. Questi consentono:
+\begin{itemize}
+    \item \textbf{Controllo in coppia e impedenza:} Possibilità di regolare la rigidezza del robot per interagire in modo conforme con l'ambiente circostante;
+    \item \textbf{Sicurezza intrinseca:} Rilevamento tempestivo di collisioni non pianificate con l'operatore umano o la cella di lavoro, garantendo l'arresto immediato o reazioni elastiche;
+    \item \textbf{Apprendimento per dimostrazione:} Programmazione intuitiva tramite guida manuale (\textit{lead-through programming}).
+\end{itemize}
+
+\section{Architettura di controllo e libreria \textit{libfranka}}
+
+Per l'interfaccia a basso livello con il manipolatore è stata impiegata la libreria \textit{libfranka}, una libreria nativa in C++ fornita da Franka Emika che si connette direttamente alla \textit{Franka Control Interface} (FCI) tramite connessione di rete Ethernet dedicata su protocollo UDP/IP. 
+
+La FCI consente di accedere allo stato completo del robot e di inviare comandi di controllo a una frequenza di $1\text{ kHz}$ ($1\text{ ms}$ di tempo di ciclo). Per garantire l'esecuzione in tempo reale e prevenire fenomeni di \textit{jitter} o perdita di pacchetti (che causerebbero l'arresto di sicurezza del robot da parte dell'unità di controllo interna), il sistema operativo dell'elaboratore di controllo è munito di un kernel Linux con patch di tempo reale \textit{PREEMPT\_RT}.
+
+Il paradigma di controllo di \textit{libfranka} si basa su un ciclo di esecuzione bloccante gestito tramite la chiamata al metodo \texttt{robot.control()}, il quale accetta una funzione \textit{lambda} (o un oggetto funzione) eseguita ad ogni passo di integrazione di $1\text{ ms}$ \cite{libfranka}. La funzione riceve in ingresso la struttura \texttt{franka::RobotState}, contenente lo stato istantaneo del robot (posizioni e velocità giuntali, accelerazioni, stime delle forze esterne, matrici jacobiane e vettori di gravità/Coriolis), e restituisce le variabili di comando desiderate.
+
+In base alla natura delle variabili scambiate, la libreria consente di implementare diversi schemi di controllo:
+
+\begin{itemize}
+    \item \textbf{Controllo in posizione/velocità nello spazio dei giunti:} il codice utente definisce direttamente i valori desiderati per i giunti $q$ o le loro derivate $\dot{q}$. Il controllore interno della FCI gestisce la dinamica e calcola le coppie ai giunti necessarie per inseguire il profilo fornito.
+    
+    \item \textbf{Controllo in posizione/velocità nello spazio cartesiano:} l'utente specifica la posa desiderata dell'end-effector $T_{EE}$ o il twist cartesiano $v_{EE}$. L'unità di controllo interna si occupa della risoluzione della cinematica inversa e del calcolo delle azioni di controllo.
+    
+    \item \textbf{Controllo di coppia giuntale:} in questa modalità, il controllo interno di posizione viene disabilitato e il programma applica un vettore di coppie $\tau_{d}$ direttamente ai giunti del robot. Questa modalità è indispensabile per l'implementazione di algoritmi avanzati sviluppati a livello utente, quali controllori a impedenza, schemi di compensazione della gravità o algoritmi basati sulla dinamica inversa del manipolatore.
+\end{itemize}
+
+Inoltre, \textit{libfranka} offre la possibilità di combinare simultaneamente un \textit{Motion Generator} (in posizione o velocità) e un \textit{Controller} di coppia. Questa struttura modulare permette, ad esempio, di sovrapporre un'azione di regolazione di forza ad una traiettoria cartesiana generata in tempo reale.
+
+\subsection{Gestione della sicurezza e delle eccezioni}
+
+Trattandosi di un manipolatore collaborativo operante a frequenze elevate, la gestione della sicurezza è integrata nativamente nell'architettura software di \textit{libfranka}. Durante l'esecuzione del loop di controllo a $1\text{ kHz}$, la FCI esegue una verifica continua sul rispetto dei vincoli fisici del robot. Se vengono superati i limiti operativi — quali velocità, accelerazioni, coppie ai giunti massime o disallineamenti temporali nei pacchetti UDP — l'unità di controllo interrompe immediatamente il moto sollevando un'eccezione di tipo \texttt{franka::ControlException}.
+
+Per garantire la robustezza del codice e la protezione dell'hardware, le chiamate ai metodi di controllo vengono tipicamente racchiuse all'interno di blocchi \texttt{try-catch}:
+
+\begin{lstlisting}[language=C++, showstringspaces=false]
+try {
+    robot.control(torque_control_callback);
+} catch (const franka::ControlException& e) {
+    std::cerr << "Errore di controllo rilevato: " << e.what() << std::endl;
+}
+\end{lstlisting}
+
+
+Inoltre, prima di avviare qualsiasi ciclo di controllo, è buona norma impostare esplicitamente i limiti di sicurezza software tramite i metodi dedicati della classe \texttt{franka::Robot}:
+\begin{itemize}
+    \item \texttt{setCollisionBehavior}: definisce le soglie di coppia e di forza cartesiana per il rilevamento delle collisioni e dei contatti sia in fase di stazionamento sia durante il moto;
+    \item \texttt{setJointImpedance} / \texttt{setCartesianImpedance}: configurano la rigidezza interna del controllore di base del robot;
+    \item \texttt{setLimits}: impone limiti software restrittivi su velocità e accelerazioni giuntali per prevenire traiettorie troppo aggressive durante la fase di test degli algoritmi.
+\end{itemize}
+
+Questo doppio livello di protezione garantisce che qualsiasi anomalia nel codice utente si traduca in un arresto sicuro del braccio senza rischi per l'operatore o la struttura meccanica.
+
+\section{Gestione della dinamica: \textit{Pinocchio}}
+
+Per la valutazione efficiente della cinematica e della dinamica del braccio robotico è stata impiegata la libreria open-source C++ \textit{Pinocchio} \cite{pinocchio}. Sviluppata prevalentemente per applicazioni di controllo e analisi di sistemi multi-corpo in tempo reale, \textit{Pinocchio} basa la propria algebra lineare sulla libreria \textit{Eigen} ed implementa algoritmi ricorsivi di dinamica rigida basati sull'algebra spaziale (\textit{Spatial Algebra}) \cite{pinocchio}.
+
+\subsection{Architettura software e separazione Model/Data}
+A differenza di altri moduli software di dinamica, \textit{Pinocchio} introduce una rigida separazione tra le strutture dati che descrivono il sistema e i buffer di calcolo usati dagli algoritmi:
+\begin{itemize}
+    \item \textbf{Classe \texttt{Model}:} memorizza i parametri strutturali costanti del robot (catena cinematica, masse, inerzie e giunti) letti tipicamente da file di descrizione come URDF;
+    \item \textbf{Classe \texttt{Data}:} contiene i risultati intermedi, i buffer di memoria temporanei e le grandezze risultanti (posizioni, velocità, accelerazioni e matrici jacobiane).
+\end{itemize}
+
+Questa separazione evita allocazioni dinamiche di memoria durante l'esecuzione e garantisce una firma uniforme per tutti gli algoritmi nella forma \texttt{algorithm(model, data, q, v, ...)}, favorendo l'esecuzione parallela e la prevedibilità dei tempi di calcolo.
+
+La correttezza dei calcoli dinamici svolti da \textit{Pinocchio} dipende in maniera critica dalla fedeltà del modello URDF fornito in ingresso. Poichè i file URDF modellano la struttura come una catena di corpi rigidi con giunti ideali, gli attriti interni e altre dinamiche non modellate vengono tralasciati (aspetto che verrà affrontato nel dettaglio in Sezione~\ref{sec:attriti}.
+
+\subsection{Efficienza computazionale via polimorfismo statico}
+Per coniugare la flessibilità del caricamento dinamico del modello con l'efficienza tipica del codice generato *ad hoc*, \textit{Pinocchio} adotta il paradigma del polimorfismo statico basato sul design pattern CRTP (\textit{Curiously Recurring Template Pattern}). 
+
+Mentre il polimorfismo dinamico tradizionale (basato su funzioni virtuali) introduce rallentamenti dovuti alla risoluzione a tempo di esecuzione e ostacola le ottimizzazioni del compilatore, il meccanismo CRTP seleziona gli operatori specifici di ciascun giunto direttamente in fase di compilazione. Combinando il pattern CRTP con l'uso dei \textit{variant} per scorrere i giunti del modello, la libreria minimizza l'overhead di memoria e ottimizza l'uso delle risorse di calcolo dell'elaboratore. Questo rende la libraria ideal sia per il ciclo di controllo in tempo reale a $1\text{ kHz}$, sia per l'integrazione all'interno di routine di ottimizzazione numerica.
+
+\subsection{Algoritmi dinamici e derivate analitiche}
+All'interno del loop di controllo a basso livello, \textit{Pinocchio} consente di eseguire in tempi dell'ordine del microsecondo i principali algoritmi della dinamica rigida:
+\begin{itemize}
+    \item \textbf{RNEA (\textit{Recursive Newton-Euler Algorithm}):} calcola la dinamica inversa per determinare le coppie ai giunti $\tau$ necessarie a realizzare il moto desiderato;
+    \item \textbf{CRBA (\textit{Composite Rigid Body Algorithm}):} calcola la matrice di inerzia nello spazio dei giunti $M(q)$;
+    \item \textbf{ABA (\textit{Articulated Body Algorithm}):} risolve la dinamica diretta ottenendo le accelerazioni dei giunti a partire dalle coppie applicate.
+\end{itemize}
+
+Un elemento caratterizzante di \textit{Pinocchio} è la presenza nativa delle derivate analitiche di tali algoritmi. Ciò ne permette l'impiego diretto all'interno di schemi di controllo in spazio di stato, stimatori basati su filtro di Kalman o algoritmi di controllo ottimo e \textit{Model Predictive Control} (MPC).
+
+\section{Modellazione attriti ai giunti}
+\label{sec:attriti}
+
+
+\section{Frenata morbida}
+
+Prima di descrivere l'implementazione dell'algoritmo di controllo è necessario parlare 
+
+
+
+
+
+
+
+\section{----------BOZZA--------------}
+Parla di casadi, libfranka, pinocchio, urdf, Eigen
+parla in particolare del controllo di coppia, perchè lo hai scelto rispetto al constrollo di posizione, cosa cambia, come calcoli la coppia, butta dentro anche Gaz
+
+Mentre nella Sezione \ref{subsec:optimization_problem} la dinamica inversa è espressa nella forma matriciale canonica con il termine $C(q, \dot{q})\dot{q}$, l'implementazione in C++ sfrutta la struttura dati fornita dall'interfaccia \texttt{libfranka}. In particolare, la classe \texttt{franka::RobotState} fornisce direttamente il vettore pre-calcolato $c(q, \dot{q}) \in \mathbb{R}^7$, ottimizzando i tempi di calcolo nel ciclo di controllo in tempo reale."

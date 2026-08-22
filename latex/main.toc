@@ -1,0 +1,38 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {chapter}{Sommario}{i}{chapter*.1}%
+\contentsline {chapter}{Elenco delle figure}{v}{chapter*.3}%
+\contentsline {chapter}{Elenco delle tabelle}{vii}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Introduzione}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Collaborazione uomo-robot}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Sicurezza nella collaborazione uomo-robot}{3}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Obiettivo della tesi}{5}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Struttura della tesi}{5}{section.1.4}%
+\contentsline {chapter}{\numberline {2}Approcci considerati}{7}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Rappresentazione geometrica del sistema}{7}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Sphere Swept Lines (SSL)}{7}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Modellazione del robot e dell'operatore}{8}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Distanza geometrica tra robot e operatore}{10}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Primo approccio: dimensionamento dinamico delle zone di sicurezza}{11}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Principio dello Speed and Separation Monitoring (SSM)}{12}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Pianificazione online della traiettoria di arresto}{12}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Formulazione dell'ottimizzazione e vincoli dinamici}{14}{subsection.2.3.3}%
+\contentsline {section}{\numberline {2.4}Secondo approccio: capsule \textit {soft}}{14}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Confronto tra capsule \textit {hard} e \textit {soft}}{15}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Controllo di ammettenza per l'evasione dinamica}{15}{subsection.2.4.2}%
+\contentsline {subsubsection}{Sintesi della forza repulsiva e dinamica dell'ammettenza}{16}{section*.11}%
+\contentsline {subsubsection}{Calcolo online della posizione modificata}{16}{section*.12}%
+\contentsline {chapter}{\numberline {3}Implementazione}{19}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Braccio robotico}{19}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Architettura di controllo e libreria \textit {libfranka}}{20}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Gestione della sicurezza e delle eccezioni}{21}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.3}Gestione della dinamica: \textit {Pinocchio}}{22}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Architettura software e separazione Model/Data}{22}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Efficienza computazionale via polimorfismo statico}{23}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Algoritmi dinamici e derivate analitiche}{23}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Modellazione attriti ai giunti}{24}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Frenata morbida}{24}{section.3.5}%
+\contentsline {section}{\numberline {3.6}----------BOZZA--------------}{24}{section.3.6}%
+\contentsline {chapter}{\numberline {4}Risultati}{25}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{27}{chapter.5}%
+\contentsline {chapter}{Bibliografia}{29}{chapter*.14}%

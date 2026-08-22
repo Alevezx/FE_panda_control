@@ -1,0 +1,215 @@
+\documentclass[12pt,a4paper, twoside, openright]{report}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{hyperref}
+\usepackage{cleveref}
+
+\usepackage[nottoc]{tocbibind}
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\lstset{
+    language=C++,
+    numbers=left,
+    numbersep=10pt,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue}\bfseries,
+    commentstyle=\color{green!60!black},
+    stringstyle=\color{red},
+    breaklines=true,
+    frame=single,
+    showstringspaces=false,
+    tabsize=2
+}
+
+\title{Pianificazione e ottimizzazione di traiettorie per la robotica collaborativa}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\pagenumbering{roman}
+
+\chapter*{Sommario}
+\addcontentsline{toc}{chapter}{Sommario}
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\clearpage
+\pagenumbering{arabic}
+
+\chapter{Introduzione}
+\input{capitoli/introduzione}
+
+\chapter{Approcci considerati}
+\input{capitoli/approcci}
+
+\chapter{Implementazione}
+\input{capitoli/implementazione}
+
+\chapter{Risultati}
+\input{capitoli/risultati}
+
+\chapter{Conclusioni e sviluppi futuri}
+\input{capitoli/conclusioni}
+
+\bibliographystyle{unsrt}
+\bibliography{bibliografia}
+
+\end{document}
+
+
+
+
+
+
+
+
+Per verificare le differenze nelle coppie applicate ai giunti tra il robot virtuale simulato tramite Pinocchio e il robot reale, è stata creata una traiettoria composta da più punti di riferimento; in questo modo è possibile confrontare le coppie applicate in diverse situazioni.
+
+L'esperimento consiste nell'esecuzione della stessa traiettoria sul robot reale con controllo di posizione e sul robot virtuale, modificando la stima dell'attrito dei giunti, per poi analizzare le coppie misurate e calcolate.
+
+In Figura \ref{fig:coppie_reali} sono riportate le coppie misurate sul robot reale, si osserva in particolare la coppia del secondo giunto, che riporta la variazione maggiore.
+Le linee tratteggiate verticali indicano il raggiungimento dei punti di riferimento, in cui le velocità e le accelerazioni dei giunti si annullano.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/tau_composta_reale.png}
+    \caption{Coppie applicate ai giunti del robot reale durante una traiettoria complessa}
+    \label{fig:coppie_reali}
+\end{figure}
+
+In Figura \ref{fig:coppie_virtuali} osserviamo il confronto tra le coppie reali e quelle calcolate tramite Pinocchio per la stessa traiettoria. In particolare per i giunti 2 e 4, si nota un distacco dal grafico delle coppie reali. Questo è causato dal fatto che Pinocchio utilizza un modello URDF del robot che non rispecchia perfettamente i parametri del robot reale, per correggere questa mancanza, sono stati applicati due metodi tratti da Gaz et al. \textbf{cit.}.
+
+Il primo metodo consiste nella stima dell'attrito tramite la formula $\tau_{f,j}(\dot{q}_j) = \frac{\phi_{1,j}}{1+e^{-\phi_{2,j}({\dot{q}_j+\phi_{3,j})}}} - \frac{\phi_{1,j}}{1+e^{-\phi_{2,j}\phi_{3,j}}}$, i cui coefficienti $\phi_1, \phi_2, \phi_3$ sono tratti da Gaz2 \textbf{cit.}.
+
+Il risultato è riportato in Figura \ref{fig:coppie_virtuali_attrito_Gaz} e si osserva che il cambiamento è minimo rispetto al grafico senza la stima dell'attrito.
+
+Il secondo metodo consiste nell'utilizzo della formula $\tau_{f,j}(\dot{q}_j) = \beta_{v,j}\dot{q}_j+\beta_{c,j}sign(\dot{q}_j)$, dove $\beta_v$ e $\beta_c$ sono coefficienti di attrito di Coulomb e viscoso tratti da Scalera 2023 \textbf{cit.}.
+Il risultato è riportato in Figura \ref{fig:coppie_virtuali_Scalera}, in cui si osservano delle discontinuità nelle coppie calcolate, causate dal cambio di segno della velocità dei giunti.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_realvssim.png}
+    \caption{Coppie applicate al robot simulato con Pinocchio, rispetto a quelle reali misurate}
+    \label{fig:coppie_virtuali}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_error_realvssim.png}
+    \caption{Errori nelle coppie calcolate tramite Pinocchio}
+    \label{fig:errori_realvssim}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline 
+    Giunto & Errore RMS & Errore massimo & Errore medio \\
+    \hline
+    1   &  0.4402  &  1.3235  &  0.0786 \\
+    2   &  5.3377  &  7.3122  & -5.2445 \\
+    3   &  0.7998  &  1.8859  & -0.5404 \\
+    4   &  3.7442  &  4.7565  &  3.7191 \\
+    5   &  0.5523  &  0.8293  &  0.1949 \\
+    6   &  0.2864  &  0.5426  &  0.2335 \\
+    7   &  0.3461  &  0.7043  &  0.1579 \\
+    \hline
+    \end{tabular}
+    \caption{Errore per ogni giunto senza attrito}
+    \label{tab:errori_coppie}
+\end{table}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_realvssim_Gaz.png}
+    \caption{Coppie applicate al robot simulato con pinocchio, con l'attrito secondo Gaz}
+    \label{fig:coppie_virtuali_Gaz}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_error_realvssim_Gaz.png}
+    \caption{Errori con l'attrito secondo Gaz}
+    \label{fig:errori_Gaz}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    Giunto & Errore RMS & Errore massimo & Errore medio \\
+    \hline
+    1   &  0.4075  &  1.0825  &  0.0335 \\
+    2   &  5.3126  &  6.8439  & -5.2376 \\
+    3   &  0.7594  &  1.8314  & -0.5139 \\
+    4   &  3.7588  &  4.7221  &  3.7376 \\
+    5   &  0.4887  &  0.8124  &  0.1664 \\
+    6   &  0.2541  &  0.4944  &  0.2279 \\
+    7   &  0.2281  &  0.6645  &  0.0830 \\
+    \hline 
+    \end{tabular}
+    \caption{Errori con l'attrito secondo Gaz}
+    \label{tab:errori_Gaz}
+\end{table}
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_realvssim_Scalera.png}
+    \caption{Coppie applicate al robot simulato con pinocchio, con l'attrito secondo Scalera}
+    \label{fig:coppie_virtuali_Scalera}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=1\textwidth]{figure/torque_error_realvssim_Scalera.png}
+    \caption{Errori con l'attrito secondo Scalera}
+    \label{fig:errori_Scalera}
+\end{figure}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+    \hline
+    Giunto & Errore RMS & Errore massimo & Errore medio \\
+    \hline
+    1   &  0.4050  &  1.0964  & -0.0001 \\
+    2   &  6.2858  &  9.7362  & -5.5576 \\
+    3   &  0.7336  &  1.8608  & -0.4328 \\
+    4   &  3.7023  &  4.4865  &  3.6848 \\
+    5   &  0.3637  &  1.0912  &  0.1650 \\
+    6   &  0.2565  &  0.5853  &  0.2438 \\
+    7   &  0.1978  &  0.7644  &  0.0564 \\
+    \hline
+    \end{tabular}
+    \caption{Errori con l'attrito secondo Scalera}
+    \label{tab:errori_Scalera}
+\end{table}
+
+
+\subsection{Arresto nel tempo ottimo}
+
+\section{Conclusioni e sviluppi futuri}
+
+\section{Bibliografia}
+
+
+\end{document}

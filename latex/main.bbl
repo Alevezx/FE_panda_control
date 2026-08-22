@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{BARATTA20231887}
+A.~Baratta, A.~Cimino, M.~G. Gnoni, and F.~Longo.
+\newblock Human robot collaboration in industry 4.0: a literature review.
+\newblock {\em Procedia Computer Science}, 217:1887--1895, 2023.
+
+\bibitem{Montini2024}
+E.~Montini, F.~Daniele, L.~Agbomemewa, M.~Confalonieri, V.~Cutrona, A.~Bettoni,
+  P.~Rocco, and A.~Ferrario.
+\newblock Collaborative robotics: A survey from literature and practitioners
+  perspectives.
+\newblock {\em Journal of Intelligent \& Robotic Systems}, 110:117, 2024.
+
+\bibitem{Li2024}
+W.~Li, Y.~Hu, Y.~Zhou, and D.~T. Pham.
+\newblock Safe human–robot collaboration for industrial settings: a survey.
+\newblock {\em Journal of Intelligent Manufacturing}, 35:2235--2261, 2024.
+
+\bibitem{ISO15066}
+International~Organization for Standardization.
+\newblock {ISO/TS} 15066: 2016 robots and robotic devices-collaborative robots.
+\newblock Technical report, International Organization for Standardization,
+  2016.
+
+\bibitem{Marvel2017}
+J.~A. Marvel and R.~Norcross.
+\newblock Implementing speed and separation monitoring in collaborative robot
+  workcells.
+\newblock {\em Robotics and Computer-Integrated Manufacturing}, 44:144--155,
+  2017.
+
+\bibitem{Scalera2022}
+L.~Scalera, A.~Giusti, R.~Vidoni, and A.~Gasparetto.
+\newblock Enhancing fluency and productivity in human‑robot collaboration
+  through online scaling of dynamic safety zones.
+\newblock {\em The International Journal of Advanced Manufacturing Technology},
+  121:6783--6798, 2022.
+
+\bibitem{Qyrani2026}
+D.~Qyrani.
+\newblock Approcci di controllo avanzati per una collaborazione sicura tra uomo
+  e robot.
+\newblock Master's thesis, Università degli Studi di Udine, 2026.
+
+\bibitem{larsen1999fast}
+E.~Larsen, S.~Gottschalk, M.~C. Lin, and D.~Manocha.
+\newblock Fast proximity queries with swept sphere volumes.
+\newblock Technical report, Technical Report TR99-018, Department of Computer
+  Science, University of North Carolina, 1999.
+
+\bibitem{Scalera2024}
+L.~Scalera, F.~Lozer, A.~Giusti, and A.~Gasparetto.
+\newblock An experimental evaluation of robot-stopping approaches for improving
+  fluency in collaborative robotics.
+\newblock {\em Robotica}, 42(5):1386--1402, 2024.
+
+\bibitem{libfranka}
+Sami Haddadin, Sven Parusel, Lars Johannsmeier, Saskia Golz, Simon Gabl,
+  Florian Walch, Mohamadreza Sabaghian, Christoph Jähne, Lukas Hausperger, and
+  Simon Haddadin.
+\newblock The franka emika robot: A reference platform for robotics research
+  and education.
+\newblock {\em IEEE Robotics & Automation Magazine}, 29(2):46--64, 2022.
+
+\bibitem{pinocchio}
+Justin Carpentier, Guilhem Saurel, Gabriele Buondonno, Joseph Mirabel, Florent
+  Lamiraux, Olivier Stasse, and Nicolas Mansard.
+\newblock {The Pinocchio C++ library -- A fast and flexible implementation of
+  rigid body dynamics algorithms and their analytical derivatives}.
+\newblock In {\em {SII 2019 - International Symposium on System Integrations}},
+  Paris, France, January 2019.
+
+\end{thebibliography}
