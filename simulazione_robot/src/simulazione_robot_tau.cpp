@@ -65,7 +65,7 @@ std::vector<std::vector<double>> readCSV(const std::string& path) {
 }
 
 int main() {
-    const std::string urdf_path = "../urdf/panda.urdf";
+    const std::string urdf_path = "../urdf/panda_arm.urdf";
     pinocchio::Model model;
     pinocchio::urdf::buildModel(urdf_path, model);
     pinocchio::Data data(model);

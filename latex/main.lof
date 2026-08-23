@@ -1,14 +1,15 @@
-\babel@toc {italian}{}\relax 
-\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}
+\babel@toc {italian}{}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Rappresentazione schematica di una cella di lavoro collaborativa. Viene evidenziata la sovrapposizione tra il volume operativo dell'operatore (\textit {Human work envelope}) e l'area di lavoro del robot (\textit {Robot work envelope}).}}{2}{figure.caption.5}%
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Rappresentazione schematica del principio di Speed and Separation Monitoring (SSM).}}{4}{figure.caption.6}%
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Rappresentazione schematica di una cella di lavoro collaborativa. Viene evidenziata la sovrapposizione tra il volume operativo dell'operatore (\textit {Human work envelope}) e l'area di lavoro del robot (\textit {Robot work envelope}).\relax }}{2}{figure.caption.5}%
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Rappresentazione schematica del principio di Speed and Separation Monitoring (SSM).\relax }}{4}{figure.caption.6}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Rappresentazione geometrica di una Sphere Swept Line (SSL).}}{8}{figure.caption.7}%
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Confronto tra la geometria dettagliata del robot (a) e la sua rappresentazione semplificata a capsule (b).}}{9}{figure.caption.8}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione geometrica della distanza minima $d_{seg}$ tra due segmenti $S_1$ e $S_2$.}}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.4}{\ignorespaces Profili temporali di posizione $q(t)$, velocità $\dot {q}(t)$ e accelerazione $\ddot {q}(t)$ durante la manovra di arresto morbido con polinomio quintico.}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Rappresentazione geometrica di una Sphere Swept Line (SSL).\relax }}{8}{figure.caption.7}%
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Confronto tra la geometria dettagliata del robot (a) e la sua rappresentazione semplificata a capsule (b).\relax }}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Rappresentazione geometrica della distanza minima $d_{seg}$ tra due segmenti $S_1$ e $S_2$.\relax }}{11}{figure.caption.9}%
+\contentsline {figure}{\numberline {2.4}{\ignorespaces Profili temporali di posizione $q(t)$, velocità $\dot {q}(t)$ e accelerazione $\ddot {q}(t)$ durante la manovra di arresto morbido con polinomio quintico.\relax }}{13}{figure.caption.10}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Robot collaborativo \textit {Franka Emika Panda}}}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Robot collaborativo \textit {Franka Emika Panda}\relax }}{19}{figure.caption.13}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Confronto tra le coppie reali misurate ai giunti e le coppie stimate tramite il modello dinamico in Pinocchio.\relax }}{25}{figure.caption.14}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }

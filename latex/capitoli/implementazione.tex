@@ -94,20 +94,224 @@ Un elemento caratterizzante di \textit{Pinocchio} è la presenza nativa delle de
 
 \section{Modellazione attriti ai giunti}
 \label{sec:attriti}
+Per valutare l'accuratezza del modello cinematico del robot implementato in C++ tramite la libraria Pinocchio, è stato effettuato un confronto tra le coppie reali misurate ai giunti e quelle stimate dal modello URDF.
+
+Inizialmente, considerando esclusivamente i parametri inerziali presi dal modello CAD dell'URDF, si nota che la curva della coppia stimata ricalca l'andamento di quella reale, ma presenta un offset significativo. Tale discrepanza è attribuibile alla mancata modellazione dei fenomeni dissipativi, come l'attrito viscoso e l'attrito di Coulomb presenti nei riduttori e nei cuscinetti dei giunti \cite{gaz2019dynamic}.
+
+Per modellare accuratamente tali effetti dissipativi e garantire la continuità del modello nelle simulazioni dinamiche, è stata integrata una formulazione per la coppia d'attrito $\tau_{f,j}$ al giunto $j$. Nella sua forma classica l'attrito è rappresentato dalla combinazione di attrito viscoso e di Coulomb:
+\begin{equation}
+	\tau_{f,j}(\dot{q}_j) = f_{v,j} \dot{q}_j + f_{c,j} \, \mathrm{sgn}\dot{q}_j + f_{o,j}
+\end{equation}
+dove $f_{v,j}$ rappresenta il coefficiente di attrito viscoso, $f_{c,j}$ l'attrito di Coulomb e $f_{o,j}$ un eventuale offset \cite{gaz2019dynamic}.
+
+Tuttavia, per evitare le discontinuità e i fenomeni di \textit{chattering} in prossimità dello zero ($\dot{q}_j \approx 0$), si fa uso di una formulazione sigmoidale continua \cite{gaz2019dynamic}:
+\begin{equation}
+\tau_{f,j}(\dot{q}_j) = c_{v,j} \dot{q}_j + \frac{\varphi_{1,j}}{1 + e^{-\varphi_{2,j} (\dot{q}_j + \varphi_{3,j})}} - \frac{\varphi_{1,j}}{1 + e^{-\varphi_{2,j} \varphi_{3,j}}}
+\end{equation}
+dove i parametri $\varphi_{1,j}, \varphi_{2,j}, \varphi_{3,j}$ (unitamente agli eventuali termini viscosi) identificano la risposta dinamica non lineare del singolo giunto \cite{gaz2019dynamic}.
+
+L'introduzione nel modello di Pinocchio dei parametri di smorzamento (\textit{damping}) e attrito (\textit{friction}) permette di eliminare l'offset residuo. La curva di coppia calcolata dal modello identificato risulta così sovrapponibile a quella misurata dai sensori di giunto, Figura~\ref{fig:confronto_coppie}, confermando l'importanza dell'inclusione dei parametri dissipativi per una stima dinamica accurata sia tramite approccio lagrangiano sia nell'algoritmo ricorsivo di Newton-Euler \cite{gaz2019dynamic}.
+
+\begin{figure}[htbp]
+	\centering
+	
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_1.png}
+		\caption{Giunto 1}
+		\label{fig:coppie1}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_2.png}
+		\caption{Giunto 2}
+		\label{fig:coppie2}
+	\end{subfigure}
+
+	\vspace{0.4cm}
+	
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_3.png}
+		\caption{Giunto 3}
+		\label{fig:coppie3}
+	\end{subfigure}
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_4.png}
+		\caption{Giunto 4}
+		\label{fig:coppie4}
+	\end{subfigure}
+
+	\vspace{0.4cm}
+	
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_5.png}
+		\caption{Giunto 5}
+		\label{fig:coppie5}
+	\end{subfigure}
+	\hfill
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_6.png}
+		\caption{Giunto 6}
+		\label{fig:coppie6}
+	\end{subfigure}
+
+	\vspace{0.4cm}
+	\begin{subfigure}[hbtp]{0.48\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figure_tesi/coppie_7.png}
+		\caption{Giunto 7}
+		\label{fig:coppie7}
+	\end{subfigure}
+	
+
+	\caption{Confronto tra le coppie reali misurate ai giunti e le coppie stimate tramite il modello dinamico in Pinocchio.}
+	\label{fig:confronto_coppie}
+	
+\end{figure}
 
 
-\section{Frenata morbida}
+\section{Primo metodo: frenata morbida}
 
-Prima di descrivere l'implementazione dell'algoritmo di controllo è necessario parlare 
+Come visto in Sezione~\ref{sec:primo_approccio}, è necessario risolvere un problema di ottimizzazione vincolata. Per fare ciò si è deciso di utilizzare il framework open-source \textit{CasADi}~\cite{Andersson2018}.
+
+\subsection{Ottimizzazione tramite CasADi}
+\textit{CasADi} è uno strumento software ad alte prestazioni sviluppato per l'ottimizzazione numerica, con particolare attenzione all'ottimizzazione vincolata non lineare (NLP) e al controllo ottimale. È scritto in C++ con interfacce per Python e MATLAB, rendendolo estremamente versatile sia in fase di prototipazione che di implementazione in sistemi embedded o ad alte prestazioni.
+
+Il punto di forza di CasADi risiede nella sua struttura simbolica basata sui grafi di espressione (\textit{expression graphs}). Ciò consente di eseguire la Differenziazione Algoritmica (AD) sia in modalità diretta (\textit{forward mode}) sia inversa (\textit{reverse mode}). In questo modo, derivate prime (gradienti, Jacobiane) e derivate seconde (Hessiane) vengono calcolate con accuratezza pari alla precisione della macchina, evitando le imprecisioni numeriche della differenziazione alle differenze finite e l'esplosione della complessità del calcolo simbolico classico.
+
+Un generico problema di ottimizzazione non lineare (NLP) risolto da CasADi viene formulato nella seguente forma standard:
+\begin{equation}
+\begin{aligned}
+\min_{x} \quad & f(x) \
+\textrm{s.t.} \quad & x_{lb} \le x \le x_{ub} \
+& g_{lb} \le g(x) \le g_{ub}
+\end{aligned}
+\end{equation}
+dove $x \in \mathbb{R}^n$ rappresenta il vettore delle variabili decisionali, $f(x): \mathbb{R}^n \to \mathbb{R}$ è la funzione obiettivo (cost function), $x_{lb}$ e $x_{ub}$ sono i limiti inferiori e superiori sulle variabili (box constraints), mentre $g(x): \mathbb{R}^n \to \mathbb{R}^m$ rappresenta il vettore delle funzioni di vincolo non lineare bounded da $g_{lb}$ e $g_{ub}$.
+
+Per la risoluzione del problema, CasADi mette a disposizione l'interfaccia ad alto livello \texttt{casadi::nlpsol}. Questa interfaccia accetta un dizionario \texttt{nlp} contenente la definizione simbolica di $x$, $f(x)$ e $g(x)$, unita alla specifica del solutore numerico sottostante (come ad esempio \textit{IPOPT}, \textit{SNOPT} o \textit{KNITRO}).
+
+\subsubsection{Esempio di risoluzione NLP in C++}
+Di seguito viene mostrato un esempio applicativo in C++ per la risoluzione di un problema di ottimizzazione non lineare limitato e vincolato Eq.~\ref{eq:nlp} tramite il solutore IPOPT integrato in CasADi:
+
+\begin{equation}
+\min_{x_0, x_1} \quad x_0^2 + (x_1 - 1)^2 \quad \textrm{s.t.} \quad x_0 + x_1 = 2, \quad x_0 \ge 0, ; x_1 \ge 0
+\label{eq:nlp}
+\end{equation}
+
+\begin{lstlisting}[language=C++]
+#include <casadi/casadi.hpp>
+#include
+
+using namespace casadi;
+
+int main() {
+// 1. Definizione delle variabili simboliche (SX o MX)
+SX x = SX::sym("x", 2); // Vettore di 2 variabili decisionali (x0, x1)
+// 2. Definizione della funzione costo f(x) e dei vincoli g(x)
+SX f = pow(x(0), 2) + pow(x(1) - 1, 2);
+SX g = x(0) + x(1);
+
+// 3. Creazione del dizionario NLP per CasADi
+MXDict nlp = {
+{"x", x},
+{"f", f},
+{"g", g}
+};
+
+// 4. Inizializzazione del solutore (es. IPOPT)
+// E possibile passare opzioni aggiuntive come secondo argomento (Dict)
+Function solver = nlpsol("solver", "ipopt", nlp);
+
+// 5. Impostazione dei limiti numerici sui vincoli e sulle variabili
+DNDict args;
+args["x0"]  = std::vector<double>{0.0, 0.0};  // Punto di partenza (Initial guess)
+
+// Bounds sulle variabili x (x >= 0)
+args["lbx"] = std::vector<double>{0.0, 0.0};  
+args["ubx"] = std::vector<double>{inf, inf};  
+
+// Bounds sul vincolo g(x) = 2 -> lbg = ubg = 2
+args["lbg"] = std::vector<double>{2.0};
+args["ubg"] = std::vector<double>{2.0};
+
+// 6. Risoluzione del problema
+DNDict res = solver(args);
+
+// 7. Estrazione dei risultati
+std::vector<double> x_opt = std::vector<double>(res["x"]);
+std::cout << "Soluzione ottimale x: [" << x_opt[0] << ", " << x_opt[1] << "]" << std::endl;
+std::cout << "Valore minimo costo: " << double(res["f"]) << std::endl;
+
+return 0;
+
+}
+\end{lstlisting}
+
+\section{Rilevamento di una potenziale collisione}
+La libreria \textit{CasADi} descritta nella sezione precedente viene utilizzata per risolvere il problema di ottimizzazione definito nella Sezione~\ref{subsec:optimization_problem}, vincolato ai limiti di posizione, velocità, accelerazione e coppia dei giunti del robot:
+\begin{equation}
+\min_{T_{\text{stop}}} \quad w_0 T_{\text{stop}} + w_1 \left|T_{\text{stop}}-T_{\text{stop,prev}} \right|
+\label{eq:costo}
+\end{equation}
+
+Per garantire il rispetto dei vincoli temporali e non bloccare l'esecuzione del task nominale, l'architettura software sfrutta due thread dedicati:
+\begin{itemize}
+	\item \texttt{skeleton\_thread}: gestisce la ricezione e il playback in tempo reale delle posizioni delle articolazioni dello scheletro umano;
+	\item \texttt{collision\_checker\_thread}: esegue la risoluzione dell'ottimizzazione in Eq.~\eqref{eq:costo} nell'intervallo $T_{\text{stop}} \in [0.1, 0.4]~\text{s}$ a partire dallo stato corrente del robot letto tramite \textit{libfranka}, integrando il modello cinematico e dinamico fornito da \textit{Pinocchio}.
+\end{itemize}
+
+I parametri geometrici, cinematici e numerici adottati nell'implementazione dell'algoritmo sono sintetizzati nella Tabella~\ref{tab:collision_params}.
+
+\begin{table}[htbp]
+	\centering
+	\caption{Parametri geometrici, cinematici e di configurazione usati dall'algoritmo di rilevamento collisione.}
+	\label{tab:collision_params}
+	\begin{tabular}{lccc}
+		\toprule
+		\textbf{Parametro} & \textbf{Simbolo} & \textbf{Valore} & \textbf{Unità di misura} \\
+		\midrule
+		\multicolumn{4}{l}{\textit{Modello geometrico (Capsule SSL)}} \\
+		Raggio capsula 1 robot & $r_{r,1}$ & $0.085$ & \text{m} \\
+		Raggio capsula 2 robot & $r_{r,2}$ & $0.085$ & \text{m} \\
+		Raggio capsula 3 robot & $r_{r,3}$ & $0.060$ & \text{m} \\
+		Raggio capsula 4 robot & $r_{r,4}$ & $0.065$ & \text{m} \\
+		Raggio capsule scheletro umano & $r_h$ & $0.05 - 0.16$ & \text{m} \\
+		\midrule
+		\multicolumn{4}{l}{\textit{Parametri cinematici e tempi}} \\
+		Velocità massima stimata umano & $v_{\text{human, max}}$ & $1.60$ & \text{m/s} \\
+		Tempo di reazione del sistema & $T_{\text{reaction}}$ & $0.05$ & \text{s} \\
+		\midrule
+		\multicolumn{4}{l}{\textit{Vincoli e impostazioni ottimizzatore (CasADi)}} \\
+		Tempo di stop minimo & $T_{\text{stop, min}}$ & $0.10$ & \text{s} \\
+		Tempo di stop massimo & $T_{\text{stop, max}}$ & $0.40$ & \text{s} \\
+		Peso termine tempo di stop & $w_0$ & $10^6$ & -- \\
+		Peso variazione tempo di stop & $w_1$ & $10^6$ & -- \\
+		Numero massimo di iterazioni & $\texttt{max\_iter}$ & $5$ & -- \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+Per garantire un approccio cautelativo (worst-case scenario), la velocità massima dell'umano $v_{\text{human, max}}$ è stata impostata a $1.60\,\text{m/s}$, in accordo con le direttive sulle velocità di avvicinamento stabilite dalla norma ISO/TS 15066 per applicazioni collaborative. I raggi delle primitive SSL ($r_r$ e $r_h$) coprono l'ingombro effettivo dei link del robot Franka Emika Panda e dei segmenti corporei dell'operatore.
+
+A partire dal tempo $T_{\text{stop}}$ ottimizzato ad ogni ciclo, la distanza di separazione minima di sicurezza $d_{\text{safe}}$ considerata nell'algoritmo viene calcolata dinamicamente come:
+\begin{equation}
+d_{\text{safe}} = v_{\text{human, max}} \cdot \left( T_{\text{reaction}} + T_{\text{stop}} \right)
+\label{eq:d_safe}
+\end{equation}
+Se la distanza tra i volumi SSL del robot e dell'umano risulta inferiore a $d_{\text{safe}}$, viene rilevata una potenziale collisione e attivata la traiettoria di arresto arresto entro il tempo $T_{\text{stop}}$.
+
+\section{Esecuzione del task nominale}
+Per questo lavoro di tesi si è scelto di far eseguire al robot una traiettoria di pick and place
 
 
-
-
-
-
-
-\section{----------BOZZA--------------}
-Parla di casadi, libfranka, pinocchio, urdf, Eigen
-parla in particolare del controllo di coppia, perchè lo hai scelto rispetto al constrollo di posizione, cosa cambia, come calcoli la coppia, butta dentro anche Gaz
+\section{----------BOZZA---------------}
+Parla di casadi, -libfranka, -pinocchio, -urdf, Eigen
+parla in particolare del controllo di coppia, perchè lo hai scelto rispetto al constrollo di posizione, cosa cambia, come calcoli la coppia, -butta dentro anche Gaz
 
 Mentre nella Sezione \ref{subsec:optimization_problem} la dinamica inversa è espressa nella forma matriciale canonica con il termine $C(q, \dot{q})\dot{q}$, l'implementazione in C++ sfrutta la struttura dati fornita dall'interfaccia \texttt{libfranka}. In particolare, la classe \texttt{franka::RobotState} fornisce direttamente il vettore pre-calcolato $c(q, \dot{q}) \in \mathbb{R}^7$, ottimizzando i tempi di calcolo nel ciclo di controllo in tempo reale."

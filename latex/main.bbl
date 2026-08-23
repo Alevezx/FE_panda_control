@@ -61,7 +61,7 @@ Sami Haddadin, Sven Parusel, Lars Johannsmeier, Saskia Golz, Simon Gabl,
   Simon Haddadin.
 \newblock The franka emika robot: A reference platform for robotics research
   and education.
-\newblock {\em IEEE Robotics & Automation Magazine}, 29(2):46--64, 2022.
+\newblock {\em IEEE Robotics \& Automation Magazine}, 29(2):46--64, 2022.
 
 \bibitem{pinocchio}
 Justin Carpentier, Guilhem Saurel, Gabriele Buondonno, Joseph Mirabel, Florent
@@ -70,5 +70,19 @@ Justin Carpentier, Guilhem Saurel, Gabriele Buondonno, Joseph Mirabel, Florent
   rigid body dynamics algorithms and their analytical derivatives}.
 \newblock In {\em {SII 2019 - International Symposium on System Integrations}},
   Paris, France, January 2019.
+
+\bibitem{gaz2019dynamic}
+Claudio Gaz, Marco Cognetti, Alexander Oliva, Paolo~Robuffo Giordano, and
+  Alessandro De~Luca.
+\newblock Dynamic identification of the franka emika panda robot with retrieval
+  of feasible parameters using penalty-based optimization.
+\newblock {\em IEEE Robotics and Automation Letters}, 4(4):4147--4154, 2019.
+
+\bibitem{Andersson2018}
+Joel A~E Andersson, Joris Gillis, Greg Horn, James~B Rawlings, and Moritz
+  Diehl.
+\newblock {CasADi} -- {A} software framework for nonlinear optimization and
+  optimal control.
+\newblock {\em Mathematical Programming Computation}, 2018.
 
 \end{thebibliography}

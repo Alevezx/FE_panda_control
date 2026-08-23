@@ -6,12 +6,12 @@ close all
 
 % --- Replace these with your data ---
 t = readmatrix("../traj/t.txt");                       % nx1 time vector
-data = readmatrix("torques_with_friction_out.txt");                      % nx7 data matrix
+data = readmatrix("torques_out_friction.txt");                      % nx7 data matrix
 % -------------------------------------------
 
 % Line colours and labels for the 7 data channels
 colors = lines(7);
-channelNames = arrayfun(@(k) sprintf('Joint %d', k), 1:7, 'UniformOutput', false);
+channelNames = arrayfun(@(k) sprintf('Giunto %d', k), 1:7, 'UniformOutput', false);
 
 % Vertical-line properties
 vlineTimes  = [3, 4, 7, 9, 11];
@@ -31,24 +31,14 @@ for k = 1:7
         'DisplayName', channelNames{k});
 end
 
-% --- Draw vertical lines ---
-hVline = gobjects(1, numel(vlineTimes));
-for i = 1:numel(vlineTimes)
-    hVline(i) = xline(vlineTimes(i), ...
-        vlineStyle, ...
-        'Color',     vlineColor, ...
-        'LineWidth', vlineWidth, ...
-        'DisplayName', sprintf('t = %g', vlineTimes(i)));
-end
-
 % --- Axes formatting ---
 axis([0 11 -50 50]);
-xlabel('Time [s]');
-ylabel('Torque [Nm]');
-title('Virtual robot torques with friction');
+xlabel('Tempo [s]');
+ylabel('Coppia [Nm]');
+title('Coppie ai giunti simulate con compensazione inerziale');
 grid on;
 
 % --- Legend: data channels + vertical lines ---
-legend([hData, hVline], 'Location', 'bestoutside');
+legend(hData, 'Location', 'bestoutside');
 
 hold off;
