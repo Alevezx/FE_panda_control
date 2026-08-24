@@ -35,8 +35,11 @@
 \contentsline {subsection}{\numberline {3.5.1}Ottimizzazione tramite CasADi}{26}{subsection.3.5.1}%
 \contentsline {subsubsection}{Esempio di risoluzione NLP in C++}{26}{section*.15}%
 \contentsline {section}{\numberline {3.6}Rilevamento di una potenziale collisione}{28}{section.3.6}%
-\contentsline {section}{\numberline {3.7}Esecuzione del task nominale}{30}{section.3.7}%
-\contentsline {section}{\numberline {3.8}----------BOZZA---------------}{30}{section.3.8}%
-\contentsline {chapter}{\numberline {4}Risultati}{31}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{33}{chapter.5}%
-\contentsline {chapter}{Bibliografia}{35}{chapter*.17}%
+\contentsline {section}{\numberline {3.7}Esecuzione del Task}{30}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Architettura Software e Flusso di Esecuzione}{30}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Controllo di Posizione dei Giunti}{31}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Controllo di Coppia e Controllo di Impedenza}{33}{subsection.3.7.3}%
+\contentsline {chapter}{\numberline {4}Risultati}{35}{chapter.4}%
+\contentsline {section}{\numberline {4.1}BOZZA}{35}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{37}{chapter.5}%
+\contentsline {chapter}{Bibliografia}{39}{chapter*.18}%

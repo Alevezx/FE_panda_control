@@ -294,7 +294,7 @@ void executeTrajectory (
                 Eigen::Matrix<double, 7, 1> tau_d, tau_fb;
                 Eigen::Matrix<double, 7, 1> tau_ff = /*mass * ddq_d +*/ coriolis;
 
-                // PD
+                // PD controller
                 for (size_t i = 0; i < 7; ++i) {
                     tau_fb(i) = k_gains[i]*(q_d(i)-q_m(i)) + 
                                 d_gains[i]*(dq_d(i)-dq_m(i));

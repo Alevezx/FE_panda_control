@@ -30,8 +30,11 @@
 \BOOKMARK [1][-]{section.3.5}{Primo metodo: frenata morbida}{chapter.3}% 30
 \BOOKMARK [2][-]{subsection.3.5.1}{Ottimizzazione tramite CasADi}{section.3.5}% 31
 \BOOKMARK [1][-]{section.3.6}{Rilevamento di una potenziale collisione}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.7}{Esecuzione del task nominale}{chapter.3}% 33
-\BOOKMARK [1][-]{section.3.8}{\204\204\204-BOZZA\204\204\204\204\204}{chapter.3}% 34
-\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 35
-\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 36
-\BOOKMARK [0][-]{chapter*.17}{Bibliografia}{}% 37
+\BOOKMARK [1][-]{section.3.7}{Esecuzione del Task}{chapter.3}% 33
+\BOOKMARK [2][-]{subsection.3.7.1}{Architettura Software e Flusso di Esecuzione}{section.3.7}% 34
+\BOOKMARK [2][-]{subsection.3.7.2}{Controllo di Posizione dei Giunti}{section.3.7}% 35
+\BOOKMARK [2][-]{subsection.3.7.3}{Controllo di Coppia e Controllo di Impedenza}{section.3.7}% 36
+\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 37
+\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 38
+\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 39
+\BOOKMARK [0][-]{chapter*.18}{Bibliografia}{}% 40

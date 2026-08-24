@@ -306,12 +306,104 @@ d_{\text{safe}} = v_{\text{human, max}} \cdot \left( T_{\text{reaction}} + T_{\t
 \end{equation}
 Se la distanza tra i volumi SSL del robot e dell'umano risulta inferiore a $d_{\text{safe}}$, viene rilevata una potenziale collisione e attivata la traiettoria di arresto arresto entro il tempo $T_{\text{stop}}$.
 
-\section{Esecuzione del task nominale}
-Per questo lavoro di tesi si è scelto di far eseguire al robot una traiettoria di pick and place
+\section{Esecuzione del Task}
+L'applicazione di test sviluppata per la validazione delle strategie di sicurezza nella collaborazione uomo-robot (HRC) consiste in un task sequenziale di \textit{pick and place}. Dal punto di vista software, la logica di controllo in C++ è stata architettata ed eseguita come una macchina a stati finiti (FSM, \textit{Finite State Machine}), garantendo una gestione deterministica delle transizioni tra la traiettoria nominale e le manovre di arresto di sicurezza.
+
+\subsection{Architettura Software e Flusso di Esecuzione}
+A livello concettuale, la macchina a stati si fonda su due macro-stati operativi principali:
+\begin{itemize}
+	\item \texttt{RUNNING}: il manipolatore insegue la traiettoria nominale pianificata nello spazio dei giunti o cartesiano. Al raggiungimento di ciascun \textit{waypoint} intermedio, l'algoritmo provvede al calcolo e all'interpolazione del segmento di traiettoria successivo.
+	\item \texttt{STOPPING}: innescato dal rilevamento di una condizione di potenziale pericolo o dalla violazione delle distanze di sicurezza, questo stato forza l'esecuzione di una traiettoria di arresto a tempo ottimo (\textit{time-optimal stopping trajectory}). Al termine della decelerazione, il robot viene mantenuto in uno stato di arresto temporaneo per un intervallo di tempo prefissato, durante il quale il sistema calcola la nuova traiettoria di ripartenza in modo da garantire un rientro fluido e privo di urti (\textit{jerk-free}) sulla traiettoria nominale.
+\end{itemize}
+
+Dal punto di vista dell'implementazione software, la FSM non è strutturata all'interno di un unico blocco condizionale, ma si articola attraverso una gerarchia di funzioni che separano la \textit{pianificazione di alto livello} dal \textit{loop di controllo ad alta frequenza} (\SI{1}{\kHz}). Il flusso operativo segue una logica ciclica suddivisa nei seguenti passi:
+
+\begin{enumerate}
+	\item \textbf{Pianificazione e Inizializzazione (Alto Livello):} La funzione principale di gestione (\textit{executeTask}) configura i dati di input, calcola analiticamente i segmenti della traiettoria desiderata e invoca l'esecutore di movimento ad alta frequenza.
+	\item \textbf{Esecuzione Real-Time (\SI{1}{\kHz}):} La funzione di controllo a \SI{1}{\kHz} (\textit{executeTrajectory}, implementata tramite costrutto \textit{lambda} in C++) esegue l'inseguimento della traiettoria generata. Il loop controlla continuamente le condizioni di terminazione o di interruzione:
+	\begin{itemize}
+		\item Se il robot raggiunge la configurazione finale nominale, la funzione solleva la condizione di fine movimento (\texttt{franka::MotionFinished}) e restituisce il controllo al livello superiore.
+		\item Se si verifica una condizione di stop per sicurezza, il sistema commuta nello stato \texttt{STOPPING}, porta il robot all'arresto in tempo ottimo e termina l'esecuzione del ciclo ad alta frequenza.
+	\end{itemize}
+	\item \textbf{Fase di Stasi e Ri-pianificazione (\textit{Re-planning State}):} Al rientro dal loop real-time, il programma entra in uno stato transitorio di stasi. In questo intervallo il robot rimane fermo in posizione di sicurezza, mentre il thread di alto livello valuta la nuova configurazione e ricalcola la traiettoria di rientro prima di richiamare nuovamente il ciclo di controllo a \SI{1}{\kHz}.
+\end{enumerate}
+
+La Figura~\ref{fig:architettura_macchina_stati} illustra lo schema concettuale di tale architettura. Come si può notare, il sistema commuta in modo deterministico tra il livello di pianificazione ad alto livello e il loop di controllo ad alta frequenza. Quando la traiettoria viene completata o interrotta nello stato \texttt{STOPPING}, la restituzione dell'oggetto \texttt{franka::MotionFinished} riporta l'esecuzione allo stato di stasi ad alto livello, consentendo il ricalcolo sicuro della nuova traiettoria senza saturare il thread real-time.
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{figure_tesi/schema_controllo.png}
+	\label{fig:architettura_macchina_stati}
+	\caption{Architettura software del sistema di controllo. L'alto livello gestisce la pianificazione offline e la ri-pianificazione delle traiettorie, mentre il basso livello esegue il loop di controllo ad alta frequenza ($1\text{ kHz}$) alternando deterministicamente gli stati di \texttt{RUNNING} e \texttt{STOPPING}.}
+\end{figure}
 
 
-\section{----------BOZZA---------------}
-Parla di casadi, -libfranka, -pinocchio, -urdf, Eigen
-parla in particolare del controllo di coppia, perchè lo hai scelto rispetto al constrollo di posizione, cosa cambia, come calcoli la coppia, -butta dentro anche Gaz
+Nel seguito vengono analizzate ed elaborate due strategie di controllo implementate tramite le API di basso livello di \texttt{libfranka}: il controllo in posizione e il controllo in coppia.
 
-Mentre nella Sezione \ref{subsec:optimization_problem} la dinamica inversa è espressa nella forma matriciale canonica con il termine $C(q, \dot{q})\dot{q}$, l'implementazione in C++ sfrutta la struttura dati fornita dall'interfaccia \texttt{libfranka}. In particolare, la classe \texttt{franka::RobotState} fornisce direttamente il vettore pre-calcolato $c(q, \dot{q}) \in \mathbb{R}^7$, ottimizzando i tempi di calcolo nel ciclo di controllo in tempo reale."
+\subsection{Controllo di Posizione dei Giunti}
+In prima istanza, la movimentazione del robot è stata implementata sfruttando l'interfaccia di controllo in posizione fornita da \texttt{libfranka}, mediante il metodo generico:
+\begin{lstlisting}[language=C++]
+robot.control([&](const franka::RobotState& state, franka::Duration period) 
+-> franka::JointPositions { ... });
+\end{lstlisting}
+
+Attraverso questo approccio, la funzione \textit{lambda} viene eseguita all'interno del loop di controllo ad alta frequenza ($1\text{ kHz}$) e restituisce al controllore interno del manipolatore i valori obiettivo per le posizioni dei giunti ($\mathbf{q}_d$). 
+
+Sebbene questo approccio abbia mostrato prestazioni soddisfacenti nell'ambiente di simulazione, l'applicazione sul robot reale ha evidenziato criticità applicative. In particolare, si sono riscontrate discontinuità nel profilo delle velocità misurate ai giunti, accompagnate da sollecitazioni meccaniche udibili e vibrazioni indesiderate sulla struttura del manipolatore. Tale fenomeno è riconducibile al fatto che l'invio diretto di posizioni discrete, se non accuratamente filtrato a livello di \textit{jerk}, può generare derivate prime e seconde non continue, attivando i filtri di protezione interni del robot o causandone un comportamento a scatti.
+
+Per la gestione dell'arresto definitivo o del completamento del movimento, l'uscita dal ciclo di controllo viene notificata al sistema restituendo l'oggetto di terminazione con lo stato finale desiderato, mantenendo la posizione corrente di riferimento:
+\begin{lstlisting}[language=C++]
+return franka::MotionFinished(franka::JointPositions(state.q_d));
+\end{lstlisting}
+
+\subsection{Controllo di Coppia e Controllo di Impedenza}
+Per risolvere le discontinuità nei profili di velocità e garantire un'interazione intrinsecamente sicura durante l'esecuzione del task, si è scelto di implementare uno schema di controllo di coppia (\textit{torque control}) in C++. L'interfaccia sfrutta il seguente metodo:
+\begin{lstlisting}[language=C++]
+robot.control([&](const franka::RobotState& state, franka::Duration period) 
+-> franka::Torques { ... });
+\end{lstlisting}
+
+Per garantire un inseguimento preciso e reattivo della traiettoria, è stata adottata una legge di controllo a coppia calcolata (\textit{Computed Torque Control}), che unisce un'azione di \textit{feedforward} (basata sul modello dinamico inverso del robot) ad un'azione di \textit{feedback} proporzionale-derivativa (PD) per regolare l'impedenza ai giunti. 
+
+Matematicamente, la coppia desiderata $\boldsymbol{\tau}_d \in \mathbb{R}^7$ da applicare ai giunti è calcolata come:
+\begin{equation}
+\boldsymbol{\tau}_d = \mathbf{M}(\mathbf{q}) \ddot{\mathbf{q}}_d + \mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) + \mathbf{K}_p (\mathbf{q}_d - \mathbf{q}) + \mathbf{K}_d (\dot{\mathbf{q}}_d - \dot{\mathbf{q}})
+\end{equation}
+dove:
+\begin{itemize}
+	\item $\mathbf{M}(\mathbf{q}) \in \mathbb{R}^{7 \times 7}$ è la matrice di inerzia dipendente dalla configurazione attuale $\mathbf{q}$;
+	\item $\mathbf{C}(\mathbf{q}, \dot{\mathbf{q}}) \in \mathbb{R}^7$ è il vettore che raggruppa gli effetti di Coriolis e le forze centrifughe;
+	\item $\mathbf{q}_d, \dot{\mathbf{q}}_d, \ddot{\mathbf{q}}_d \in \mathbb{R}^7$ sono rispettivamente posizione, velocità ed accelerazione desiderate ai giunti, calcolate dal generatore di traiettoria;
+	\item $\mathbf{K}_p, \mathbf{K}_d \in \mathbb{R}^{7 \times 7}$ sono le matrici diagonali dei guadagni (rispettivamente di rigidezza e smorzamento) del controllore di impedenza.
+\end{itemize}
+
+\textit{Nota: Il vettore della gravità $\mathbf{g}(\mathbf{q})$ non compare esplicitamente nella legge di controllo, poiché l'interfaccia \texttt{libfranka} provvede, di default, a sommare la compensazione di gravità interna ai comandi di coppia forniti dall'utente.}
+
+A livello software, l'implementazione nel loop di controllo a $1\text{ kHz}$ necessita della classe \texttt{franka::Model} per recuperare i parametri dinamici aggiornati. Poiché le API di \texttt{libfranka} restituiscono questi dati sotto forma di \texttt{std::array}, si è fatto ricorso alla libreria \texttt{Eigen} e in particolare alla classe \texttt{Eigen::Map}, che permette di proiettare gli array in matrici e vettori senza allocare nuova memoria, ottimizzando così i tempi di calcolo \textit{real-time}:
+
+\begin{lstlisting}[language=C++]
+// Acquisizione dei termini dinamici dal modello di libfranka
+std::array<double, 49> mass_array = model.mass(state);
+std::array<double, 7> coriolis_array = model.coriolis(state);
+
+// Mappatura (zero-copy) degli array in strutture dati Eigen
+Eigen::Map<Eigen::Matrix<double, 7, 7>> M(mass_array.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> C(coriolis_array.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> q(state.q.data());
+Eigen::Map<Eigen::Matrix<double, 7, 1>> dq(state.dq.data());
+
+// Calcolo degli errori di inseguimento (feedback)
+Eigen::Matrix<double, 7, 1> error = q_d - q;
+Eigen::Matrix<double, 7, 1> derror = dq_d - dq;
+
+// Legge di controllo a coppia calcolata
+Eigen::Matrix<double, 7, 1> tau_d;
+tau_d = M * ddq_d + C + K_p * error + K_d * derror;
+
+// Invio del comando al manipolatore
+std::array<double, 7> tau_d_array;
+Eigen::VectorXd::Map(&tau_d_array[0], 7) = tau_d;
+return tau_d_array;
+\end{lstlisting}
+
+L'adozione di questo schema ha permesso non solo di eliminare le discontinuità e il rumore causati dal controllo di posizione, ma anche di conformare il comportamento dinamico del robot in caso di contatto, un requisito fondamentale per le applicazioni di robotica collaborativa.
