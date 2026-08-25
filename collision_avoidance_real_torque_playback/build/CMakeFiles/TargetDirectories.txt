@@ -1,0 +1,3 @@
+/home/alessandro/Desktop/tesi/codici_cpp/collision_avoidance_real_torque_playback/build/CMakeFiles/demo_stop_event_traj.dir
+/home/alessandro/Desktop/tesi/codici_cpp/collision_avoidance_real_torque_playback/build/CMakeFiles/edit_cache.dir
+/home/alessandro/Desktop/tesi/codici_cpp/collision_avoidance_real_torque_playback/build/CMakeFiles/rebuild_cache.dir
