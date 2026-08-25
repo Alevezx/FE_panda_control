@@ -20,21 +20,21 @@
 \BOOKMARK [2][-]{subsection.2.4.2}{Controllo di ammettenza per l'evasione dinamica}{section.2.4}% 20
 \BOOKMARK [0][-]{chapter.3}{Implementazione}{}% 21
 \BOOKMARK [1][-]{section.3.1}{Braccio robotico}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.2}{Architettura di controllo e libreria libfranka}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.2.1}{Gestione della sicurezza e delle eccezioni}{section.3.2}% 24
-\BOOKMARK [1][-]{section.3.3}{Gestione della dinamica: Pinocchio}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.1}{Architettura software e separazione Model/Data}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.2}{Efficienza computazionale via polimorfismo statico}{section.3.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.3}{Algoritmi dinamici e derivate analitiche}{section.3.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Modellazione attriti ai giunti}{chapter.3}% 29
-\BOOKMARK [1][-]{section.3.5}{Primo metodo: frenata morbida}{chapter.3}% 30
-\BOOKMARK [2][-]{subsection.3.5.1}{Ottimizzazione tramite CasADi}{section.3.5}% 31
-\BOOKMARK [1][-]{section.3.6}{Rilevamento di una potenziale collisione}{chapter.3}% 32
-\BOOKMARK [1][-]{section.3.7}{Esecuzione del Task}{chapter.3}% 33
-\BOOKMARK [2][-]{subsection.3.7.1}{Architettura Software e Flusso di Esecuzione}{section.3.7}% 34
-\BOOKMARK [2][-]{subsection.3.7.2}{Controllo di Posizione dei Giunti}{section.3.7}% 35
-\BOOKMARK [2][-]{subsection.3.7.3}{Controllo di Coppia e Controllo di Impedenza}{section.3.7}% 36
-\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 37
-\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 38
+\BOOKMARK [1][-]{section.3.2}{Architettura software e strumenti di modellazione}{chapter.3}% 23
+\BOOKMARK [2][-]{subsection.3.2.1}{Controllo del robot e libreria libfranka}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.2}{Gestione della dinamica: Pinocchio}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.3}{Modellazione attriti ai giunti}{section.3.2}% 26
+\BOOKMARK [2][-]{subsection.3.2.4}{Ambiente di simulazione}{section.3.2}% 27
+\BOOKMARK [1][-]{section.3.3}{Sistema di visione e playback dello scheletro}{chapter.3}% 28
+\BOOKMARK [1][-]{section.3.4}{Primo metodo: frenata morbida}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.4.1}{Ottimizzazione tramite CasADi}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.2}{Rilevamento di una potenziale collisione}{section.3.4}% 31
+\BOOKMARK [2][-]{subsection.3.4.3}{Esecuzione del Task}{section.3.4}% 32
+\BOOKMARK [1][-]{section.3.5}{Secondo approccio: capsule soft}{chapter.3}% 33
+\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 34
+\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.2}{Controllo di posizione e di coppia ai giunti}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.3}{Primo approccio}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.4}{Secondo approccio}{chapter.4}% 38
 \BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 39
-\BOOKMARK [0][-]{chapter*.18}{Bibliografia}{}% 40
+\BOOKMARK [0][-]{chapter*.25}{Bibliografia}{}% 40

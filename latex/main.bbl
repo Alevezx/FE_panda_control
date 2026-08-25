@@ -78,6 +78,31 @@ Claudio Gaz, Marco Cognetti, Alexander Oliva, Paolo~Robuffo Giordano, and
   of feasible parameters using penalty-based optimization.
 \newblock {\em IEEE Robotics and Automation Letters}, 4(4):4147--4154, 2019.
 
+\bibitem{oliva2022frankasim}
+Alexander~Antonio Oliva, Fabien Spindler, Paolo~Robuffo Giordano, and
+  Fran{\c{c}}ois Chaumette.
+\newblock Frankasim: A dynamic simulator for the franka emika robot with
+  visual-servoing enabled capabilities.
+\newblock In {\em 2022 17th International Conference on Control, Automation,
+  Robotics and Vision (ICARCV)}, pages 868--874. IEEE, 2022.
+
+\bibitem{tadic2019application}
+Vladimir Tadic, Akos Odry, Istvan Kecskes, Ervin Burkus, Zoltan Kiraly, and
+  Peter Odry.
+\newblock Application of intel realsense cameras for depth image generation in
+  robotics.
+\newblock {\em WSEAS Transac. Comput}, 18:2224--2872, 2019.
+
+\bibitem{reis2023real}
+Dillon Reis, Jordan Kupec, Jacqueline Hong, and Ahmad Daoudi.
+\newblock Real-time flying object detection with yolov8.
+\newblock {\em arXiv preprint arXiv:2305.09972}, 2023.
+
+\bibitem{hintjens2013zeromq}
+Pieter Hintjens.
+\newblock {\em ZeroMQ: messaging for many applications}.
+\newblock " O'Reilly Media, Inc.", 2013.
+
 \bibitem{Andersson2018}
 Joel A~E Andersson, Joris Gillis, Greg Horn, James~B Rawlings, and Moritz
   Diehl.

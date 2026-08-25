@@ -10,7 +10,7 @@
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Profili temporali di posizione $q(t)$, velocità $\dot {q}(t)$ e accelerazione $\ddot {q}(t)$ durante la manovra di arresto morbido con polinomio quintico.\relax }}{13}{figure.caption.10}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Robot collaborativo \textit {Franka Emika Panda}\relax }}{19}{figure.caption.13}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Confronto tra le coppie reali misurate ai giunti e le coppie stimate tramite il modello dinamico in Pinocchio.\relax }}{25}{figure.caption.14}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Architettura software del sistema di controllo. L'alto livello gestisce la pianificazione offline e la ri-pianificazione delle traiettorie, mentre il basso livello esegue il loop di controllo ad alta frequenza ($1\text { kHz}$) alternando deterministicamente gli stati di \texttt {RUNNING} e \texttt {STOPPING}.\relax }}{32}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Confronto tra le coppie reali misurate ai giunti e le coppie stimate tramite il modello dinamico in Pinocchio.\relax }}{25}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Architettura software del sistema di controllo. L'alto livello gestisce la pianificazione offline e la ri-pianificazione delle traiettorie, mentre il basso livello esegue il loop di controllo ad alta frequenza ($1\text { kHz}$) alternando deterministicamente gli stati di \texttt {RUNNING} e \texttt {STOPPING}.\relax }}{33}{figure.caption.22}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
