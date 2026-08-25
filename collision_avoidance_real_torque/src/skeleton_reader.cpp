@@ -57,6 +57,8 @@ void loadSkeletonXML(const std::string& xml_path) {
             // std::stod (which defers to strtod) handles "nan" correctly.
             std::string tok_x, tok_y, tok_z;
             ss >> tok_x >> tok_y >> tok_z;
+
+            if (id < 0 || id >= 15) continue;
  
             try {
                 double x = std::stod(tok_x);
