@@ -239,7 +239,7 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
     // Fail-safe: if no valid frame has arrived within this long, flag the
     // skeleton data as stale so the collision checker forces a stop rather
     // than continuing to trust a frozen (or never-received) skeleton.
-    constexpr double STALE_TIMEOUT_S = 2.0;
+    constexpr double STALE_TIMEOUT_S = 0.1;
     constexpr int    POLL_TIMEOUT_MS = 100;  // re-check trajectory_done / staleness this often
  
     void* ctx  = zmq_ctx_new();
