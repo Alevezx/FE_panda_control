@@ -203,7 +203,7 @@ Il ricalcolo della traiettoria in tempo reale si fonda sull'implementazione di u
 
 Poiché i controllori industriali standard e le API di basso livello del robot sono tipicamente ottimizzati con anelli interni di posizione e velocità ad elevata rigidezza, il controllo d'ammettenza risulta l'approccio ideale. Esso agisce come un filtro dinamico esterno che genera un nuovo riferimento cinematico inviabile direttamente ai servocomandi di giunto del manipolatore.
 
-\subsubsection{Sintesi della forza repulsiva e dinamica dell'ammettenza}
+\subsubsection{Sintesi della forza repulsiva}
 
 Nel nostro scenario di evasione non si ha un contatto fisico reale con l'operatore; la vicinanza dell'uomo all'interno della capsula \textit{soft} viene tradotta in una forza repulsiva virtuale $\boldsymbol{F}_{\text{rep}} \in \mathbb{R}^6$. Tale forza ha modulo proporzionale alla profondità di penetrazione all'interno della fascia \textit{soft} ed è diretta lungo la retta di minima distanza tra i segmenti geometrici.
 

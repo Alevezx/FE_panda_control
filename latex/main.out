@@ -1,40 +1,39 @@
 \BOOKMARK [0][-]{chapter*.1}{Sommario}{}% 1
 \BOOKMARK [0][-]{chapter*.3}{Elenco delle figure}{}% 2
-\BOOKMARK [0][-]{chapter*.4}{Elenco delle tabelle}{}% 3
-\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 4
-\BOOKMARK [1][-]{section.1.1}{Collaborazione uomo-robot}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.2}{Sicurezza nella collaborazione uomo-robot}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.3}{Obiettivo della tesi}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.4}{Struttura della tesi}{chapter.1}% 8
-\BOOKMARK [0][-]{chapter.2}{Approcci considerati}{}% 9
-\BOOKMARK [1][-]{section.2.1}{Rappresentazione geometrica del sistema}{chapter.2}% 10
-\BOOKMARK [2][-]{subsection.2.1.1}{Sphere Swept Lines \(SSL\)}{section.2.1}% 11
-\BOOKMARK [2][-]{subsection.2.1.2}{Modellazione del robot e dell'operatore}{section.2.1}% 12
-\BOOKMARK [1][-]{section.2.2}{Distanza geometrica tra robot e operatore}{chapter.2}% 13
-\BOOKMARK [1][-]{section.2.3}{Primo approccio: dimensionamento dinamico delle zone di sicurezza}{chapter.2}% 14
-\BOOKMARK [2][-]{subsection.2.3.1}{Principio dello Speed and Separation Monitoring \(SSM\)}{section.2.3}% 15
-\BOOKMARK [2][-]{subsection.2.3.2}{Pianificazione online della traiettoria di arresto}{section.2.3}% 16
-\BOOKMARK [2][-]{subsection.2.3.3}{Formulazione dell'ottimizzazione e vincoli dinamici}{section.2.3}% 17
-\BOOKMARK [1][-]{section.2.4}{Secondo approccio: capsule soft}{chapter.2}% 18
-\BOOKMARK [2][-]{subsection.2.4.1}{Confronto tra capsule hard e soft}{section.2.4}% 19
-\BOOKMARK [2][-]{subsection.2.4.2}{Controllo di ammettenza per l'evasione dinamica}{section.2.4}% 20
-\BOOKMARK [0][-]{chapter.3}{Implementazione}{}% 21
-\BOOKMARK [1][-]{section.3.1}{Braccio robotico}{chapter.3}% 22
-\BOOKMARK [1][-]{section.3.2}{Architettura software e strumenti di modellazione}{chapter.3}% 23
-\BOOKMARK [2][-]{subsection.3.2.1}{Controllo del robot e libreria libfranka}{section.3.2}% 24
-\BOOKMARK [2][-]{subsection.3.2.2}{Gestione della dinamica: Pinocchio}{section.3.2}% 25
-\BOOKMARK [2][-]{subsection.3.2.3}{Modellazione attriti ai giunti}{section.3.2}% 26
-\BOOKMARK [2][-]{subsection.3.2.4}{Ambiente di simulazione}{section.3.2}% 27
-\BOOKMARK [1][-]{section.3.3}{Sistema di visione e playback dello scheletro}{chapter.3}% 28
-\BOOKMARK [1][-]{section.3.4}{Primo metodo: frenata morbida}{chapter.3}% 29
-\BOOKMARK [2][-]{subsection.3.4.1}{Ottimizzazione tramite CasADi}{section.3.4}% 30
-\BOOKMARK [2][-]{subsection.3.4.2}{Rilevamento di una potenziale collisione}{section.3.4}% 31
-\BOOKMARK [2][-]{subsection.3.4.3}{Esecuzione del Task}{section.3.4}% 32
-\BOOKMARK [1][-]{section.3.5}{Secondo approccio: capsule soft}{chapter.3}% 33
-\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 34
-\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.2}{Controllo di posizione e di coppia ai giunti}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.3}{Primo approccio}{chapter.4}% 37
-\BOOKMARK [1][-]{section.4.4}{Secondo approccio}{chapter.4}% 38
-\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 39
-\BOOKMARK [0][-]{chapter*.25}{Bibliografia}{}% 40
+\BOOKMARK [0][-]{chapter.1}{Introduzione}{}% 3
+\BOOKMARK [1][-]{section.1.1}{Collaborazione uomo-robot}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.2}{Sicurezza nella collaborazione uomo-robot}{chapter.1}% 5
+\BOOKMARK [1][-]{section.1.3}{Obiettivo della tesi}{chapter.1}% 6
+\BOOKMARK [1][-]{section.1.4}{Struttura della tesi}{chapter.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Approcci considerati}{}% 8
+\BOOKMARK [1][-]{section.2.1}{Rappresentazione geometrica del sistema}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.1.1}{Sphere Swept Lines \(SSL\)}{section.2.1}% 10
+\BOOKMARK [2][-]{subsection.2.1.2}{Modellazione del robot e dell'operatore}{section.2.1}% 11
+\BOOKMARK [1][-]{section.2.2}{Distanza geometrica tra robot e operatore}{chapter.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Primo approccio: dimensionamento dinamico delle zone di sicurezza}{chapter.2}% 13
+\BOOKMARK [2][-]{subsection.2.3.1}{Principio dello Speed and Separation Monitoring \(SSM\)}{section.2.3}% 14
+\BOOKMARK [2][-]{subsection.2.3.2}{Pianificazione online della traiettoria di arresto}{section.2.3}% 15
+\BOOKMARK [2][-]{subsection.2.3.3}{Formulazione dell'ottimizzazione e vincoli dinamici}{section.2.3}% 16
+\BOOKMARK [1][-]{section.2.4}{Secondo approccio: capsule soft}{chapter.2}% 17
+\BOOKMARK [2][-]{subsection.2.4.1}{Confronto tra capsule hard e soft}{section.2.4}% 18
+\BOOKMARK [2][-]{subsection.2.4.2}{Controllo di ammettenza per l'evasione dinamica}{section.2.4}% 19
+\BOOKMARK [0][-]{chapter.3}{Implementazione}{}% 20
+\BOOKMARK [1][-]{section.3.1}{Braccio robotico}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.2}{Architettura software e strumenti di modellazione}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.2.1}{Controllo del robot e libreria libfranka}{section.3.2}% 23
+\BOOKMARK [2][-]{subsection.3.2.2}{Gestione della dinamica: Pinocchio}{section.3.2}% 24
+\BOOKMARK [2][-]{subsection.3.2.3}{Modellazione attriti ai giunti}{section.3.2}% 25
+\BOOKMARK [2][-]{subsection.3.2.4}{Ambiente di simulazione}{section.3.2}% 26
+\BOOKMARK [1][-]{section.3.3}{Sistema di visione e playback dello scheletro}{chapter.3}% 27
+\BOOKMARK [1][-]{section.3.4}{Primo metodo: frenata morbida}{chapter.3}% 28
+\BOOKMARK [2][-]{subsection.3.4.1}{Ottimizzazione tramite CasADi}{section.3.4}% 29
+\BOOKMARK [2][-]{subsection.3.4.2}{Rilevamento di una potenziale collisione}{section.3.4}% 30
+\BOOKMARK [2][-]{subsection.3.4.3}{Esecuzione del Task}{section.3.4}% 31
+\BOOKMARK [1][-]{section.3.5}{Secondo approccio: capsule soft}{chapter.3}% 32
+\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 33
+\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.2}{Controllo di posizione e di coppia ai giunti}{chapter.4}% 35
+\BOOKMARK [1][-]{section.4.3}{Primo approccio}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.4}{Secondo approccio}{chapter.4}% 37
+\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 38
+\BOOKMARK [0][-]{chapter*.24}{Bibliografia}{}% 39
