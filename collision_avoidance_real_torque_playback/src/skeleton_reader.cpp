@@ -60,7 +60,8 @@ void loadSkeletonXML(const std::string& xml_path) {
             std::string tok_x, tok_y, tok_z;
             ss >> tok_x >> tok_y >> tok_z;
 
-            if (id < 0 || id >= 15) continue;
+            if (id < 0 || id >= 15) continue;   // 15 is the minimum number, used in the xml files
+                                                // not to be confused with the 21 points from the camera logic
  
             try {
                 double x = std::stod(tok_x);
@@ -137,7 +138,8 @@ void receiveSkeletonLive(const std::string& temp_path) {
         temp.close();
 
         // Write to shared skeleton if we got a full skeleton
-        if (keypoint.size() == 15) {
+        if (keypoint.size() == 15) {        // 15 is legacy number, the camera sends more anyway
+                                            // if you change it to 21 check the skeleton capsule logic
             std::lock_guard<std::mutex> lock(skeleton_mutex);
             shared_skeleton = keypoint;
         }
@@ -148,7 +150,7 @@ void receiveSkeletonLive(const std::string& temp_path) {
 }
 
 
-// ── receiveSkeletonMerged helpers ───────────────────────────────────────
+//  receiveSkeletonMerged helpers 
  
 // Parses one DataTransmitter skeleton message of the form:
 //   "<topic>_<id>; [[x,y,z], [x,y,z], ...]; [c0, c1, ...]"

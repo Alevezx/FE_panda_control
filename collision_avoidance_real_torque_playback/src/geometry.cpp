@@ -69,6 +69,13 @@ std::pair<std::optional<DistanceResult>, int> distanceToSkeleton(
         int ind1 = SKEL_INDEX[i][0];
         int ind2 = SKEL_INDEX[i][1];
 
+        // guard against skeleton shorter than 21 joints
+
+        if (ind1 < 0 || ind2 < 0 ||
+            ind1 >= (int)skeleton.size() || ind2 >= (int)skeleton.size()) {
+            continue;
+        }
+
         Eigen::Vector3d P1(skeleton[ind1][0], skeleton[ind1][1], skeleton[ind1][2]);
         Eigen::Vector3d Q1(skeleton[ind2][0], skeleton[ind2][1], skeleton[ind2][2]);
         
