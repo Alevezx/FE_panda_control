@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque
+CMAKE_SOURCE_DIR = /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build
+CMAKE_BINARY_DIR = /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/demo_stop_event_traj.dir/depend.make
@@ -72,100 +72,100 @@ include CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: ../src/demo_stop_event_traj.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp > CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp > CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o: ../src/ik_solver.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/ik_solver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/ik_solver.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/ik_solver.cpp > CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/ik_solver.cpp > CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/ik_solver.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/ik_solver.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/ik_solver.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o: ../src/examples_common.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/examples_common.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/examples_common.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/examples_common.cpp > CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/examples_common.cpp > CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/examples_common.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/examples_common.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/examples_common.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o: ../src/calc_stop_duration.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.cpp > CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.cpp > CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o: ../src/flag_stop.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/flag_stop.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/flag_stop.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/flag_stop.cpp > CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/flag_stop.cpp > CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/flag_stop.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/flag_stop.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/flag_stop.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o: ../src/geometry.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/geometry.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/geometry.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/geometry.cpp > CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/geometry.cpp > CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/geometry.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/geometry.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/geometry.cpp.s
 
 CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o: CMakeFiles/demo_stop_event_traj.dir/flags.make
 CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o: ../src/skeleton_reader.cpp
 CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o: CMakeFiles/demo_stop_event_traj.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/skeleton_reader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o -MF CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o.d -o CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/skeleton_reader.cpp
 
 CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/skeleton_reader.cpp > CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/skeleton_reader.cpp > CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.i
 
 CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/skeleton_reader.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/skeleton_reader.cpp -o CMakeFiles/demo_stop_event_traj.dir/src/skeleton_reader.cpp.s
 
 # Object files for target demo_stop_event_traj
 demo_stop_event_traj_OBJECTS = \
@@ -199,7 +199,7 @@ demo_stop_event_traj: /usr/lib/x86_64-linux-gnu/libboost_system.so
 demo_stop_event_traj: /usr/lib/x86_64-linux-gnu/libboost_serialization.so
 demo_stop_event_traj: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
 demo_stop_event_traj: CMakeFiles/demo_stop_event_traj.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable demo_stop_event_traj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable demo_stop_event_traj"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/demo_stop_event_traj.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -211,6 +211,6 @@ CMakeFiles/demo_stop_event_traj.dir/clean:
 .PHONY : CMakeFiles/demo_stop_event_traj.dir/clean
 
 CMakeFiles/demo_stop_event_traj.dir/depend:
-	cd /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/CMakeFiles/demo_stop_event_traj.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/CMakeFiles/demo_stop_event_traj.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/demo_stop_event_traj.dir/depend
 

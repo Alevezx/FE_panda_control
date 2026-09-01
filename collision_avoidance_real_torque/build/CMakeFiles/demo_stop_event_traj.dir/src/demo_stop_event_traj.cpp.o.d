@@ -1,5 +1,5 @@
 CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/demo_stop_event_traj.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/7/iostream \
  /usr/include/x86_64-linux-gnu/c++/7/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/7/bits/os_defines.h \
@@ -1800,8 +1800,8 @@ CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: \
  /home/panda/ivan_ws/libfranka/include/franka/exception.h \
  /home/panda/ivan_ws/libfranka/include/franka/log.h \
  /home/panda/ivan_ws/libfranka/include/franka/rate_limiting.h \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/examples_common.h \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/ik_solver.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/examples_common.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/ik_solver.h \
  /usr/local/include/pinocchio/multibody/data.hpp \
  /usr/include/eigen3/Eigen/Cholesky \
  /usr/local/include/pinocchio/multibody/data.hxx \
@@ -2011,9 +2011,9 @@ CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: \
  /usr/local/include/pinocchio/algorithm/jacobian.hxx \
  /usr/local/include/pinocchio/algorithm/joint-configuration.hpp \
  /usr/local/include/pinocchio/algorithm/joint-configuration.hxx \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/flag_stop.h \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/shared_state.h \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/flag_stop.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/shared_state.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.h \
  /usr/local/include/casadi/casadi.hpp \
  /usr/local/include/casadi/core/core.hpp \
  /usr/local/include/casadi/core/sx_elem.hpp \
@@ -2180,4 +2180,4 @@ CMakeFiles/demo_stop_event_traj.dir/src/demo_stop_event_traj.cpp.o: \
  /usr/local/include/casadi/core/filesystem.hpp \
  /usr/local/include/casadi/core/options.hpp \
  /usr/local/include/casadi/core/blas.hpp \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/skeleton_reader.h
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/skeleton_reader.h

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-project(simulazione_robot_tau CXX)
+project(parser CXX)
 
 # Richiesto C++14 per libfranka e Pinocchio
 set(CMAKE_CXX_STANDARD 17)
@@ -13,7 +13,7 @@ find_package(pinocchio REQUIRED)
 
 # --- ESEGUIBILE ---
 add_executable(simulazione_robot_tau #demo_stop_event_traj
-    src/simulazione_robot_tau.cpp
+    src/parser.cpp
 )
 
 target_link_libraries(simulazione_robot_tau PRIVATE

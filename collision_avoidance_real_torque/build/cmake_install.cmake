@@ -1,4 +1,4 @@
-# Install script for directory: /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque
+# Install script for directory: /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

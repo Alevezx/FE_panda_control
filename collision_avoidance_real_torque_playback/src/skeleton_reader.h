@@ -21,6 +21,8 @@ void loadSkeletonXML(const std::string& xml_path);
 // Runs in its own thread, writes to shared_skeleton
 void receiveSkeletonLive(const std::string& temp_path);
 
+static std::string formatSkeletonJSON(const Skeleton& skel);
+
 // Live mode: subscribes over ZeroMQ to the merged
 // multi-camera skeleton stream published by data_merging.py
 // (utils.data_transmitter.DataTransmitter, topic "MERGED", device_id 10 ->
@@ -30,4 +32,5 @@ void receiveSkeletonLive(const std::string& temp_path);
 // skeleton_stale if no valid frame has arrived within STALE_TIMEOUT_S.
 void receiveSkeletonMerged(const std::string& host = "localhost",
                             int device_id = 10,
-                            const std::string& topic = "MERGED");
+                            const std::string& topic = "MERGED",
+                            const std::string& log_path = "");

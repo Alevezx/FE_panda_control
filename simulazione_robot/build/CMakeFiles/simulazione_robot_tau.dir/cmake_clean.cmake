@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/simulazione_robot_tau.dir/src/simulazione_robot_tau.cpp.o"
-  "CMakeFiles/simulazione_robot_tau.dir/src/simulazione_robot_tau.cpp.o.d"
+  "CMakeFiles/simulazione_robot_tau.dir/src/parser.cpp.o"
+  "CMakeFiles/simulazione_robot_tau.dir/src/parser.cpp.o.d"
   "simulazione_robot_tau"
   "simulazione_robot_tau.pdb"
 )

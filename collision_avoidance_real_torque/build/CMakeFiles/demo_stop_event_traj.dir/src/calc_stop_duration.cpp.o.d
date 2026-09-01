@@ -1,5 +1,5 @@
 CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o: \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.cpp \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.cpp \
  /usr/include/stdc-predef.h \
  /usr/local/include/pinocchio/autodiff/casadi.hpp \
  /usr/local/include/pinocchio/math/fwd.hpp \
@@ -1357,7 +1357,7 @@ CMakeFiles/demo_stop_event_traj.dir/src/calc_stop_duration.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SSE.h \
- /home/panda/Desktop/ALESSANDRO_VECCHIO/cpp/collision_avoidance_real_torque/src/calc_stop_duration.h \
+ /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/collision_avoidance_real_torque/src/calc_stop_duration.h \
  /usr/local/include/pinocchio/multibody/model.hpp \
  /usr/local/include/pinocchio/spatial/se3.hpp \
  /usr/local/include/pinocchio/spatial/se3-base.hpp \

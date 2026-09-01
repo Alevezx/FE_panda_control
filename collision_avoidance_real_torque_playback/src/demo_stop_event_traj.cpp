@@ -67,6 +67,17 @@ void collisionCheckerThread(const pinocchio::Model& model, std::ofstream& outfil
             skeleton = shared_skeleton;
         }
 
+        std::cout << "Skeleton points (" << skeleton.size() << " total):\n";
+        for (size_t i = 0; i < skeleton.size(); ++i) {
+            const auto& pt = skeleton[i];
+            std::cout << "  [" << i << "] -> ";
+            if (std::isnan(pt[0]) && std::isnan(pt[1]) && std::isnan(pt[2])) {
+                std::cout << "NaN, NaN, NaN\n";
+            } else {
+                std::cout << "x: " << pt[0] << ", y: " << pt[1] << ", z: " << pt[2] << "\n";
+            }
+        }
+
         // check staleness
         bool stale = skeleton_stale.load();
 \
@@ -381,7 +392,8 @@ void executeTask(
     // thread per scheletro e collision check
     // usa loadSkeletonXML per virtual mode
     // usa receiveSkeletonLive per real time mode
-    std::thread skeleton_thread(receiveSkeletonMerged, "localhost", 10, "MERGED");
+    std::thread skeleton_thread(receiveSkeletonMerged, "localhost", 10, "MERGED",
+                                 "../logs/skeleton_received.txt");
 
     std::thread collision_thread(collisionCheckerThread,
     std::cref(model), std::ref(outfile_dist));

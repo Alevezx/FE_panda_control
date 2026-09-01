@@ -6,6 +6,7 @@
 #include <thread>
 #include <cmath>
 #include <limits>
+#include <iomanip>
 #include <zmq.h>
 
 void loadSkeletonXML(const std::string& xml_path) {
@@ -169,71 +170,71 @@ void receiveSkeletonLive(const std::string& temp_path) {
 // truncated/garbled message — not on the presence of NaN, which is a
 // normal, expected value here.
 static bool parseMergedSkeletonMessage(const std::string& raw, Skeleton& out) {
-    auto first_semi = raw.find("; ");
-    if (first_semi == std::string::npos) return false;
- 
-    auto arr_start = raw.find('[', first_semi);
-    if (arr_start == std::string::npos) return false;
- 
-    // Depth-count to the matching closing bracket so we grab exactly the
-    // position array and don't run into the confidence array that follows.
-    int depth = 0;
-    size_t arr_end = std::string::npos;
-    for (size_t i = arr_start; i < raw.size(); ++i) {
-        if (raw[i] == '[') depth++;
-        else if (raw[i] == ']') {
-            depth--;
-            if (depth == 0) { arr_end = i; break; }
-        }
+
+    //std::cout << raw << "\n";
+    size_t start_idx = raw.find("[[");
+    if (start_idx == std::string::npos) {
+        std::cerr << "Parser error on [[\n";
+        return false;
     }
-    if (arr_end == std::string::npos) return false;
- 
-    std::string body = raw.substr(arr_start + 1, arr_end - arr_start - 1);
- 
-    Skeleton parsed;
+    size_t end_idx = raw.find("]]", start_idx);
+    if (end_idx == std::string::npos) { 
+        std::cerr << "Parser error on ]]\n";
+        return false;
+    }
+    std::string points_str = raw.substr(start_idx + 1, end_idx - (start_idx));
+    
+    out.clear();
+
     size_t pos = 0;
-    while (pos < body.size()) {
-        auto t_start = body.find('[', pos);
-        if (t_start == std::string::npos) break;
-        auto t_end = body.find(']', t_start);
-        if (t_end == std::string::npos) break;
- 
-        std::string triplet = body.substr(t_start + 1, t_end - t_start - 1);
-        std::array<double, 3> point{
-            std::numeric_limits<double>::quiet_NaN(),
-            std::numeric_limits<double>::quiet_NaN(),
-            std::numeric_limits<double>::quiet_NaN()
-        };
- 
-        std::istringstream ss(triplet);
-        std::string tok;
-        int i = 0;
-        while (std::getline(ss, tok, ',') && i < 3) {
-            auto a = tok.find_first_not_of(" \t");
-            if (a != std::string::npos) {
-                auto b = tok.find_last_not_of(" \t");
-                try {
-                    point[i] = std::stod(tok.substr(a, b - a + 1));
-                } catch (const std::exception&) {
-                    // leave as NaN — malformed single value, not a reason
-                    // to reject the whole joint or the whole frame
-                }
+    while ((pos = points_str.find('[', pos)) != std::string::npos) {
+        size_t close_bracket = points_str.find(']', pos);
+        if (close_bracket == std::string::npos) break;
+
+        std::string triplet = points_str.substr(pos + 1, close_bracket - (pos + 1));
+        std::stringstream ss(triplet);
+        std::string x_str, y_str, z_str;
+
+        if (std::getline(ss, x_str, ',') &&
+            std::getline(ss, y_str, ',') &&
+            std::getline(ss, z_str)) {
+            
+            std::array<double, 3> pt;
+            try {
+                pt[0] = (x_str.find("NaN") != std::string::npos) ? NAN : std::stod(x_str);
+                pt[1] = (y_str.find("NaN") != std::string::npos) ? NAN : std::stod(y_str);
+                pt[2] = (z_str.find("NaN") != std::string::npos) ? NAN : std::stod(z_str);
+            } catch (...) {
+                pt = {NAN, NAN, NAN};
             }
-            ++i;
+            out.push_back(pt);
         }
-        if (i != 3) return false;  // genuinely truncated triplet -> reject frame
- 
-        parsed.push_back(point);
-        pos = t_end + 1;
+
+        pos = close_bracket + 1;
     }
- 
-    if (parsed.empty()) return false;
- 
-    out = std::move(parsed);
-    return true;
+    /*std::cout << "Skeleton points (" << out.size() << " total):\n";
+    for (size_t i = 0; i < out.size(); ++i) {
+        const auto& pt = out[i];
+        std::cout << "  [" << i << "] -> ";
+        if (std::isnan(pt[0]) && std::isnan(pt[1]) && std::isnan(pt[2])) {
+            std::cout << "NaN, NaN, NaN\n";
+        } else {
+            std::cout << "x: " << pt[0] << ", y: " << pt[1] << ", z: " << pt[2] << "\n";
+        }
+    }*/
+
+    return !out.empty();
 }
+
+// Formats a Skeleton back into the same "[[x,y,z], ...]" shape produced by
+// json.dumps() in DataTransmitter._send_skeleton_data — including the
+// capital-N "NaN" token, since Python's json module matches that literal
+// case-sensitively (a lowercase "nan", which is what plain ostream
+// formatting of a NaN double would otherwise emit, is not valid JSON and
+// would fail to parse on the analysis side).
  
-void receiveSkeletonMerged(const std::string& host, int device_id, const std::string& topic) {
+void receiveSkeletonMerged(const std::string& host, int device_id, const std::string& topic,
+                            const std::string& log_path) {
     const int port = 6001 + device_id;   // mirrors DataTransmitter's port = base_port + device_id
     const std::string endpoint = "tcp://" + host + ":" + std::to_string(port);
     const std::string subscribe_topic = topic + "_" + std::to_string(device_id);
@@ -244,6 +245,18 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
     constexpr double STALE_TIMEOUT_S = 0.1;
     constexpr int    POLL_TIMEOUT_MS = 100;  // re-check trajectory_done / staleness this often
  
+    // logging, opened once at thread start
+    std::ofstream log_file;
+    if (!log_path.empty()) {
+        log_file.open(log_path, std::ios::out | std::ios::app);
+        if (!log_file.is_open()) {
+            std::cerr << "skeleton_reader: WARNING could not open log file '"
+                       << log_path << "' — continuing without logging\n";
+        } else {
+            std::cout << "skeleton_reader: logging received frames to '" << log_path << "'\n";
+        }
+    }
+
     void* ctx  = zmq_ctx_new();
     void* sock = zmq_socket(ctx, ZMQ_SUB);
  
@@ -279,13 +292,38 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
             if (nbytes >= 0) {
                 std::string raw(static_cast<char*>(zmq_msg_data(&msg)), nbytes);
                 zmq_msg_close(&msg);
+
+                //std::cout << raw << "\n";
  
                 Skeleton parsed;
                 if (parseMergedSkeletonMessage(raw, parsed)) {
+                    /*std::cout << "Skeleton points (" << parsed.size() << " total):\n";
+                    for (size_t i = 0; i < parsed.size(); ++i) {
+                        const auto& pt = parsed[i];
+                        std::cout << "  [" << i << "] -> ";
+                        if (std::isnan(pt[0]) && std::isnan(pt[1]) && std::isnan(pt[2])) {
+                            std::cout << "NaN, NaN, NaN\n";
+                        } else {
+                            std::cout << "x: " << pt[0] << ", y: " << pt[1] << ", z: " << pt[2] << "\n";
+                        }
+                    }*/
+                    if (log_file.is_open()) {
+                        log_file << parsed.size() << "\n";
+                        for (size_t i = 0; i < parsed.size(); ++i) {
+                            const auto& pt = parsed[i];
+                            log_file << "  [" << i << "] -> ";
+                            if (std::isnan(pt[0]) && std::isnan(pt[1]) && std::isnan(pt[2])) {
+                                log_file << "NaN, NaN, NaN\n";
+                            } else {
+                                log_file << "x: " << pt[0] << ", y: " << pt[1] << ", z: " << pt[2] << "\n";
+                            }
+                        }
+                    }
                     {
                         std::lock_guard<std::mutex> lock(skeleton_mutex);
                         shared_skeleton = std::move(parsed);
                     }
+
                     last_valid_frame = std::chrono::steady_clock::now();
                     skeleton_stale.store(false);
  
@@ -308,7 +346,7 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
         // applies equally to "never received a frame at all" and to
         // "was receiving, then stopped" — both are the same failure mode
         // from the collision checker's point of view.
-        if (elapsed > STALE_TIMEOUT_S) {
+        /*if (elapsed > STALE_TIMEOUT_S) {
             skeleton_stale.store(true);
             if (!warned_stale) {
                 std::cerr << "skeleton_reader: WARNING no valid skeleton frame in "
@@ -316,9 +354,17 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
                            << "s) — flagging stale, forcing stop condition\n";
                 warned_stale = true;
             }
-        }
+        }*/
     }
  
     zmq_close(sock);
     zmq_ctx_destroy(ctx);
+
+    zmq_close(sock);
+    zmq_ctx_destroy(ctx);
+
+    if (log_file.is_open()) {
+        log_file.close();
+        std::cout << "skeleton_reader: closed log file '" << log_path << "'\n";
+    }
 }

@@ -5,7 +5,7 @@
 #include <atomic>
 
 //  Skeleton type 
-// 15 joints, each a 3D point
+// 15 joints or more, each a 3D point
 using Skeleton = std::vector<std::array<double, 3>>;
 
 //  Robot state 
