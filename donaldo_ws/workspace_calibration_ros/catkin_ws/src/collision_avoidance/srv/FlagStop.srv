@@ -1,0 +1,6 @@
+float64 T_stop
+float64[] q
+float64[] q_p
+float64[] q_pp
+---
+bool flag_stop

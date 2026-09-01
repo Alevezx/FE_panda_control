@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/lab/donaldo_ws/workspace_calibration_ros/catkin_ws/devel/setup.sh

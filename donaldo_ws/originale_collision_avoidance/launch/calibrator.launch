@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<launch>
+    <!-- Launch wrapper node -->
+    <include file="$(find realsense2_camera)/launch/rs_camera.launch">
+    </include>
+
+    <!-- Launch aruco node -->
+    <include file="$(find aruco_ros)/launch/single.launch">
+    </include>
+
+    <!-- Launch base_rotation_matrix_subscriber node -->
+    <node pkg="collision_avoidance" name="base_rotation_matrix_subscriber" type="base_rotation_matrix_subscriber.py" output="screen">
+    </node>
+</launch>
+
