@@ -83,7 +83,7 @@ int main(int argc, char** argv) {
   SafetyParams safetyParams;
   safetyParams.r_inner = 0.0;  // Soglia di arresto immediato
   safetyParams.r_outer = 0.30; // Raggio di influenza repulsiva
-  safetyParams.T_stop = 10.0;   // Tempo di arresto controllato (basato su test empirici)
+  safetyParams.T_stop = 0.4;   // Tempo di arresto controllato (basato su test empirici)
 
   // Parametri di filtraggio forze
   const double forceFilterGain = 0.15;   //0.05;
@@ -300,13 +300,20 @@ int main(int argc, char** argv) {
       SkeletonCapsuleBuffer skel;
       skelSub.readLatest(skel); 
 
-      const uint64_t now_ns = (uint64_t)std::chrono::duration_cast<std::chrono::nanoseconds>(
-                                  std::chrono::steady_clock::now() - skel_t0).count();
-      const double max_age_s = 0.10;
-      const bool skeleton_valid = (skel.n_caps > 0) && (skel.rx_time_ns > 0) /*&&
-                                  ((now_ns >= skel.rx_time_ns) ? ((now_ns - skel.rx_time_ns) * 1e-9 < max_age_s) : true)*/;
+      //const uint64_t now_ns = (uint64_t)std::chrono::duration_cast<std::chrono::nanoseconds>(
+      //                            std::chrono::steady_clock::now() - skel_t0).count();
 
-      //std::cout << "Skeleton valid: " << skeleton_valid << "\n" << skel.n_caps << ", " << skel.rx_time_ns << ", " << now_ns << ", " << max_age_s << "\n";
+      // prova con epoch per sincronizzare robot e zmq
+      const uint64_t now_ns = static_cast<uint64_t>(
+                                  std::chrono::duration_cast<std::chrono::nanoseconds>(
+                                    std::chrono::steady_clock::now().time_since_epoch()).count());                                  
+      
+      const double max_age_s = 0.10;
+
+      const bool skeleton_valid = (skel.n_caps > 0) && (skel.rx_time_ns > 0) &&
+                                  ((now_ns >= skel.rx_time_ns) ? ((now_ns - skel.rx_time_ns) * 1e-9 < max_age_s) : true);
+
+      std::cout << "Skeleton valid: " << skeleton_valid << "\n" << skel.n_caps << ", " << now_ns - skel.rx_time_ns << ", " << max_age_s << "\n";
       if (!skeleton_valid) {
         minSurfaceDist = 1e9;
       } else {

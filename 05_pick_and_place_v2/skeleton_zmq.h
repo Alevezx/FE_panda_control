@@ -112,9 +112,14 @@ private:
       const auto* recs = reinterpret_cast<const SkeletonCapsuleRecord*>(
           static_cast<const uint8_t*>(msg.data()) + sizeof(SkeletonCapsuleMsgHeader));
 
-      const uint64_t now_ns = (uint64_t)std::chrono::duration_cast<std::chrono::nanoseconds>(
-                                  std::chrono::steady_clock::now() - t0)
-                                  .count();
+      //const uint64_t now_ns = (uint64_t)std::chrono::duration_cast<std::chrono::nanoseconds>(
+      //                            std::chrono::steady_clock::now() - t0).count();
+
+
+      // prova con epoch per sincronizzare robot e zmq
+      const uint64_t now_ns = static_cast<uint64_t>(
+                                  std::chrono::duration_cast<std::chrono::nanoseconds>(
+                                    std::chrono::steady_clock::now().time_since_epoch()).count());
 
       // Scrittura nel buffer "back" (quello non attivo, indice opposto a active_idx_)      
       const int widx = 1 - active_idx_.load(std::memory_order_relaxed); 

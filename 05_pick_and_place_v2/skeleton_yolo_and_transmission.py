@@ -184,7 +184,7 @@ def main():
     torso_radius = 0.25     # Raggio maggiorato per la capsula del busto (metri)
     max_depth_range = 3.0   # [m] Ignora punti oltre questa distanza (D435 diventa rumorosa)
     endpoint = "ipc:///tmp/skeleton.ipc" # Indirizzo socket ZeroMQ (IPC per comunicazione locale veloce)
-    save_video = True      # Imposta a True per salvare il video, False altrimenti
+    save_video = False      # Imposta a True per salvare il video, False altrimenti
     video_filename = "output_video_capsule_last_hard.avi"
     # ipc sta per inter-process communication (comunicazione tra processi) (usa un file socket speciale nel filesystem si linux, invece che la rete TCP/IP)
 
