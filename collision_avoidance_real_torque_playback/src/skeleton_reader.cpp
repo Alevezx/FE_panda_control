@@ -346,7 +346,7 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
         // applies equally to "never received a frame at all" and to
         // "was receiving, then stopped" — both are the same failure mode
         // from the collision checker's point of view.
-        /*if (elapsed > STALE_TIMEOUT_S) {
+        if (elapsed > STALE_TIMEOUT_S) {
             skeleton_stale.store(true);
             if (!warned_stale) {
                 std::cerr << "skeleton_reader: WARNING no valid skeleton frame in "
@@ -354,7 +354,7 @@ void receiveSkeletonMerged(const std::string& host, int device_id, const std::st
                            << "s) — flagging stale, forcing stop condition\n";
                 warned_stale = true;
             }
-        }*/
+        }
     }
  
     zmq_close(sock);

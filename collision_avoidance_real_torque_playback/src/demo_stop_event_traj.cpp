@@ -66,7 +66,7 @@ void collisionCheckerThread(const pinocchio::Model& model, std::ofstream& outfil
             std::lock_guard<std::mutex> lock(skeleton_mutex);
             skeleton = shared_skeleton;
         }
-
+/*
         std::cout << "Skeleton points (" << skeleton.size() << " total):\n";
         for (size_t i = 0; i < skeleton.size(); ++i) {
             const auto& pt = skeleton[i];
@@ -77,7 +77,7 @@ void collisionCheckerThread(const pinocchio::Model& model, std::ofstream& outfil
                 std::cout << "x: " << pt[0] << ", y: " << pt[1] << ", z: " << pt[2] << "\n";
             }
         }
-
+*/
         // check staleness
         bool stale = skeleton_stale.load();
 \
@@ -391,7 +391,7 @@ void executeTask(
 
     // thread per scheletro e collision check
     // usa loadSkeletonXML per virtual mode
-    // usa receiveSkeletonLive per real time mode
+    // usa receiveSkeletonMerged per real time mode
     std::thread skeleton_thread(receiveSkeletonMerged, "localhost", 10, "MERGED",
                                  "../logs/skeleton_received.txt");
 
