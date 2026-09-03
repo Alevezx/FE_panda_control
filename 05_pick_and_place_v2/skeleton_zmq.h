@@ -83,7 +83,7 @@ private:
   void loop() {
     // Collegamento all'indirizzo ICP definito da python
     sub_.connect(endpoint_);
-    sub_.set(zmq::sockopt::subscribe, ""); // Sottoscrizione a tutti i messaggi
+    sub_.setsockopt(ZMQ_SUBSCRIBE, "", 0); // Sottoscrizione a tutti i messaggi
 
     const auto t0 = std::chrono::steady_clock::now();
 
@@ -91,7 +91,7 @@ private:
       zmq::message_t msg;
       // Ricezione bloccante (ma siamo in un thread separato, quindi non blocca il robot)
       // Il thread di scrittura da python (non della lettura del robot) si ferma qui, finchè non arriva un pacchetto da python. 
-      if (!sub_.recv(msg, zmq::recv_flags::none)) continue;
+      if (!sub_.recv(&msg, 0)) continue;
       
       // Validazione dimensione minima header
       if (msg.size() < sizeof(SkeletonCapsuleMsgHeader)) continue;

@@ -1,0 +1,3 @@
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/edit_cache.dir
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/rebuild_cache.dir

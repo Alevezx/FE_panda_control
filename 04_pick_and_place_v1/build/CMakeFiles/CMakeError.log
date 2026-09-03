@@ -1,0 +1,45 @@
+Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_e72ac/fast && /usr/bin/make  -f CMakeFiles/cmTC_e72ac.dir/build.make CMakeFiles/cmTC_e72ac.dir/build
+make[1]: Entering directory '/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e72ac.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_e72ac.dir/src.cxx.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_e72ac
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e72ac.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_e72ac.dir/src.cxx.o -o cmTC_e72ac 
+CMakeFiles/cmTC_e72ac.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e72ac.dir/build.make:98: recipe for target 'cmTC_e72ac' failed
+make[1]: *** [cmTC_e72ac] Error 1
+make[1]: Leaving directory '/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/04_pick_and_place_v1/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_e72ac/fast' failed
+make: *** [cmTC_e72ac/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+

@@ -217,7 +217,7 @@ def main():
     # Inizializzazione VideoWriter
     video_writer = None
     if save_video:
-        video_writer = cv2.VideoWriter(video_filename, cv2.VideoWriter_fourcc(*'XVID'), 30, (848, 480))
+        video_writer = cv2.VideoWriter(video_filename, cv2.VideoWriter_fourcc(*'XVID'), 10, (848, 480))
 
     # Inizializzazione filtri di smoothing
     smoother = Keypoints3DSmoother(num_kpts=17, min_cutoff=0.1, beta=1.0)

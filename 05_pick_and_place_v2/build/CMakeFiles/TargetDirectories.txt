@@ -1,3 +1,3 @@
-/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/rebuild_cache.dir
-/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/edit_cache.dir
-/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/edit_cache.dir
+/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/rebuild_cache.dir

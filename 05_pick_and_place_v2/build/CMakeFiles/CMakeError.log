@@ -1,27 +1,31 @@
 Performing C++ SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: /home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp
+Change Dir: /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_24faa/fast && /usr/bin/make -f CMakeFiles/cmTC_24faa.dir/build.make CMakeFiles/cmTC_24faa.dir/build
-make[1]: Entering directory '/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp'
-Building CXX object CMakeFiles/cmTC_24faa.dir/src.cxx.o
-/usr/bin/c++    -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_24faa.dir/src.cxx.o -c /home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp/src.cxx
-Linking CXX executable cmTC_24faa
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24faa.dir/link.txt --verbose=1
-/usr/bin/c++   -DCMAKE_HAVE_LIBC_PTHREAD    CMakeFiles/cmTC_24faa.dir/src.cxx.o  -o cmTC_24faa 
-/usr/bin/ld: CMakeFiles/cmTC_24faa.dir/src.cxx.o: in function `main':
-src.cxx:(.text+0x46): undefined reference to `pthread_create'
-/usr/bin/ld: src.cxx:(.text+0x52): undefined reference to `pthread_detach'
-/usr/bin/ld: src.cxx:(.text+0x63): undefined reference to `pthread_join'
+Run Build Command(s):/usr/bin/make -f Makefile cmTC_3a48a/fast && /usr/bin/make  -f CMakeFiles/cmTC_3a48a.dir/build.make CMakeFiles/cmTC_3a48a.dir/build
+make[1]: Entering directory '/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_3a48a.dir/src.cxx.o
+/usr/bin/c++ -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3a48a.dir/src.cxx.o -c /home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp/src.cxx
+Linking CXX executable cmTC_3a48a
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3a48a.dir/link.txt --verbose=1
+/usr/bin/c++ CMakeFiles/cmTC_3a48a.dir/src.cxx.o -o cmTC_3a48a 
+CMakeFiles/cmTC_3a48a.dir/src.cxx.o: In function `main':
+src.cxx:(.text+0x3e): undefined reference to `pthread_create'
+src.cxx:(.text+0x4a): undefined reference to `pthread_detach'
+src.cxx:(.text+0x56): undefined reference to `pthread_cancel'
+src.cxx:(.text+0x67): undefined reference to `pthread_join'
+src.cxx:(.text+0x7b): undefined reference to `pthread_atfork'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_24faa.dir/build.make:87: cmTC_24faa] Error 1
-make[1]: Leaving directory '/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_24faa/fast] Error 2
+CMakeFiles/cmTC_3a48a.dir/build.make:98: recipe for target 'cmTC_3a48a' failed
+make[1]: *** [cmTC_3a48a] Error 1
+make[1]: Leaving directory '/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/build/CMakeFiles/CMakeTmp'
+Makefile:127: recipe for target 'cmTC_3a48a/fast' failed
+make: *** [cmTC_3a48a/fast] Error 2
 
 
 Source file was:
 #include <pthread.h>
 
-void* test_func(void* data)
+static void* test_func(void* data)
 {
   return data;
 }
@@ -31,6 +35,7 @@ int main(void)
   pthread_t thread;
   pthread_create(&thread, NULL, test_func, NULL);
   pthread_detach(thread);
+  pthread_cancel(thread);
   pthread_join(thread, NULL);
   pthread_atfork(NULL, NULL, NULL);
   pthread_exit(NULL);

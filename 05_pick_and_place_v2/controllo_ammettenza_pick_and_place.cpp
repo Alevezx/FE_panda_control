@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <map> // Aggiunto per gestire i waypoint
+#include <iomanip>
 
 #include <Eigen/Dense>
 
@@ -71,8 +72,8 @@ int main(int argc, char** argv) {
   std::vector<double> robot_capsule_radius = {0.125, 0.125, 0.125, 0.125};
 
   // Parametri di ammettenza e campo potenziale
-  const double kStiffness = 400.0;       
-  const double kRepulsiveStiffness = 600.0; 
+  const double kStiffness = 350.0;       
+  const double kRepulsiveStiffness = 200.0; 
 
   // Parametri per la procedura di Recovery
   const double kRecoveryMaxVel = 0.25;     // [m/s] Limite ISO 10218-1 (Reduced Speed)  
@@ -81,12 +82,12 @@ int main(int argc, char** argv) {
   // Parametri delle zone di sicurezza dinamica
   SafetyParams safetyParams;
   safetyParams.r_inner = 0.0;  // Soglia di arresto immediato
-  safetyParams.r_outer = 0.10; // Raggio di influenza repulsiva
-  safetyParams.T_stop = 0.4;   // Tempo di arresto controllato (basato su test empirici)
+  safetyParams.r_outer = 0.30; // Raggio di influenza repulsiva
+  safetyParams.T_stop = 10.0;   // Tempo di arresto controllato (basato su test empirici)
 
   // Parametri di filtraggio forze
-  const double forceFilterGain = 0.05;   
-  const double softmin_beta = 40.0; 
+  const double forceFilterGain = 0.15;   //0.05;
+  const double softmin_beta = 15.0; //40.0; 
 
   // Variabili di stato per la generazione traiettorie (polinomi quintici)
   Eigen::MatrixXd coeffsX(6, 1), coeffsY(6, 1), coeffsZ(6, 1);
@@ -302,9 +303,10 @@ int main(int argc, char** argv) {
       const uint64_t now_ns = (uint64_t)std::chrono::duration_cast<std::chrono::nanoseconds>(
                                   std::chrono::steady_clock::now() - skel_t0).count();
       const double max_age_s = 0.10;
-      const bool skeleton_valid = (skel.n_caps > 0) && (skel.rx_time_ns > 0) &&
-                                  ((now_ns >= skel.rx_time_ns) ? ((now_ns - skel.rx_time_ns) * 1e-9 < max_age_s) : true);
+      const bool skeleton_valid = (skel.n_caps > 0) && (skel.rx_time_ns > 0) /*&&
+                                  ((now_ns >= skel.rx_time_ns) ? ((now_ns - skel.rx_time_ns) * 1e-9 < max_age_s) : true)*/;
 
+      //std::cout << "Skeleton valid: " << skeleton_valid << "\n" << skel.n_caps << ", " << skel.rx_time_ns << ", " << now_ns << ", " << max_age_s << "\n";
       if (!skeleton_valid) {
         minSurfaceDist = 1e9;
       } else {
@@ -342,6 +344,7 @@ int main(int argc, char** argv) {
       // 5. Macchina a Stati: Gestione Comportamento (Running, Stop, Recovery)
       if (currentState == RUNNING) {
         // A) Controllo condizione di STOP (distanza < r_inner)
+        std::cout << "Distanza: " << minSurfaceDist << "\n";
         if (minSurfaceDist <= safetyParams.r_inner) {
           std::cout << "!!! STOP ATTIVATO (min surf dist: " << minSurfaceDist << ") !!!\n";
           currentState = STOPPING;
@@ -349,8 +352,8 @@ int main(int argc, char** argv) {
           frozenTime = segmentTime; // Congela il tempo LOCALE del segmento
 
           stopStartPos = lastDesiredPos;
-          //Eigen::Vector3d stopEndPos = stopStartPos + currentVelocity * safetyParams.T_stop * 0.5;
-          Eigen::Vector3d stopEndPos = stopStartPos; // per vedere se il profilo di stop è più fluido senza movimento (forse con velocità iniziale bassa è già abbastanza fluido senza muovere il target)
+          Eigen::Vector3d stopEndPos = stopStartPos + currentVelocity * safetyParams.T_stop * 0.5;
+          //Eigen::Vector3d stopEndPos = stopStartPos; // per vedere se il profilo di stop è più fluido senza movimento (forse con velocità iniziale bassa è già abbastanza fluido senza muovere il target)
 
           stopCoeffsX = compute_traj_poly5_coeffs(stopStartPos[0], currentVelocity[0], 0.0, stopEndPos[0], 0.0, 0.0, safetyParams.T_stop);
           stopCoeffsY = compute_traj_poly5_coeffs(stopStartPos[1], currentVelocity[1], 0.0, stopEndPos[1], 0.0, 0.0, safetyParams.T_stop);
@@ -358,6 +361,7 @@ int main(int argc, char** argv) {
         }
         // B) Calcolo Forza Repulsiva (distanza < r_outer)
         else if (minSurfaceDist < safetyParams.r_outer) {
+          std::cout << "-- calcolo forza repulsiva --\n";
           double sum_w = 0.0;
           std::array<double, 4> w; w.fill(0.0);
           for (int i = 0; i < 4; i++) {
@@ -385,9 +389,9 @@ int main(int argc, char** argv) {
             // MODIFICA: Profilo quadratico per attacco più morbido (C1 continuo)
             double penetration = safetyParams.r_outer - minSurfaceDist;
             // Profilo lineare standard (da mantenere se voglio una repulsione più decisa vicino al bordo esterno)
-            Eigen::Vector3d F_std = kRepulsiveStiffness * penetration * d_hat;
+            //Eigen::Vector3d F_std = kRepulsiveStiffness * penetration * d_hat;
             // Profilo quadratico più morbido vicino al bordo esterno (C1 continuo)
-            // Eigen::Vector3d F_std = kRepulsiveStiffness * (penetration * penetration / safetyParams.r_outer) * d_hat;
+             Eigen::Vector3d F_std = kRepulsiveStiffness * (penetration * penetration / safetyParams.r_outer) * d_hat;
             
             // Calcolo componente laterale per aggiramento ostacolo
             Eigen::Vector3d t_hat = Eigen::Vector3d::Zero();
@@ -409,9 +413,9 @@ int main(int argc, char** argv) {
               if (n_hat.norm() > 1e-9) n_hat.normalize();
             }
             // Profilo lineare standard (da mantenere se voglio una repulsione più decisa vicino al bordo esterno)
-            Eigen::Vector3d F_lat = kRepulsiveStiffness * penetration * n_hat;
+            //Eigen::Vector3d F_lat = kRepulsiveStiffness * penetration * n_hat;
             // Profilo quadratico più morbido vicino al bordo esterno (C1 continuo)
-            // Eigen::Vector3d F_lat = kRepulsiveStiffness * (penetration * penetration / safetyParams.r_outer) * n_hat;
+             Eigen::Vector3d F_lat = kRepulsiveStiffness * (penetration * penetration / safetyParams.r_outer) * n_hat;
 
 
             double col = std::abs(d_hat.dot(t_hat));
@@ -430,6 +434,9 @@ int main(int argc, char** argv) {
             double alpha = std::max(0.0, std::min(geometry_mix * alpha_r, 1.0));
 
             Eigen::Vector3d targetRepulsiveForce = (1.0 - alpha) * F_std + alpha * F_lat;
+            //const double maxRepulsiveForce = 20.0;
+            //if (targetRepulsiveForce.norm() > maxRepulsiveForce) targetRepulsiveForce = targetRepulsiveForce.normalize() * maxRepulsiveForce;
+            std::cout << "Repulsive force: " << targetRepulsiveForce << "\n";
             filteredRepulsiveForce = (1.0 - forceFilterGain) * filteredRepulsiveForce + forceFilterGain * targetRepulsiveForce;
           }
         } else {
@@ -495,6 +502,9 @@ int main(int argc, char** argv) {
         admittanceOffset.setZero();
         externalForce.setZero();
         stateX.setZero();
+
+        //stateX *= 0.95;
+        //admittanceOffset = Cd * stateX;
 
         if (currentState == STOPPING) {
           stopTimer += dt;

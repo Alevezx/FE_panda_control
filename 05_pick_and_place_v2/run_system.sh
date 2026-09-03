@@ -4,7 +4,7 @@
 # IP del Robot Franka (modifica se necessario)
 ROBOT_IP="172.16.0.2"
 # Percorso specifico di libfranka sul PC del laboratorio
-FRANKA_DIR="/home/lab/donaldo_ws/home/lab/donaldo_ws/libfranka/build"
+FRANKA_DIR="/home/panda/Desktop/ALESSANDRO_VECCHIO/libfranka/build"
 
 # Percorsi relativi
 PYTHON_SCRIPT="skeleton_yolo_and_transmission.py"

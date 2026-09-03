@@ -1,19 +1,16 @@
+
+# Consider dependencies only in project.
+set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
+
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
   )
-# The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/controllo_ammettenza_pick_and_place.cpp" "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir/controllo_ammettenza_pick_and_place.cpp.o"
-  "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/examples_common.cpp" "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir/examples_common.cpp.o"
-  "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/header_capsuleStatiche.cpp" "/home/lab/donaldo_ws/progetto_tesi_magistrale/applicazione_controllo_ammettenza/05_pick_and_place_v2/build/CMakeFiles/controllo_ammettenza_pick_and_place.dir/header_capsuleStatiche.cpp.o"
-  )
-set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/usr/include/pgm-5.2"
-  "/usr/local/include/eigen3"
+# The set of dependency files which are needed:
+set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/controllo_ammettenza_pick_and_place.cpp" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/controllo_ammettenza_pick_and_place.cpp.o" "gcc" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/controllo_ammettenza_pick_and_place.cpp.o.d"
+  "/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/examples_common.cpp" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/examples_common.cpp.o" "gcc" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/examples_common.cpp.o.d"
+  "/home/panda/Desktop/ALESSANDRO_VECCHIO/repo/FE_panda_control/05_pick_and_place_v2/header_capsuleStatiche.cpp" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/header_capsuleStatiche.cpp.o" "gcc" "CMakeFiles/controllo_ammettenza_pick_and_place.dir/header_capsuleStatiche.cpp.o.d"
   )
 
 # Targets to which this target links.
