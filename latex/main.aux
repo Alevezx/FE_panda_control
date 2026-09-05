@@ -106,8 +106,9 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.4.2}Controllo di ammettenza per l'evasione dinamica}{15}{subsection.2.4.2}\protected@file@percent }
 \newlabel{subsec:ammettenza}{{2.4.2}{15}{Controllo di ammettenza per l'evasione dinamica}{subsection.2.4.2}{}}
 \newlabel{subsec:ammettenza@cref}{{[subsection][2][2,4]2.4.2}{[1][15][]15}}
-\@writefile{toc}{\contentsline {subsubsection}{Sintesi della forza repulsiva e dinamica dell'ammettenza}{16}{section*.10}\protected@file@percent }
-\newlabel{eq:admittance_dynamics}{{2.21}{16}{Sintesi della forza repulsiva e dinamica dell'ammettenza}{equation.2.4.21}{}}
+\citation{he2020admittance}
+\@writefile{toc}{\contentsline {subsubsection}{Sintesi della forza repulsiva}{16}{section*.10}\protected@file@percent }
+\newlabel{eq:admittance_dynamics}{{2.21}{16}{Sintesi della forza repulsiva}{equation.2.4.21}{}}
 \newlabel{eq:admittance_dynamics@cref}{{[equation][21][2]2.21}{[1][16][]16}}
 \@writefile{toc}{\contentsline {subsubsection}{Calcolo online della posizione modificata}{16}{section*.11}\protected@file@percent }
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Implementazione}{19}{chapter.3}\protected@file@percent }
@@ -172,8 +173,6 @@
 \newlabel{lst:sim_control@cref}{{[lstlisting][1][3]3.1}{[1][26][]26}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {3.1}Implementazione del controllo ideale nell'ambiente di simulazione.}{26}{lstlisting.3.1}\protected@file@percent }
 \citation{tadic2019application}
-\citation{Qyrani2026}
-\citation{reis2023real}
 \citation{hintjens2013zeromq}
 \citation{Andersson2018}
 \@writefile{toc}{\contentsline {section}{\numberline {3.3}Sistema di visione e playback dello scheletro}{27}{section.3.3}\protected@file@percent }
@@ -201,18 +200,47 @@
 \newlabel{subsec:controllo_posizione}{{3.4.3}{33}{Controllo di Posizione dei Giunti}{section*.22}{}}
 \newlabel{subsec:controllo_posizione@cref}{{[subsection][3][3,4]3.4.3}{[1][33][]33}}
 \@writefile{toc}{\contentsline {subsubsection}{Controllo di Coppia e Controllo di Impedenza}{34}{section*.23}\protected@file@percent }
+\newlabel{subsec:controllo_coppia}{{3.4.3}{34}{Controllo di Coppia e Controllo di Impedenza}{section*.23}{}}
+\newlabel{subsec:controllo_coppia@cref}{{[subsection][3][3,4]3.4.3}{[1][34][]34}}
 \citation{Qyrani2026}
 \@writefile{toc}{\contentsline {section}{\numberline {3.5}Secondo approccio: capsule \textit  {soft}}{36}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Risultati}{39}{chapter.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Sintesi e filtraggio della forza repulsiva}{37}{subsection.3.5.1}\protected@file@percent }
+\newlabel{lst:repulsive_force}{{3.2}{37}{Sintesi e filtraggio della forza repulsiva virtuale}{lstlisting.3.2}{}}
+\newlabel{lst:repulsive_force@cref}{{[lstlisting][2][3]3.2}{[1][37][]37}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.2}Sintesi e filtraggio della forza repulsiva virtuale.}{37}{lstlisting.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}Integrazione a tempo discreto del modello d'ammettenza}{38}{subsection.3.5.2}\protected@file@percent }
+\newlabel{lst:admittance_tustin}{{3.3}{38}{Discretizzazione di Tustin ed evoluzione dello stato dell'ammettenza}{lstlisting.3.3}{}}
+\newlabel{lst:admittance_tustin@cref}{{[lstlisting][3][3]3.3}{[1][38][]38}}
+\@writefile{lol}{\contentsline {lstlisting}{\numberline {3.3}Discretizzazione di Tustin ed evoluzione dello stato dell'ammettenza.}{38}{lstlisting.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Risultati sperimentali}{41}{chapter.4}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}BOZZA}{39}{section.4.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.2}Controllo di posizione e di coppia ai giunti}{39}{section.4.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.3}Primo approccio}{39}{section.4.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {4.4}Secondo approccio}{39}{section.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Analisi comparativa: controllo di posizione e di coppia ai giunti}{41}{section.4.1}\protected@file@percent }
+\newlabel{sec:risultati_pos_vs_torque}{{4.1}{41}{Analisi comparativa: controllo di posizione e di coppia ai giunti}{section.4.1}{}}
+\newlabel{sec:risultati_pos_vs_torque@cref}{{[section][1][4]4.1}{[1][41][]41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Profilo delle velocità ai giunti registrato con l'adozione del controllo di posizione. Si notino i picchi impulsivi e il fenomeno di \textit  {jitter} dovuto alle discontinuità dei riferimenti.\relax }}{42}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:velocitgiuntirealepc}{{4.1}{42}{Profilo delle velocità ai giunti registrato con l'adozione del controllo di posizione. Si notino i picchi impulsivi e il fenomeno di \textit {jitter} dovuto alle discontinuità dei riferimenti.\relax }{figure.caption.24}{}}
+\newlabel{fig:velocitgiuntirealepc@cref}{{[figure][1][4]4.1}{[1][41][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces Profilo delle velocità ai giunti con schema di controllo di coppia guidato dal regolatore PD. L'azione del controllore elimina i picchi, garantendo un'andamento fluido e privo di \textit  {ripple}.\relax }}{42}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:jointspeedcompensatedtc}{{4.2}{42}{Profilo delle velocità ai giunti con schema di controllo di coppia guidato dal regolatore PD. L'azione del controllore elimina i picchi, garantendo un'andamento fluido e privo di \textit {ripple}.\relax }{figure.caption.25}{}}
+\newlabel{fig:jointspeedcompensatedtc@cref}{{[figure][2][4]4.2}{[1][41][]42}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Risultati del primo approccio: arresto ottimizzato con capsule dinamiche}{43}{section.4.2}\protected@file@percent }
+\newlabel{sec:risultati_primo_approccio}{{4.2}{43}{Risultati del primo approccio: arresto ottimizzato con capsule dinamiche}{section.4.2}{}}
+\newlabel{sec:risultati_primo_approccio@cref}{{[section][2][4]4.2}{[1][41][]43}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Secondo approccio}{43}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Contronto metriche di fluency}{43}{section.4.4}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces Profilo temporale delle velocità ai giunti durante la traiettoria di \textit  {pick-and-place}. Al tempo $t \approx 2.5\text  { s}$ viene rilevato l'ostacolo e attivata la procedura di arresto continuo.\relax }}{44}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:speedcalibrated1stoptc}{{4.3}{44}{Profilo temporale delle velocità ai giunti durante la traiettoria di \textit {pick-and-place}. Al tempo $t \approx 2.5\text { s}$ viene rilevato l'ostacolo e attivata la procedura di arresto continuo.\relax }{figure.caption.26}{}}
+\newlabel{fig:speedcalibrated1stoptc@cref}{{[figure][3][4]4.3}{[1][43][]44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Andamento del tempo di arresto ottimizzato $T_{\text  {stop}}$. Si nota la modulazione continua tra il valore minimo ($0.25\text  { s}$) e massimo ($0.4\text  { s}$) in base alla velocità istantanea.\relax }}{44}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:duration1stoptc}{{4.4}{44}{Andamento del tempo di arresto ottimizzato $T_{\text {stop}}$. Si nota la modulazione continua tra il valore minimo ($0.25\text { s}$) e massimo ($0.4\text { s}$) in base alla velocità istantanea.\relax }{figure.caption.27}{}}
+\newlabel{fig:duration1stoptc@cref}{{[figure][4][4]4.4}{[1][43][]44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces Evoluzione temporale dei raggi delle capsule di protezione dinamiche, coerente con il profilo di decelerazione del robot.\relax }}{45}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:raggicapsule1stoptc}{{4.5}{45}{Evoluzione temporale dei raggi delle capsule di protezione dinamiche, coerente con il profilo di decelerazione del robot.\relax }{figure.caption.28}{}}
+\newlabel{fig:raggicapsule1stoptc@cref}{{[figure][5][4]4.5}{[1][43][]45}}
 \bibstyle{unsrt}
 \bibdata{bibliografia}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{41}{chapter.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusioni e sviluppi futuri}{47}{chapter.5}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibcite{BARATTA20231887}{1}
@@ -224,12 +252,12 @@
 \bibcite{Qyrani2026}{7}
 \bibcite{larsen1999fast}{8}
 \bibcite{Scalera2024}{9}
-\@writefile{toc}{\contentsline {chapter}{Bibliografia}{43}{chapter*.24}\protected@file@percent }
-\bibcite{libfranka}{10}
-\bibcite{pinocchio}{11}
-\bibcite{gaz2019dynamic}{12}
-\bibcite{oliva2022frankasim}{13}
-\bibcite{tadic2019application}{14}
-\bibcite{reis2023real}{15}
+\@writefile{toc}{\contentsline {chapter}{Bibliografia}{49}{chapter*.29}\protected@file@percent }
+\bibcite{he2020admittance}{10}
+\bibcite{libfranka}{11}
+\bibcite{pinocchio}{12}
+\bibcite{gaz2019dynamic}{13}
+\bibcite{oliva2022frankasim}{14}
+\bibcite{tadic2019application}{15}
 \bibcite{hintjens2013zeromq}{16}
 \bibcite{Andersson2018}{17}

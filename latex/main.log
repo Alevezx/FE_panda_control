@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2026.8.23)  26 AUG 2026 09:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2026.8.23)  5 SEP 2026 12:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -583,17 +583,17 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 4.
  (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
-))
+)
+[5
+
+])
 \tf@lof=\write5
 \openout5 = `main.lof'.
 
-
-[5
-
-]
+ [6]
 Capitolo 1.
 (./capitoli/introduzione.tex
-<figure_tesi/Application-of-cobots-in-the-manufacturing-process.png, id=272, 85
+<figure_tesi/Application-of-cobots-in-the-manufacturing-process.png, id=309, 85
 3.1875pt x 568.1225pt>
 File: figure_tesi/Application-of-cobots-in-the-manufacturing-process.png Graphi
 c file (type png)
@@ -613,7 +613,7 @@ l.16
 Underfull \vbox (badness 1043) has occurred while \output is active []
 
  [2 <./figure_tesi/Application-of-cobots-in-the-manufacturing-process.png>]
-<figure_tesi/Speed-and-separation-monitoringVillani-et-al-2018.png, id=291, 386
+<figure_tesi/Speed-and-separation-monitoringVillani-et-al-2018.png, id=327, 386
 .44376pt x 291.0875pt>
 File: figure_tesi/Speed-and-separation-monitoringVillani-et-al-2018.png Graphic
  file (type png)
@@ -637,7 +637,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [6]
 Capitolo 2.
 (./capitoli/approcci.tex
-<figure_tesi/SSL.png, id=319, 162.6075pt x 322.20375pt>
+<figure_tesi/SSL.png, id=357, 162.6075pt x 322.20375pt>
 File: figure_tesi/SSL.png Graphic file (type png)
 <use figure_tesi/SSL.png>
 Package pdftex.def Info: figure_tesi/SSL.png  used on input line 18.
@@ -645,12 +645,12 @@ Package pdftex.def Info: figure_tesi/SSL.png  used on input line 18.
  [7
 
 ]
-<figure_tesi/robot.png, id=331, 1391.4384pt x 657.657pt>
+<figure_tesi/robot.png, id=366, 1391.4384pt x 657.657pt>
 File: figure_tesi/robot.png Graphic file (type png)
 <use figure_tesi/robot.png>
 Package pdftex.def Info: figure_tesi/robot.png  used on input line 35.
 (pdftex.def)             Requested size: 390.0pt x 184.33336pt.
-<figure_tesi/robot_capsule.png, id=332, 1391.4384pt x 657.657pt>
+<figure_tesi/robot_capsule.png, id=367, 1391.4384pt x 657.657pt>
 File: figure_tesi/robot_capsule.png Graphic file (type png)
 <use figure_tesi/robot_capsule.png>
 Package pdftex.def Info: figure_tesi/robot_capsule.png  used on input line 42.
@@ -660,31 +660,31 @@ Underfull \vbox (badness 6236) has occurred while \output is active []
 
  [8 <./figure_tesi/SSL.png>] [9 <./figure_tesi/robot.png (PNG copy)> <./figure_
 tesi/robot_capsule.png (PNG copy)>] [10]
-<figure_tesi/distanza_segmenti_corretta.png, id=356, 412.6617pt x 419.166pt>
+<figure_tesi/distanza_segmenti_corretta.png, id=391, 412.6617pt x 419.166pt>
 File: figure_tesi/distanza_segmenti_corretta.png Graphic file (type png)
 <use figure_tesi/distanza_segmenti_corretta.png>
 Package pdftex.def Info: figure_tesi/distanza_segmenti_corretta.png  used on in
 put line 96.
 (pdftex.def)             Requested size: 195.0pt x 198.06978pt.
  [11 <./figure_tesi/distanza_segmenti_corretta.png>] [12]
-<figure_tesi/arresto_morbido.png, id=373, 1391.4384pt x 743.8992pt>
+<figure_tesi/arresto_morbido.png, id=408, 1391.4384pt x 743.8992pt>
 File: figure_tesi/arresto_morbido.png Graphic file (type png)
 <use figure_tesi/arresto_morbido.png>
 Package pdftex.def Info: figure_tesi/arresto_morbido.png  used on input line 14
 4.
 (pdftex.def)             Requested size: 390.0pt x 208.50603pt.
- [13 <./figure_tesi/arresto_morbido.png (PNG copy)>] [14] [15] [16])
-[17] [18
-
-]
+ [13 <./figure_tesi/arresto_morbido.png (PNG copy)>] [14] [15] [16]
+[17]) [18]
 Capitolo 3.
 (./capitoli/implementazione.tex
-<figure_tesi/robot_reale.png, id=428, 2677.00125pt x 4015.0pt>
+<figure_tesi/robot_reale.png, id=472, 2677.00125pt x 4015.0pt>
 File: figure_tesi/robot_reale.png Graphic file (type png)
 <use figure_tesi/robot_reale.png>
 Package pdftex.def Info: figure_tesi/robot_reale.png  used on input line 7.
 (pdftex.def)             Requested size: 155.99762pt x 233.96678pt.
- [19 <./figure_tesi/robot_reale.png>]
+ [19
+
+ <./figure_tesi/robot_reale.png>]
 Overfull \hbox (0.93207pt too wide) in paragraph at lines 18--19
 []\T1/cmr/bx/n/12 Apprendimento per di-mo-stra-zio-ne: \T1/cmr/m/n/12 Pro-gram-
 ma-zio-ne in-tui-ti-va tra-
@@ -697,37 +697,37 @@ LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10.95> not available
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 74.
  [22] [23]
-<figure_tesi/coppie_1.png, id=475, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_1.png, id=517, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_1.png Graphic file (type png)
 <use figure_tesi/coppie_1.png>
 Package pdftex.def Info: figure_tesi/coppie_1.png  used on input line 122.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_2.png, id=476, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_2.png, id=518, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_2.png Graphic file (type png)
 <use figure_tesi/coppie_2.png>
 Package pdftex.def Info: figure_tesi/coppie_2.png  used on input line 129.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_3.png, id=477, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_3.png, id=519, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_3.png Graphic file (type png)
 <use figure_tesi/coppie_3.png>
 Package pdftex.def Info: figure_tesi/coppie_3.png  used on input line 138.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_4.png, id=478, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_4.png, id=520, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_4.png Graphic file (type png)
 <use figure_tesi/coppie_4.png>
 Package pdftex.def Info: figure_tesi/coppie_4.png  used on input line 144.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_5.png, id=479, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_5.png, id=521, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_5.png Graphic file (type png)
 <use figure_tesi/coppie_5.png>
 Package pdftex.def Info: figure_tesi/coppie_5.png  used on input line 153.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_6.png, id=480, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_6.png, id=522, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_6.png Graphic file (type png)
 <use figure_tesi/coppie_6.png>
 Package pdftex.def Info: figure_tesi/coppie_6.png  used on input line 160.
 (pdftex.def)             Requested size: 187.19833pt x 112.81374pt.
-<figure_tesi/coppie_7.png, id=481, 800.2698pt x 482.2818pt>
+<figure_tesi/coppie_7.png, id=523, 800.2698pt x 482.2818pt>
 File: figure_tesi/coppie_7.png Graphic file (type png)
 <use figure_tesi/coppie_7.png>
 Package pdftex.def Info: figure_tesi/coppie_7.png  used on input line 168.
@@ -775,22 +775,62 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `fig:architettura_macchina_stati' on page 33 undefined
  on input line 377.
 
-<figure_tesi/schema_controllo.png, id=624, 1445.4pt x 813.0375pt>
+<figure_tesi/schema_controllo.png, id=663, 1445.4pt x 813.0375pt>
 File: figure_tesi/schema_controllo.png Graphic file (type png)
 <use figure_tesi/schema_controllo.png>
 Package pdftex.def Info: figure_tesi/schema_controllo.png  used on input line 3
 81.
 (pdftex.def)             Requested size: 312.00119pt x 175.49438pt.
-[33 <./figure_tesi/schema_controllo.png (PNG copy)>] [34] [35] [36]) [37]
-[38
+[33 <./figure_tesi/schema_controllo.png (PNG copy)>] [34] [35] [36] [37]
+Underfull \hbox (badness 4872) in paragraph at lines 518--518
+[]\T1/cmr/m/n/12 Listing 3.3: |Di-scre-tiz-za-zio-ne di Tu-stin ed evo-lu-zio-n
+e del-lo sta-to
+ []
+
+[38]) [39] [40
 
 ]
 Capitolo 4.
-(./capitoli/risultati.tex) [39] [40
+(./capitoli/risultati.tex
+<figure_tesi/velocit_giunti_reale_PC.png, id=770, 800.2698pt x 482.2818pt>
+File: figure_tesi/velocit_giunti_reale_PC.png Graphic file (type png)
+<use figure_tesi/velocit_giunti_reale_PC.png>
+Package pdftex.def Info: figure_tesi/velocit_giunti_reale_PC.png  used on input
+ line 15.
+(pdftex.def)             Requested size: 331.50238pt x 199.78261pt.
+<figure_tesi/joint_speed_compensated_TC.png, id=771, 1339.1631pt x 716.1957pt>
+File: figure_tesi/joint_speed_compensated_TC.png Graphic file (type png)
+<use figure_tesi/joint_speed_compensated_TC.png>
+Package pdftex.def Info: figure_tesi/joint_speed_compensated_TC.png  used on in
+put line 22.
+(pdftex.def)             Requested size: 331.50238pt x 177.28903pt.
+ [41] [42 <./figure_tesi/velocit_giunti_reale_PC.png (PNG copy)> <./figure_tesi
+/joint_speed_compensated_TC.png>]
+<figure_tesi/speed_calibrated_1stop_TC.png, id=788, 1339.1631pt x 716.1957pt>
+File: figure_tesi/speed_calibrated_1stop_TC.png Graphic file (type png)
+<use figure_tesi/speed_calibrated_1stop_TC.png>
+Package pdftex.def Info: figure_tesi/speed_calibrated_1stop_TC.png  used on inp
+ut line 47.
+(pdftex.def)             Requested size: 331.50238pt x 177.28903pt.
+<figure_tesi/duration_1stop_TC.png, id=789, 1391.4384pt x 657.657pt>
+File: figure_tesi/duration_1stop_TC.png Graphic file (type png)
+<use figure_tesi/duration_1stop_TC.png>
+Package pdftex.def Info: figure_tesi/duration_1stop_TC.png  used on input line 
+54.
+(pdftex.def)             Requested size: 331.50238pt x 156.67683pt.
+<figure_tesi/raggi_capsule_1stop_TC.png, id=790, 1391.4384pt x 657.657pt>
+File: figure_tesi/raggi_capsule_1stop_TC.png Graphic file (type png)
+<use figure_tesi/raggi_capsule_1stop_TC.png>
+Package pdftex.def Info: figure_tesi/raggi_capsule_1stop_TC.png  used on input 
+line 61.
+(pdftex.def)             Requested size: 331.50238pt x 156.67683pt.
+) [43] [44 <./figure_tesi/speed_calibrated_1stop_TC.png> <./figure_tesi/duratio
+n_1stop_TC.png (PNG copy)>] [45 <./figure_tesi/raggi_capsule_1stop_TC.png (PNG 
+copy)>] [46
 
 ]
 Capitolo 5.
-(./capitoli/conclusioni.tex) (./main.bbl [41] [42
+(./capitoli/conclusioni.tex) (./main.bbl [47] [48
 
 ]
 Underfull \hbox (badness 1259) in paragraph at lines 27--32
@@ -798,28 +838,28 @@ Underfull \hbox (badness 1259) in paragraph at lines 27--32
 pa-
  []
 
-[43])
+[49] [50])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 82.
- [44]
+ [51]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 82.
  (./main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 82.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 82.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AD0DFE11624EC7F2CF05C25621CBC18A;3011.
+(rerunfilecheck)             Checksum: BA86C66DB20B65F33517D0C58F5F524C;3330.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 16088 strings out of 483099
- 286651 string characters out of 5964234
- 855198 words of memory out of 5000000
- 30559 multiletter control sequences out of 15000+600000
+ 16259 strings out of 483099
+ 290271 string characters out of 5964234
+ 856198 words of memory out of 5000000
+ 30676 multiletter control sequences out of 15000+600000
  559114 words of font info for 96 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 48i,13n,60p,865b,2320s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 48i,13n,60p,865b,2326s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecit120
 0.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/e
 ctt1095.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappe
@@ -827,11 +867,11 @@ n/ec/ecbi1200.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/j
 knappen/ec/ecbi1440.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/lj
 four/jknappen/ec/ecbi1728.600pk> </home/alessandro/.texlive2019/texmf-var/fonts
 /pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/alessandro/.texlive2019/texmf-var
-/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/alessandro/.texlive2019/tex
-mf-var/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/alessandro/.texlive20
-19/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/alessandro/.tex
-live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/alessandr
-o/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/ale
+/fonts/pk/ljfour/jknappen/ec/ecrm1095.600pk> </home/alessandro/.texlive2019/tex
+mf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk> </home/alessandro/.texlive20
+19/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600pk> </home/alessandro/.tex
+live2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600pk> </home/alessandr
+o/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/ale
 ssandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk> </ho
 me/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600pk
 > </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200
@@ -840,22 +880,22 @@ rm1200.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jknappen
 /ec/ecbx2488.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljfour/jk
 nappen/ec/ecrm1440.600pk> </home/alessandro/.texlive2019/texmf-var/fonts/pk/ljf
 our/jknappen/ec/ecrm2074.600pk></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (50 pages, 14560054 bytes).
+c/amsfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
+i12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (58 pages, 15538835 bytes).
 PDF statistics:
- 1476 PDF objects out of 1728 (max. 8388607)
- 781 compressed objects within 8 object streams
- 266 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1604 PDF objects out of 1728 (max. 8388607)
+ 887 compressed objects within 9 object streams
+ 315 named destinations out of 1000 (max. 500000)
+ 434 words of extra memory for PDF output out of 10000 (max. 10000000)
 

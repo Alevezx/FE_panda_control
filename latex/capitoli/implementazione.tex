@@ -211,7 +211,7 @@ L'architettura della libreria si ispira al lavoro di Oliva et al.~\cite{oliva202
 \section{Sistema di visione e playback dello scheletro}
 L'acquisizione visiva della scena viene effettuata tramite una telecamera di profondità Intel Realsense D435. Il dispositivo calcola la mappa di profondità direttamente a bordo tramite l'ASIC dedicato, sgravando l'unità di calcolo ospite da tale carico computazionale \cite{tadic2019application}.
 
-A partire dalle immagini acquisite, la posa dello scheletro umano viene stimata mediante l'architettura a rete neurale YOLOv8 \cite{Qyrani2026, reis2023real}, i punti salienti (\textit{keypoints}) estratti vengono successivamente salvati su file di testo.
+A partire dalle immagini acquisite, la posa dello scheletro umano viene stimata mediante il framework MediaPipe. I punti salienti (\textit{keypoints}) della struttura corporea estratti vengono successivamente salvati su file di testo.
 
 La fase di playback dello scheletro registrato si avvale della libreria ZeroMQ \cite{hintjens2013zeromq}, strutturata secondo un paradigma di comunicazione monodirezionale di tipo \textit{Publisher-Subscriber}. Per garantire il rispetto dei vincoli temporali del ciclo di controllo a 1kHz, l'architettura software impiega due thread distinti:
 \begin{itemize}
@@ -404,6 +404,7 @@ return franka::MotionFinished(franka::JointPositions(state.q_d));
 \end{lstlisting}
 
 \subsubsection{Controllo di Coppia e Controllo di Impedenza}
+\label{subsec:controllo_coppia}
 Per risolvere le discontinuità nei profili di velocità e garantire un'interazione intrinsecamente sicura durante l'esecuzione del task, si è scelto di implementare uno schema di controllo di coppia (\textit{torque control}) in C++. L'interfaccia sfrutta il seguente metodo:
 \begin{lstlisting}[language=C++]
 robot.control([&](const franka::RobotState& state, franka::Duration period) 
@@ -459,15 +460,77 @@ L'adozione di questo schema ha permesso non solo di eliminare le discontinuità 
 
 L'architettura del controllore si basa su una macchina a stati finiti (FSM) analoga a quella presentata nella sezione precedente. La differenza fondamentale risiede nello stato di \textit{RUNNING}, che integra un modulo di verifica per le interazioni con le capsule \textit{soft} esterne per la generazione delle corrispondenti forze repulsive.
 
-Quando una capsula associata all'operatore entra in contatto con una capsula \textit{soft} del robot, il sistema calcola una forza virtuale repulsiva di tipo elastico. L'entità di tale forza è proporzionale alla penetrazione tra le capsule ed è modulata mediante una funzione di raccordo continuo (\textit{smoothstep}) \cite{Qyrani2026}.
+Quando una capsula associata all'operatore entra in contatto con una capsula \textit{soft} del robot, il sistema calcola una forza virtuale repulsiva. L'entità di tale forza è proporzionale al quadrato della penetrazione tra le capsule ed è modulata mediante una funzione di raccordo continuo (\textit{smoothstep}) \cite{Qyrani2026}.
 
-La forza risultante viene convertita nella variazione di posa cartesiana dell meccano-struttura (\textit{end-effector}) per il passo di controllo successivo, implementando il paradigma del controllo di ammettenza esplicitato nella Sezione~\ref{subsec:ammettenza}. In particolare, la dinamica dell'interazione viene modellata secondo il classico sistema sistema massa-molla-smorzatore: 
-
+La forza risultante viene convertita nella variazione di posa cartesiana dell'organo terminale (\textit{end-effector}) per il passo di controllo successivo, implementando il paradigma del controllo di ammettenza esplicitato nella Sezione~\ref{subsec:ammettenza}. In particolare, la dinamica dell'interazione viene modellata secondo il sistema massa-molla-smorzatore:
 \begin{equation}
-	\mathbf{M} \mathbf{\ddot{x}}(t) + \mathbf{D} \mathbf{\dot{x}}(t) + \mathbf{K} (\mathbf{x}(t) - \mathbf{x_0}) = \mathbf{F}_{ext}(t)
+\boldsymbol{M} \ddot{\boldsymbol{x}}(t) + \boldsymbol{D} \dot{\boldsymbol{x}}(t) + \boldsymbol{K} (\boldsymbol{x}(t) - \boldsymbol{x}_0) = \boldsymbol{F}_{\text{ext}}(t)
+\end{equation}
+dove $\boldsymbol{M}, \boldsymbol{D}, \boldsymbol{K} \in \mathbb{R}^{3 \times 3}$ rappresentano rispettivamente le matrici di massa, smorzamento e rigidezza virtuali, $\boldsymbol{x}(t) \in \mathbb{R}^3$ è la posa cartesiana dell'\textit{end-effector} e $\boldsymbol{F}_{\text{ext}}(t) \in \mathbb{R}^3$ indica la forza repulsiva risultante generata dal modello a capsule.
+
+Oltre ai volumi esterni, il modello integra internamente delle capsule \textit{hard}, dimensionate e ottimizzate con la stessa metodologia descritta nella Sezione~\ref{sec:frenata}. Nel caso in cui si verifichi una violazione di tali volumi interni, il controllore interrompe l'esecuzione e comanda una frenata morbida del robot nell'intervallo di tempo ottimizzato $T_{\text{stop}}$.
+
+\subsection{Sintesi e filtraggio della forza repulsiva}
+
+La forza repulsiva virtuale viene sintetizzata considerando due componenti principali: una forza frontale $\boldsymbol{F}_{\text{std}}$, diretta in verso opposto rispetto all'ostacolo lungo il versore di minima distanza $\hat{\boldsymbol{d}}$, e una componente laterale $\boldsymbol{F}_{\text{lat}}$, diretta lungo un versore ortogonale $\hat{\boldsymbol{n}}$ per favorire il disimpegno e l'aggiramento dell'ostacolo.
+
+Per garantire un passaggio continuo e senza discontinuità da forza nulla (all'esterno della capsula \textit{soft}) a forza non nulla, il modulo dipende quadraticamente dalla profondità di penetrazione $\delta$. Il vettore di forza desiderato $\boldsymbol{F}_{\text{target}}$ viene ottenuto tramite combinazione convessa mediante un parametro $\alpha \in [0, 1]$. Successivamente, il segnale viene fatto passare attraverso un filtro passa-basso del primo ordine con guadagno $\alpha_f \in (0, 1]$ per attenuare eventuali rumori geometrici e prevenire sollecitazioni impulsive.
+
+L'implementazione in C++ (sfruttando la libreria \texttt{Eigen}) della sintesi e del filtraggio della forza al generico ciclo di controllo è la seguente:
+
+\begin{lstlisting}[language=C++, caption={Sintesi e filtraggio della forza repulsiva virtuale.}, label={lst:repulsive_force}]
+// Componente radiale (allontanamento) e laterale (aggiramento)
+const double depthRatio = (penetration * penetration) / safetyParams.r_outer;
+Eigen::Vector3d F_std = kRepulsiveStiffness * depthRatio * d_hat;
+Eigen::Vector3d F_lat = kRepulsiveStiffness * depthRatio * n_hat;
+
+// Combinazione convessa delle forze
+Eigen::Vector3d targetRepulsiveForce = (1.0 - alpha) * F_std + alpha * F_lat;
+
+// Filtraggio passa-basso del primo ordine
+filteredRepulsiveForce = (1.0 - forceFilterGain) * filteredRepulsiveForce 
++ forceFilterGain * targetRepulsiveForce;
+\end{lstlisting}
+
+\subsection{Integrazione a tempo discreto del modello d'ammettenza}
+
+Per integrare il filtro d'ammettenza nel ciclo di controllo in tempo reale con periodo di campionamento $T_s = 0.001\text{ s}$ ($1\text{ kHz}$), la dinamica continua viene formulata nello spazio degli stati:
+\begin{equation}
+\begin{aligned}
+\dot{\boldsymbol{z}}(t) &= \boldsymbol{A} \boldsymbol{z}(t) + \boldsymbol{B} \boldsymbol{F}_{\text{ext}}(t) \\
+\boldsymbol{y}(t) &= \boldsymbol{C} \boldsymbol{z}(t) + \boldsymbol{D}_{\text{ss}} \boldsymbol{F}_{\text{ext}}(t)
+\end{aligned}
+\end{equation}
+dove lo stato $\boldsymbol{z}(t) = [\boldsymbol{e}_x^\top \, \dot{\boldsymbol{e}}_x^\top]^\top$ comprende lo scostamento di posa e la relativa velocità, mentre l'uscita $\boldsymbol{y}(t)$ rappresenta l'offset cartesiano da applicare alla traiettoria nominale.
+
+La discretizzazione del sistema continuo $(\boldsymbol{A}, \boldsymbol{B}, \boldsymbol{C}, \boldsymbol{D}_{\text{ss}})$ viene eseguita applicando la trasformazione bilineare di Tustin ($s \approx \frac{2}{T_s} \frac{z-1}{z+1}$). La corrispondenza nello spazio degli stati per le matrici a tempo discreto $(\boldsymbol{A}_d, \boldsymbol{B}_d, \boldsymbol{C}_d, \boldsymbol{D}_d)$ è ottenuta analiticamente tramite la matrice ausiliaria $\boldsymbol{T}_{\text{inv}} = \left(\boldsymbol{I} - \frac{T_s}{2}\boldsymbol{A}\right)^{-1}$:
+\begin{equation}
+\begin{aligned}
+\boldsymbol{A}_d &= \boldsymbol{T}_{\text{inv}} \left(\boldsymbol{I} + \frac{T_s}{2}\boldsymbol{A}\right), \quad 
+&\boldsymbol{B}_d &= \boldsymbol{T}_{\text{inv}} \boldsymbol{B} T_s \\
+\boldsymbol{C}_d &= \boldsymbol{C} \left(\boldsymbol{I} + \frac{T_s}{2}\boldsymbol{A}\right) \boldsymbol{T}_{\text{inv}}, \quad 
+&\boldsymbol{D}_d &= \boldsymbol{D}_{\text{ss}} + \frac{T_s}{2} \boldsymbol{C} \boldsymbol{T}_{\text{inv}} \boldsymbol{B}
+\end{aligned}
 \end{equation}
 
-dove $M$, $D$ e $K$ rappresentano rispettivamente le matrici di massa, smorzamento e rigidità virtuali, $x(t)$ è la posa cartesiana dell'\textit{end-effector} e $F_{ext}(t)$ indica la forza repulsiva risultante generata dal modello a capsule.
+Nel codice di controllo, la matrice di sistema continua viene discretizzata al momento della configurazione, mentre all'interno del loop a $1\text{ kHz}$ vengono aggiornati lo stato e l'uscita dello scostamento d'ammettenza:
 
-Oltre ai volumi esterni, il modello integra internamente delle capsule \textit{hard}, dimensionate ed ottimizzate con la stessa metodologia descritta nella Sezione~\ref{sec:frenata}. Nel caso in cui si verifichi una violazione di tali volumi interni, il controllore interrompe l'esecuzione e comanda una frenata morbida del robot nell'intervallo di tempo ottimizzato $T_{\text{stop}}$.
+\begin{lstlisting}[language=C++, caption={Discretizzazione di Tustin ed evoluzione dello stato dell'ammettenza.}, label={lst:admittance_tustin}]
+// Periodo di campionamento
+const double Ts = 0.001;
+Eigen::MatrixXd I = Eigen::MatrixXd::Identity(6, 6); // Dimensione dello stato (3 posa + 3 velocita)
+
+// Calcolo delle matrici discrete (Tustin / Trasformazione bilineare)
+Eigen::MatrixXd term_inv = (I - (Ts / 2.0) * A).inverse();
+Ad = term_inv * (I + (Ts / 2.0) * A);
+Bd = term_inv * B * Ts;
+Cd = C * (I + (Ts / 2.0) * A) * term_inv;
+Dd = D_ss + C * term_inv * B * (Ts / 2.0);
+
+// Loop di controllo online (1 kHz)
+admittanceOffset = Cd * stateX + Dd * externalForce;
+stateX = Ad * stateX + Bd * externalForce;
+\end{lstlisting}
+
+L'offset cartesiano così calcolato (\texttt{admittanceOffset}) viene sommato alla posa di riferimento nominale $\boldsymbol{x}_d[k]$ per ricavare la posa desiderata modificata $\boldsymbol{x}_r[k] = \boldsymbol{x}_d[k] + \delta\boldsymbol{x}[k]$. Tale riferimento cartesiano viene infine inviato all'interfaccia del controllore del manipolatore per l'esecuzione del movimento di evasione.
  

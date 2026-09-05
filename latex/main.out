@@ -30,10 +30,12 @@
 \BOOKMARK [2][-]{subsection.3.4.2}{Rilevamento di una potenziale collisione}{section.3.4}% 30
 \BOOKMARK [2][-]{subsection.3.4.3}{Esecuzione del Task}{section.3.4}% 31
 \BOOKMARK [1][-]{section.3.5}{Secondo approccio: capsule soft}{chapter.3}% 32
-\BOOKMARK [0][-]{chapter.4}{Risultati}{}% 33
-\BOOKMARK [1][-]{section.4.1}{BOZZA}{chapter.4}% 34
-\BOOKMARK [1][-]{section.4.2}{Controllo di posizione e di coppia ai giunti}{chapter.4}% 35
-\BOOKMARK [1][-]{section.4.3}{Primo approccio}{chapter.4}% 36
-\BOOKMARK [1][-]{section.4.4}{Secondo approccio}{chapter.4}% 37
-\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 38
-\BOOKMARK [0][-]{chapter*.24}{Bibliografia}{}% 39
+\BOOKMARK [2][-]{subsection.3.5.1}{Sintesi e filtraggio della forza repulsiva}{section.3.5}% 33
+\BOOKMARK [2][-]{subsection.3.5.2}{Integrazione a tempo discreto del modello d'ammettenza}{section.3.5}% 34
+\BOOKMARK [0][-]{chapter.4}{Risultati sperimentali}{}% 35
+\BOOKMARK [1][-]{section.4.1}{Analisi comparativa: controllo di posizione e di coppia ai giunti}{chapter.4}% 36
+\BOOKMARK [1][-]{section.4.2}{Risultati del primo approccio: arresto ottimizzato con capsule dinamiche}{chapter.4}% 37
+\BOOKMARK [1][-]{section.4.3}{Secondo approccio}{chapter.4}% 38
+\BOOKMARK [1][-]{section.4.4}{Contronto metriche di fluency}{chapter.4}% 39
+\BOOKMARK [0][-]{chapter.5}{Conclusioni e sviluppi futuri}{}% 40
+\BOOKMARK [0][-]{chapter*.29}{Bibliografia}{}% 41

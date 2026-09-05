@@ -55,6 +55,13 @@ L.~Scalera, F.~Lozer, A.~Giusti, and A.~Gasparetto.
   fluency in collaborative robotics.
 \newblock {\em Robotica}, 42(5):1386--1402, 2024.
 
+\bibitem{he2020admittance}
+Wei He, Chengqian Xue, Xinbo Yu, Zhijun Li, and Chenguang Yang.
+\newblock Admittance-based controller design for physical human--robot
+  interaction in the constrained task space.
+\newblock {\em IEEE Transactions on Automation Science and Engineering},
+  17(4):1937--1949, 2020.
+
 \bibitem{libfranka}
 Sami Haddadin, Sven Parusel, Lars Johannsmeier, Saskia Golz, Simon Gabl,
   Florian Walch, Mohamadreza Sabaghian, Christoph Jähne, Lukas Hausperger, and
@@ -92,11 +99,6 @@ Vladimir Tadic, Akos Odry, Istvan Kecskes, Ervin Burkus, Zoltan Kiraly, and
 \newblock Application of intel realsense cameras for depth image generation in
   robotics.
 \newblock {\em WSEAS Transac. Comput}, 18:2224--2872, 2019.
-
-\bibitem{reis2023real}
-Dillon Reis, Jordan Kupec, Jacqueline Hong, and Ahmad Daoudi.
-\newblock Real-time flying object detection with yolov8.
-\newblock {\em arXiv preprint arXiv:2305.09972}, 2023.
 
 \bibitem{hintjens2013zeromq}
 Pieter Hintjens.

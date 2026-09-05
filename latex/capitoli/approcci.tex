@@ -201,40 +201,64 @@ Il ricalcolo della traiettoria in tempo reale si fonda sull'implementazione di u
     \item \textbf{Controllo d'ammettenza (Causalità Forza $\rightarrow$ Moto):} misura o sintetizza una forza esterna come ingresso e la converte in un riferimento di moto (posizione, velocità e accelerazione).
 \end{itemize}
 
-Poiché i controllori industriali standard e le API di basso livello del robot sono tipicamente ottimizzati con anelli interni di posizione e velocità ad elevata rigidezza, il controllo d'ammettenza risulta l'approccio ideale. Esso agisce come un filtro dinamico esterno che genera un nuovo riferimento cinematico inviabile direttamente ai servocomandi di giunto del manipolatore.
+Poiché i controllori industriali standard e le API di basso livello del robot sono ottimizzati con anelli interni di posizione e velocità ad elevata rigidezza, il controllo d'ammettenza risulta l'approccio ideale \cite{he2020admittance}. Esso agisce come un filtro dinamico esterno che genera un nuovo riferimento cinematico inviabile direttamente ai servocomandi di giunto del manipolatore.
 
 \subsubsection{Sintesi della forza repulsiva}
 
-Nel nostro scenario di evasione non si ha un contatto fisico reale con l'operatore; la vicinanza dell'uomo all'interno della capsula \textit{soft} viene tradotta in una forza repulsiva virtuale $\boldsymbol{F}_{\text{rep}} \in \mathbb{R}^6$. Tale forza ha modulo proporzionale alla profondità di penetrazione all'interno della fascia \textit{soft} ed è diretta lungo la retta di minima distanza tra i segmenti geometrici.
+Nel nostro scenario di evasione non si ha un contatto fisico reale con l'operatore; la vicinanza dell'uomo all'interno della capsula \textit{soft} viene tradotta in una forza repulsiva virtuale $\boldsymbol{F}_{\text{rep}} \in \mathbb{R}^3$. Tale forza ha modulo proporzionale alla profondità di penetrazione all'interno della fascia \textit{soft} ed è diretta lungo la retta di minima distanza tra i segmenti geometrici.
 
 La forza virtuale $\boldsymbol{F}_{\text{rep}}$ viene fornita in ingresso al modello dell'ammettenza cartesiana, che modella l'interfaccia di contatto come un sistema meccanico equivalente di tipo massa-molla-smorzatore:
 \begin{equation}
-\boldsymbol{M}_d \big(\ddot{\boldsymbol{x}}_r - \ddot{\boldsymbol{x}}_d\big) + \boldsymbol{D}_d \big(\dot{\boldsymbol{x}}_r - \dot{\boldsymbol{x}}_d\big) + \boldsymbol{K}_d \big(\boldsymbol{x}_r - \boldsymbol{x}_d\big) = \boldsymbol{F}_{\text{rep}}
+\boldsymbol{M} \big(\ddot{\boldsymbol{x}}_r - \ddot{\boldsymbol{x}}_d\big) + \boldsymbol{D} \big(\dot{\boldsymbol{x}}_r - \dot{\boldsymbol{x}}_d\big) + \boldsymbol{K} \big(\boldsymbol{x}_r - \boldsymbol{x}_d\big) = \boldsymbol{F}_{\text{rep}}
 \label{eq:admittance_dynamics}
 \end{equation}
 
 dove:
 \begin{itemize}
-    \item $\boldsymbol{x}_d, \dot{\boldsymbol{x}}_d, \ddot{\boldsymbol{x}}_d \in \mathbb{R}^6$ indicano le grandezze cartesiane desiderate (posizione, velocità, accelerazione) pianificate dal task nominale. Lo spazio $\mathbb{R}^6$ viene adottato per descrivere completamente i 6 gradi di libertà del manipolatore nello spazio operativo, includendo sia le 3 componenti traslazionali sia le 3 componenti rotazionali dell'organo terminale;
-    \item $\boldsymbol{x}_r, \dot{\boldsymbol{x}}_r, \ddot{\boldsymbol{x}}_r \in \mathbb{R}^6$ rappresentano lo stato di riferimento modificato che viene calcolato online;
-    \item $\boldsymbol{M}_d, \boldsymbol{D}_d, \boldsymbol{K}_d \in \mathbb{R}^{6 \times 6}$ costituiscono le matrici simmetriche e definite positive di massa, smorzamento e rigidezza virtuali desiderate.
+	\item $\boldsymbol{x}_d, \dot{\boldsymbol{x}}_d, \ddot{\boldsymbol{x}}_d \in \mathbb{R}^3$ indicano le grandezze cartesiane desiderate (posizione, velocità, accelerazione) pianificate dal task nominale. Lo spazio $\mathbb{R}^3$ viene adottato per descrivere le 3 componenti traslazionali dell'organo terminale;
+	\item $\boldsymbol{x}_r, \dot{\boldsymbol{x}}_r, \ddot{\boldsymbol{x}}_r \in \mathbb{R}^3$ rappresentano lo stato di riferimento modificato che viene calcolato online;
+	\item $\boldsymbol{M}, \boldsymbol{D}, \boldsymbol{K} \in \mathbb{R}^{3 \times 3}$ costituiscono le matrici simmetriche e definite positive di massa, smorzamento e rigidezza virtuali desiderate.
 \end{itemize}
 
 \subsubsection{Calcolo online della posizione modificata}
 
-L'equazione~(\ref{eq:admittance_dynamics}) descrive un sistema differenziale del secondo ordine. Esplicitando il termine di accelerazione modificata $\ddot{\boldsymbol{x}}_r$, si ottiene:
+Definendo lo spostamento relativo rispetto alla traiettoria nominale come $\boldsymbol{e}_x(t) = \boldsymbol{x}_r(t) - \boldsymbol{x}_d(t)$, la dinamica continua dell'ammettenza~(\ref{eq:admittance_dynamics}) espressa nel dominio della trasformata di Laplace si scrive come:
 \begin{equation}
-\ddot{\boldsymbol{x}}_r = \ddot{\boldsymbol{x}}_d + M_d^{-1} \Big( \boldsymbol{F}_{\text{rep}} - D_d \big(\dot{\boldsymbol{x}}_r - \dot{\boldsymbol{x}}_d\big) - K_d \big(\boldsymbol{x}_r - \boldsymbol{x}_d\big) \Big)
+\Big( \boldsymbol{M} s^2 + \boldsymbol{D} s + \boldsymbol{K} \Big) \boldsymbol{E}_x(s) = \boldsymbol{F}_{\text{rep}}(s)
 \end{equation}
 
-Attraverso schemi di integrazione numerica in tempo reale (es. Eulero o Runge-Kutta al ciclo di controllo a 1 kHz), questa accelerazione viene integrata passo-passo per ricavare la velocità $\dot{\boldsymbol{x}}_r(t)$ e infine la nuova posizione cartesiana di riferimento $\boldsymbol{x}_r(t)$. 
+da cui si ricava la funzione di trasferimento continua dell'ammettenza $\boldsymbol{G}(s) \in \mathbb{C}^{3 \times 3}$:
+\begin{equation}
+\boldsymbol{E}_x(s) = \boldsymbol{G}(s) \, \boldsymbol{F}_{\text{rep}}(s) = \Big( \boldsymbol{M} s^2 + \boldsymbol{D} s + \boldsymbol{K} \Big)^{-1} \boldsymbol{F}_{\text{rep}}(s)
+\end{equation}
 
-Il comportamento del robot durante l'evasione è governato dai parametri della matrice virtuale:
+Per l'implementazione del controllo in tempo reale al periodo di campionamento $T_s$ (pari a $1\text{ ms}$ per un ciclo a $1\text{ kHz}$), si ottiene il sistema a tempo discreto equivalente applicando la trasformazione bilineare di Tustin:
+\begin{equation}
+s \approx \frac{2}{T_s} \frac{1 - z^{-1}}{1 + z^{-1}}
+\end{equation}
+
+Sostituendo l'approssimazione di Tustin in $\boldsymbol{G}(s)$, si ricava la funzione di trasferimento a tempo discreto $\boldsymbol{G}_d(z)$:
+\begin{equation}
+\boldsymbol{E}_x(z) = \boldsymbol{G}_d(z) \, \boldsymbol{F}_{\text{rep}}(z) = \boldsymbol{G}\left( \frac{2}{T_s} \frac{1 - z^{-1}}{1 + z^{-1}} \right) \boldsymbol{F}_{\text{rep}}(z)
+\end{equation}
+
+Antitrasformando $\boldsymbol{G}_d(z)$ nel dominio del tempo discreto, si ottiene un'equazione alle differenze che permette di calcolare ricorsivamente lo scostamento $\boldsymbol{e}_x[k]$ al generico passo di campionamento $k$, in funzione dei campioni correnti e passati della forza repulsiva $\boldsymbol{F}_{\text{rep}}$ e degli stati passati dello scostamento:
+\begin{equation}
+\boldsymbol{e}_x[k] = \boldsymbol{\mathcal{A}}_1 \boldsymbol{e}_x[k-1] + \boldsymbol{\mathcal{A}}_2 \boldsymbol{e}_x[k-2] + \boldsymbol{\mathcal{B}}_0 \boldsymbol{F}_{\text{rep}}[k] + \boldsymbol{\mathcal{B}}_1 \boldsymbol{F}_{\text{rep}}[k-1] + \boldsymbol{\mathcal{B}}_2 \boldsymbol{F}_{\text{rep}}[k-2]
+\end{equation}
+
+dove le matrici di coefficienti $\boldsymbol{\mathcal{A}}_i$ e $\boldsymbol{\mathcal{B}}_j$ dipendono unicamente dai parametri fisici $(\boldsymbol{M}, \boldsymbol{D}, \boldsymbol{K})$ e dal tempo di campionamento $T_s$.
+
+La posizione cartesiana di riferimento modificata al passo $k$ viene quindi calcolata sommando lo scostamento ottenuto alla posizione nominale pianificata:
+\begin{equation}
+\boldsymbol{x}_r[k] = \boldsymbol{x}_d[k] + \boldsymbol{e}_x[k]
+\end{equation}
+
+Il comportamento dinamico del robot durante la fase di evasione è governato dai parametri delle matrici virtuali:
 \begin{itemize}
-    \item Azione della massa ($\boldsymbol{M}_d$): filtra i picchi improvvisi della forza repulsiva, garantendo accelerazioni fluide ed evitando scatti bruschi.
-    \item Azione dello smorzamento ($\boldsymbol{D}_d$): dissipa l'energia del sistema virtuale e previene l'insorgere di oscillazioni indesiderate durante l'allontanamento dall'operatore.
-    \item Azione della rigidezza ($\boldsymbol{K}_d$): agisce come un richiamo elastico verso la traiettoria nominale $\boldsymbol{x}_d(t)$. Nel momento in cui l'operatore esce dalla capsula \textit{soft}, la forza repulsiva $\boldsymbol{F}_{\text{rep}}$ si annulla e il termine $K_d$ riporta gradualmente e in modo fluido il robot sul percorso pianificato originario.
+	\item Azione della massa ($\boldsymbol{M}$): filtra i picchi improvvisi della forza repulsiva, garantendo accelerazioni fluide ed evitando scatti bruschi.
+	\item Azione dello smorzamento ($\boldsymbol{D}$): dissipa l'energia del sistema virtuale e previene l'insorgere di oscillazioni indesiderate durante l'allontanamento dall'operatore.
+	\item Azione della rigidezza ($\boldsymbol{K}$): agisce come un richiamo elastico verso la traiettoria nominale $\boldsymbol{x}_d[k]$. Nel momento in cui l'operatore esce dalla capsula \textit{soft}, la forza repulsiva $\boldsymbol{F}_{\text{rep}}[k]$ si annulla e il termine $\boldsymbol{K}$ riporta gradualmente e in modo fluido il robot sul percorso originariamente pianificato.
 \end{itemize}
 
-Infine, la posizione cartesiana modificata $\boldsymbol{x}_r(t)$ viene convertita nelle corrispondenti variabili di giunto $\boldsymbol{q}_r(t)$ tramite cinematica inversa differenziale (sfruttando lo Jacobiano analitico o geometrico del robot) e inviata all'anello di controllo di posizione interno.
-
+La posizione cartesiana $\boldsymbol{x}_r[k]$, così calcolata, rappresenta quindi il nuovo riferimento cinematico generato dall'ammettenza, in grado di deviare localmente la traiettoria nominale per garantire l'evasione dall'operatore.
